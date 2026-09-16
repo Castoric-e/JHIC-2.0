@@ -10,6 +10,7 @@ class Article extends Model
         'title',
         'slug',
         'image',
+        'detail_image',
         'category',
         'read_time',
         'content',

@@ -28,6 +28,7 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/artikel/{slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 
