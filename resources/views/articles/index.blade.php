@@ -48,7 +48,7 @@
                     <!-- Right Hero Image Frame -->
                     <div class="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
                         <div class="border-8 border-white/40 rounded-[18px] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] w-full lg:w-[548px] max-w-[548px] h-[260px] sm:h-[320px] lg:h-[370px] shrink-0 overflow-hidden relative bg-slate-200">
-                            <img src="{{ asset('assets/' . rawurlencode('artikel img.avif')) }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/' . rawurlencode('artikel-img.avif')) }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
                         </div>
                     </div>
 
