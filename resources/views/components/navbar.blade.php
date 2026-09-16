@@ -102,7 +102,7 @@
             </a>
 
             <!-- Artikel -->
-            <a href="/artikel/idn-relawan-dan-markaz-bersama-as-sunnah-salurkan-bantuan-bencana-banjir-di-bali" 
+            <a href="/artikel" 
                class="text-[16px] leading-[24px] font-semibold transition-colors duration-150 {{ $isArtikel ? 'text-[#0c61cf]' : 'text-[#717680] hover:text-[#0c61cf]' }}">
                 Artikel
             </a>
