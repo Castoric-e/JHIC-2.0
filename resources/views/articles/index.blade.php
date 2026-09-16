@@ -48,7 +48,7 @@
                     <!-- Right Hero Image Frame -->
                     <div class="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
                         <div class="border-8 border-white/40 rounded-[18px] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] w-full lg:w-[548px] max-w-[548px] h-[260px] sm:h-[320px] lg:h-[370px] shrink-0 overflow-hidden relative bg-slate-200">
-                            <img src="{{ asset('assets/artikel img.avif') }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/' . rawurlencode('artikel img.avif')) }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
                         </div>
                     </div>
 
@@ -88,7 +88,7 @@
                 @if($featuredArticle && request('page', 1) == 1 && (!$search))
                     <div class="border border-[#e9eaeb] bg-white rounded-[18px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
                         <div class="h-[280px] sm:h-[380px] lg:h-[500px] w-full overflow-hidden relative bg-slate-100">
-                            <img src="{{ asset('assets/' . $featuredArticle->image) }}" alt="{{ $featuredArticle->title }}" 
+                            <img src="{{ asset('assets/' . rawurlencode($featuredArticle->image)) }}" alt="{{ $featuredArticle->title }}" 
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         
@@ -141,7 +141,7 @@
                             <div class="border border-[#e9eaeb] bg-white rounded-[18px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
                                 <!-- Card Image -->
                                 <div class="h-[220px] sm:h-[260px] md:h-[300px] w-full overflow-hidden relative shrink-0 bg-slate-100">
-                                    <img src="{{ asset('assets/' . $article->image) }}" alt="{{ $article->title }}" 
+                                    <img src="{{ asset('assets/' . rawurlencode($article->image)) }}" alt="{{ $article->title }}" 
                                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
 

@@ -140,7 +140,7 @@
             <!-- LEFT COLUMN (Main Content) -->
             <div class="flex flex-col gap-10">
                 @if(!empty($article->detail_image) || !empty($article->image))
-                    <img src="{{ asset('assets/' . ($article->detail_image ?? $article->image)) }}" alt="{{ $article->title }}" class="w-full block h-[482px] max-md:h-[300px] shrink-0 object-cover object-top rounded-[10px]" style="border-radius: 10px;">
+                    <img src="{{ asset('assets/' . rawurlencode($article->detail_image ?? $article->image)) }}" alt="{{ $article->title }}" class="w-full block h-[482px] max-md:h-[300px] shrink-0 object-cover object-top rounded-[10px]" style="border-radius: 10px;">
                 @else
                     <div class="w-full h-[320px] max-md:h-[200px] bg-gradient-to-br from-[#0c61cf]/10 via-[#fafafa] to-[#ff7a29]/10 rounded-[10px] flex items-center justify-center p-8" style="border-radius: 10px;">
                         <div class="flex flex-col items-center gap-3 text-center">
@@ -217,7 +217,7 @@
                     <a href="{{ route('articles.show', $related->slug) }}" class="flex gap-[16px] items-center group cursor-pointer w-full h-[150px] shrink-0" style="height: 150px;">
                         <div class="w-[150px] h-[150px] min-w-[150px] max-w-[150px] min-h-[150px] max-h-[150px] rounded-[10px] overflow-hidden shrink-0 bg-slate-100 flex items-center justify-center relative" style="width: 150px; height: 150px; min-width: 150px; max-width: 150px; min-height: 150px; max-height: 150px;">
                             @if(!empty($related->image))
-                                <img src="{{ asset('assets/' . $related->image) }}" alt="{{ $related->title }}" class="w-[150px] h-[150px] object-cover rounded-[10px] transition-transform duration-300 group-hover:scale-105" style="width: 150px; height: 150px; object-fit: cover;">
+                                <img src="{{ asset('assets/' . rawurlencode($related->image)) }}" alt="{{ $related->title }}" class="w-[150px] h-[150px] object-cover rounded-[10px] transition-transform duration-300 group-hover:scale-105" style="width: 150px; height: 150px; object-fit: cover;">
                             @else
                                 <div class="text-brand-primary/60 font-bold text-xs text-center p-2">IDN News</div>
                             @endif
