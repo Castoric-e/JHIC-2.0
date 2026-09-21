@@ -19,6 +19,7 @@
         ['name' => 'IDN Mengajar', 'slug' => 'idn-mengajar', 'url' => '/program/idn-mengajar'],
         ['name' => 'Ekstrakurikuler', 'slug' => 'ekstrakurikuler', 'url' => '/program/ekstrakurikuler'],
         ['name' => 'Edurace', 'slug' => 'edurace', 'url' => '/program/edurace'],
+        ['name' => 'LDKS', 'slug' => 'ldks', 'url' => '/program/ldks'],
         ['name' => 'Live In', 'slug' => 'live-in', 'url' => '/program/live-in'],
         ['name' => 'Business Survival', 'slug' => 'business-survival', 'url' => '/program/business-survival'],
         ['name' => 'Backpacker', 'slug' => 'backpacker', 'url' => '/program/backpacker'],

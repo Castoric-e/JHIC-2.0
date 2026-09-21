@@ -17,11 +17,41 @@ Route::get('/tentang-kami', function () {
 });
 
 Route::get('/program/{slug?}', function ($slug = null) {
+    if ($slug === 'ekstrakurikuler' || $slug === 'ekstrakulikuler') {
+        return view('program.ekstrakurikuler');
+    }
+    if ($slug === 'backpacker') {
+        return view('program.backpacker');
+    }
+    if ($slug === 'idn-mengajar' || $slug === 'mengajar') {
+        return view('program.idn-mengajar');
+    }
+    if ($slug === 'edurace') {
+        return view('program.edurace');
+    }
+    if ($slug === 'ldks') {
+        return view('program.ldks');
+    }
+    if ($slug === 'live-in') {
+        return view('program.live-in');
+    }
+    if ($slug === 'business-survival') {
+        return view('program.business-survival');
+    }
+    if ($slug === 'it-camp') {
+        return view('program.it-camp');
+    }
+    if ($slug === 'idn-bersyukur' || $slug === 'bersyukur') {
+        return view('program.idn-bersyukur');
+    }
+    if ($slug === 'pkl' || $slug === 'magang') {
+        return view('program.pkl');
+    }
     return view('welcome', ['pageTitle' => 'Program: ' . ($slug ? strtoupper($slug) : 'Utama')]);
 });
 
 Route::get('/career-center', function () {
-    return view('welcome', ['pageTitle' => 'Career Center']);
+    return view('career-center');
 });
 
 Route::get('/kontak', function () {

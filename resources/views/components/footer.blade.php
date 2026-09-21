@@ -78,6 +78,7 @@
                         <a href="/program/idn-mengajar" class="hover:text-[#0c61cf]">IDN Mengajar</a>
                         <a href="/program/ekstrakurikuler" class="hover:text-[#0c61cf]">Ekstrakurikuler</a>
                         <a href="/program/edurace" class="hover:text-[#0c61cf]">Edurace</a>
+                        <a href="/program/ldks" class="hover:text-[#0c61cf]">LDKS</a>
                         <a href="/program/live-in" class="hover:text-[#0c61cf]">Live In</a>
                         <a href="/program/business-survival" class="hover:text-[#0c61cf]">Business Survival</a>
                         <a href="/program/backpacker" class="hover:text-[#0c61cf]">Backpacker</a>
