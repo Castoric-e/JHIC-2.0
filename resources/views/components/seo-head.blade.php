@@ -32,55 +32,55 @@
 
 <!-- JSON-LD Structured Data for Educational Organization -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "IDN Boarding School",
-  "url": "{{ url('/') }}",
-  "logo": "{{ asset('assets/logo_idn.png') }}",
-  "description": "Sekolah SMP & SMA IT Terbaik di Bogor yang berfokus pada Menghafal Al-Qur'an dan Penguasaan Teknologi (IT).",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bogor",
-    "addressRegion": "Jawa Barat",
-    "addressCountry": "ID"
-  },
-  "sameAs": [
-    "https://www.instagram.com/idnboardingschool",
-    "https://www.youtube.com/@idnboardingschool"
-  ]
-}
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'EducationalOrganization',
+    'name' => 'IDN Boarding School',
+    'url' => url('/'),
+    'logo' => asset('assets/logo_idn.png'),
+    'description' => "Sekolah SMP & SMA IT Terbaik di Bogor yang berfokus pada Menghafal Al-Qur'an dan Penguasaan Teknologi (IT).",
+    'address' => [
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Bogor',
+        'addressRegion' => 'Jawa Barat',
+        'addressCountry' => 'ID'
+    ],
+    'sameAs' => [
+        'https://www.instagram.com/idnboardingschool',
+        'https://www.youtube.com/@idnboardingschool'
+    ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 
 @if ($article)
 <!-- JSON-LD Structured Data for News Article -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ url()->current() }}"
-  },
-  "headline": "{{ $title }}",
-  "image": [
-    "{{ $image }}"
-  ],
-  "datePublished": "{{ $article->published_at ?? $article->created_at }}",
-  "dateModified": "{{ $article->updated_at }}",
-  "author": {
-    "@type": "Organization",
-    "name": "IDN Boarding School"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "IDN Boarding School",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ asset('assets/logo_idn.png') }}"
-    }
-  },
-  "description": "{{ $description }}"
-}
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'NewsArticle',
+    'mainEntityOfPage' => [
+        '@type' => 'WebPage',
+        '@id' => url()->current()
+    ],
+    'headline' => $title,
+    'image' => [
+        $image
+    ],
+    'datePublished' => (string) ($article->published_at ?? $article->created_at),
+    'dateModified' => (string) $article->updated_at,
+    'author' => [
+        '@type' => 'Organization',
+        'name' => 'IDN Boarding School'
+    ],
+    'publisher' => [
+        '@type' => 'Organization',
+        'name' => 'IDN Boarding School',
+        'logo' => [
+            '@type' => 'ImageObject',
+            'url' => asset('assets/logo_idn.png')
+        ]
+    ],
+    'description' => $description
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endif
