@@ -47,10 +47,10 @@
                     </p>
                 </div>
 
-                <!-- Right Hero Image (ldks-1.avif - 418x360, rounded-18px, border-8 30% white) -->
+                <!-- Right Hero Image (ldks1.avif - 418x360, rounded-18px, border-8 30% white) -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[18px] overflow-hidden shadow-xl w-full max-w-[418px] h-[280px] sm:h-[320px] lg:h-[360px] relative bg-[#e9eaeb] flex items-center justify-center group">
-                        <img src="{{ asset('assets/ldks-1.avif') }}" 
+                        <img src="{{ asset('assets/ldks1.avif') }}" 
                              alt="Program LDKS IDN Boarding School" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -215,9 +215,9 @@
                 <div class="lg:col-span-6 flex justify-center">
                     <div class="relative shrink-0 w-full max-w-[455px] h-[260px] sm:h-[330px] my-6 lg:my-0 group/collage">
                         
-                        <!-- Main Image (ldks-3.avif - 455x330, rounded-18px) -->
+                        <!-- Main Image (ldks2.avif - 455x330, rounded-18px) -->
                         <div class="w-full h-full rounded-[18px] overflow-hidden shadow-xl bg-[#e9eaeb] relative transition-all duration-500 ease-out group-hover/collage:shadow-2xl flex items-center justify-center">
-                            <img src="{{ asset('assets/ldks-2.avif') }}" 
+                            <img src="{{ asset('assets/ldks2.avif') }}" 
                                  alt="Nilai LDKS Utama" 
                                  class="w-full h-full object-cover group-hover/collage:scale-105 transition-transform duration-500"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -229,11 +229,11 @@
                             </div>
                         </div>
 
-                        <!-- Top-Left Small Tilted Frame (mini-ldks-1.avif - 160x100, -rotate-5) -->
+                        <!-- Top-Left Small Tilted Frame (ldks3.avif - 160x100, -rotate-5) -->
                         <div class="absolute -top-[20px] -left-[15px] sm:-top-[24px] sm:-left-[20px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:-rotate-12 hover:-translate-y-2 hover:z-40 cursor-pointer">
                             <div class="-rotate-5 shadow-[12px_12px_40px_rgba(0,4,45,0.16)] transition-all duration-300">
                                 <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg flex items-center justify-center">
-                                    <img src="{{ asset('assets/ldks-3.avif') }}" 
+                                    <img src="{{ asset('assets/ldks3.avif') }}" 
                                          alt="Dokumentasi LDKS 1" 
                                          class="w-full h-full object-cover"
                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -244,11 +244,11 @@
                             </div>
                         </div>
 
-                        <!-- Bottom-Right Small Tilted Frame (mini-ldks-2.avif - 160x100, rotate-5) -->
+                        <!-- Bottom-Right Small Tilted Frame (ldks4.avif - 160x100, rotate-5) -->
                         <div class="absolute -bottom-[20px] -right-[15px] sm:-bottom-[24px] sm:-right-[20px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:rotate-12 hover:translate-y-2 hover:z-40 cursor-pointer">
                             <div class="rotate-5 shadow-[12px_12px_40px_rgba(0,4,45,0.16)] transition-all duration-300">
                                 <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg flex items-center justify-center">
-                                    <img src="{{ asset('assets/ldks-4.avif') }}" 
+                                    <img src="{{ asset('assets/ldks4.avif') }}" 
                                          alt="Dokumentasi LDKS 2" 
                                          class="w-full h-full object-cover"
                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
