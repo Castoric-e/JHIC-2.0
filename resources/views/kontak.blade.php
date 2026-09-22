@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kontak Kami - IDN Boarding School</title>
+    
+    <x-seo-head 
+        title="Kontak Kami - IDN Boarding School"
+        description="Hubungi layanan informasi, customer service, dan panitia PPDB IDN Boarding School melalui WhatsApp, Telepon, Email, atau kunjungan langsung."
+        keywords="Kontak IDN Boarding School, Alamat Sekolah IDN Jonggol, No WA IDN Boarding School"
+    />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

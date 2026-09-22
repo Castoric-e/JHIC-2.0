@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $article->title }} | IDN Boarding School</title>
+    
+    <x-seo-head 
+        :title="$article->title . ' | IDN Boarding School'"
+        :description="Str::limit(strip_tags($article->content), 155)"
+        :image="asset('assets/' . $article->image)"
+        :article="$article"
+    />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

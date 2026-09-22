@@ -10,7 +10,7 @@ WORKDIR /var/www/html
 
 # Switch to root to install required PHP extensions and setup system entrypoint script
 USER root
-RUN install-php-extensions bcmath gd
+RUN install-php-extensions bcmath gd pdo_mysql
 
 # Copy startup entrypoint script to system directory as root
 COPY entrypoint.sh /etc/entrypoint.d/99-laravel.sh

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # Laravel Web Application Container
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: idn-website-app
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE:-idn_website}
+      DB_USERNAME: ${DB_USERNAME:-idn_user}
+      DB_PASSWORD: ${DB_PASSWORD:-idn_password}
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+
+  # MySQL Database Container
+  db:
+    image: mysql:8.0
+    container_name: idn-website-db
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-idn_website}
+      MYSQL_USER: ${DB_USERNAME:-idn_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-idn_password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-rootsecret}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:

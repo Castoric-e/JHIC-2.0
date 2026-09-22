@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Program LDKS | IDN Boarding School</title>
-    <meta name="description" content="LDKS membentuk siswa dengan kepemimpinan, kedisiplinan, tanggung jawab, serta kemampuan mengambil keputusan melalui pengalaman simulasi langsung yang dilakukan di luar kelas.">
+    
+    <x-seo-head 
+        title="Program LDKS - IDN Boarding School"
+        description="Latihan Dasar Kepemimpinan Siswa (LDKS) IDN Boarding School. Membentuk jiwa kepemimpinan Islami, kedisiplinan, kemandirian, dan komunikasi efektif santri."
+        keywords="LDKS IDN Boarding School, Latihan Dasar Kepemimpinan Siswa, Outbound Santri IDN, Pelatihan Leadership"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

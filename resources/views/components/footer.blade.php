@@ -83,7 +83,6 @@
                         <a href="/program/business-survival" class="hover:text-[#0c61cf]">Business Survival</a>
                         <a href="/program/backpacker" class="hover:text-[#0c61cf]">Backpacker</a>
                         <a href="/program/it-camp" class="hover:text-[#0c61cf]">IT Camp</a>
-                        <a href="/program/mpls" class="hover:text-[#0c61cf]">MPLS</a>
                         <a href="/program/idn-bersyukur" class="hover:text-[#0c61cf]">IDN Bersyukur</a>
                     </div>
                 </div>

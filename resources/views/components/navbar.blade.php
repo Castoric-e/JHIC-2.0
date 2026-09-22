@@ -13,7 +13,7 @@
     $isArtikel = $active === 'artikel' || ($active === null && (request()->is('artikel*') || $currentRouteName === 'articles.show'));
     $isKontak = $active === 'kontak' || ($active === null && request()->is('kontak*'));
 
-    // Program dropdown sub-items definition (Figma specs: PKL, IDN Mengajar, Ekstrakurikuler, Edurace, Live In, Business Survival, Backpacker, IT Camp, MPLS, IDN Bersyukur)
+    // Program dropdown sub-items definition (Figma specs: PKL, IDN Mengajar, Ekstrakurikuler, Edurace, LDKS, Live In, Business Survival, Backpacker, IT Camp, IDN Bersyukur)
     $programItems = [
         ['name' => 'PKL', 'slug' => 'pkl', 'url' => '/program/pkl'],
         ['name' => 'IDN Mengajar', 'slug' => 'idn-mengajar', 'url' => '/program/idn-mengajar'],
@@ -24,7 +24,6 @@
         ['name' => 'Business Survival', 'slug' => 'business-survival', 'url' => '/program/business-survival'],
         ['name' => 'Backpacker', 'slug' => 'backpacker', 'url' => '/program/backpacker'],
         ['name' => 'IT Camp', 'slug' => 'it-camp', 'url' => '/program/it-camp'],
-        ['name' => 'MPLS', 'slug' => 'mpls', 'url' => '/program/mpls'],
         ['name' => 'IDN Bersyukur', 'slug' => 'idn-bersyukur', 'url' => '/program/idn-bersyukur'],
     ];
 

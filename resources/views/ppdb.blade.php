@@ -3,7 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PPDB - IDN Boarding School</title>
+        
+        <x-seo-head 
+            title="PPDB IDN Boarding School - Pendaftaran Santri Baru SMP & SMA IT"
+            description="Pendaftaran Peserta Didik Baru (PPDB) IDN Boarding School Bogor. Dapatkan informasi syarat pendaftaran, biaya pendidikan, jadwal seleksi, dan beasiswa."
+            keywords="PPDB IDN, Pendaftaran SMP IT Bogor, Pendaftaran SMA IT Bogor, Beasiswa IDN Boarding School, Biaya Masuk IDN"
+        />
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

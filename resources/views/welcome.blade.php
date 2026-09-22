@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>IDN Boarding School - Menghafal Al-Qur'an, Membangun Teknologi</title>
+        
+        <x-seo-head 
+            title="IDN Boarding School - Menghafal Al-Qur'an, Membangun Teknologi"
+            description="IDN Boarding School adalah Sekolah SMP & SMA IT Terbaik di Bogor yang berfokus pada Menghafal Al-Qur'an dan Penguasaan Teknologi (IT), Coding, Cyber Security, dan UI/UX."
+        />
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

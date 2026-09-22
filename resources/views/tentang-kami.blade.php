@@ -3,7 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tentang Kami - IDN Boarding School</title>
+        
+        <x-seo-head 
+            title="Tentang Kami - IDN Boarding School Bogor"
+            description="Mengenal profil IDN Boarding School, visi dan misi, sejarah pendirian, lokasi kampus (Jonggol, Sentul, Pamijahan, Solo), serta keunggulan kurikulum IT & Tahfizh."
+            keywords="Profil IDN Boarding School, Visi Misi IDN, Lokasi Kampus IDN Jonggol, Sekolah IT Terbaik"
+        />
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

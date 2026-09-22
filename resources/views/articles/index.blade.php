@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Artikel Seputar IDN Boarding School | IDN Boarding School</title>
-    <meta name="description" content="Temukan berbagai artikel menarik seputar kegiatan, prestasi, dan kehidupan di IDN Boarding School. Dapatkan inspirasi dan informasi terbaru.">
+    
+    <x-seo-head 
+        title="Artikel & Berita Seputar IDN Boarding School"
+        description="Kumpulan artikel berita, pengumuman, dan prestasi santri IDN Boarding School dalam bidang IT, Tahfizh Al-Qur'an, serta kompetisi nasional."
+        keywords="Berita IDN Boarding School, Artikel IDN, Prestasi Santri IDN, Kegiatan IDN Boarding School"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

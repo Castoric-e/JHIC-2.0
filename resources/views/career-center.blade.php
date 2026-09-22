@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Career Center | IDN Boarding School</title>
-    <meta name="description" content="Temukan ribuan lowongan kerja impian berbasis jurusan TKJ, RPL, dan DKV di IDN Career Center. Dapatkan rekomendasi karir terbaik.">
+    
+    <x-seo-head 
+        title="Career Center - IDN Boarding School"
+        description="Pusat Karir & Alumni IDN Boarding School. Temukan rekomendasi lowongan kerja, mitra industri IT (TKJ, RPL, UI/UX), dan penyaluran kerja lulusan."
+        keywords="Career Center IDN, Lowongan Kerja IT, Penyaluran Kerja Lulusan IDN, Karir Alumni IDN"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
