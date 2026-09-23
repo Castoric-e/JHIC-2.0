@@ -77,8 +77,10 @@ class ChatbotController extends Controller
         }
 
         return response()->stream(function () use ($baseUrl, $apiKey, $payload) {
-            if (ob_get_level()) {
-                ob_end_clean();
+            @ini_set('output_buffering', 'off');
+            @ini_set('zlib.output_compression', false);
+            while (ob_get_level() > 0) {
+                @ob_end_clean();
             }
 
             $opts = [
@@ -95,15 +97,18 @@ class ChatbotController extends Controller
             $stream = @fopen("{$baseUrl}/api/v1/chat/stream", 'rb', false, $context);
 
             if ($stream === false) {
-                echo json_encode(['error' => 'Gagal terhubung ke stream chatbot backend']);
+                echo "Gagal terhubung ke stream chatbot backend.";
                 return;
             }
 
             while (!feof($stream)) {
-                $buffer = fread($stream, 512);
+                $buffer = fread($stream, 64);
                 if ($buffer !== false && strlen($buffer) > 0) {
                     echo $buffer;
-                    flush();
+                    if (ob_get_level() > 0) {
+                        @ob_flush();
+                    }
+                    @flush();
                 }
             }
 
