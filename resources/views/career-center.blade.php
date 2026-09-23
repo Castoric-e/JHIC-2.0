@@ -312,9 +312,15 @@
 
                                     <!-- Company Info -->
                                     <div class="flex items-center gap-3 pt-2">
-                                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-sm"
-                                             :class="job.companyBg">
-                                            <span x-text="job.companyLogo"></span>
+                                        <div class="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-white border border-[#e9eaeb] shrink-0 shadow-sm p-1">
+                                            <template x-if="job.companyImg">
+                                                <img :src="job.companyImg" :alt="job.companyName" class="w-full h-full object-contain rounded-lg">
+                                            </template>
+                                            <template x-if="!job.companyImg">
+                                                <div class="w-full h-full rounded-lg flex items-center justify-center text-white font-bold text-sm" :class="job.companyBg">
+                                                    <span x-text="job.companyLogo"></span>
+                                                </div>
+                                            </template>
                                         </div>
                                         <div class="overflow-hidden">
                                             <p class="text-sm font-semibold text-[#181d27] truncate" x-text="job.companyName"></p>
@@ -369,9 +375,15 @@
                 <template x-if="selectedJobModal">
                     <div class="space-y-5">
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-md shrink-0"
-                                 :class="selectedJobModal.companyBg">
-                                <span x-text="selectedJobModal.companyLogo"></span>
+                            <div class="w-14 h-14 rounded-2xl overflow-hidden flex items-center justify-center bg-white border border-[#e9eaeb] shadow-md shrink-0 p-1.5">
+                                <template x-if="selectedJobModal.companyImg">
+                                    <img :src="selectedJobModal.companyImg" :alt="selectedJobModal.companyName" class="w-full h-full object-contain rounded-xl">
+                                </template>
+                                <template x-if="!selectedJobModal.companyImg">
+                                    <div class="w-full h-full rounded-xl flex items-center justify-center text-white font-bold text-lg" :class="selectedJobModal.companyBg">
+                                        <span x-text="selectedJobModal.companyLogo"></span>
+                                    </div>
+                                </template>
                             </div>
                             <div>
                                 <h2 class="text-xl font-bold text-[#181d27]" x-text="selectedJobModal.title"></h2>
@@ -458,7 +470,6 @@
                 workLocationOptions: ['Semua', 'Onsite', 'Hybrid', 'Remote/WFH'],
                 workTypeOptions: ['Semua', 'Full-time', 'Part-time', 'Contract', 'Internship', 'Freelance'],
                 postTimeOptions: ['Semua', 'Hari ini', 'Minggu ini', 'Bulan ini', 'Tahun ini'],
-
                 // Exactly 21 Jobs Matching Figma Node 19889-5661 (100% Exact Data)
                 jobs: [
                     // Card 1
@@ -471,6 +482,7 @@
                         workType: 'Contract',
                         companyName: 'Digideep',
                         companyLogo: 'D',
+                        companyImg: "{{ asset('assets/Digdeep.avif') }}",
                         companyBg: 'bg-indigo-600',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -487,6 +499,7 @@
                         workType: 'Contract',
                         companyName: 'Tenos Data Teknologi',
                         companyLogo: 'T',
+                        companyImg: "{{ asset('assets/tenos-data-teknologi.avif') }}",
                         companyBg: 'bg-amber-500',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -503,6 +516,7 @@
                         workType: 'Contract',
                         companyName: 'Indekstat',
                         companyLogo: 'I',
+                        companyImg: "{{ asset('assets/indekstat.avif') }}",
                         companyBg: 'bg-orange-500',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -519,6 +533,7 @@
                         workType: 'Full-time',
                         companyName: 'Alfahuma Rekayasa Teknologi',
                         companyLogo: 'A',
+                        companyImg: "{{ asset('assets/alfahuma-rekayasa.avif') }}",
                         companyBg: 'bg-blue-600',
                         location: 'Bekasi, West Java',
                         locationGroup: 'Jawa',
@@ -535,6 +550,7 @@
                         workType: 'Part-time',
                         companyName: 'Pertamina',
                         companyLogo: 'P',
+                        companyImg: "{{ asset('assets/pertamina.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -551,6 +567,7 @@
                         workType: 'Freelance',
                         companyName: 'Vektora Studio',
                         companyLogo: 'V',
+                        companyImg: "{{ asset('assets/vektora-studio.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'Surakarta, Central Java',
                         locationGroup: 'Jawa',
@@ -567,6 +584,7 @@
                         workType: 'Internship',
                         companyName: 'PLN',
                         companyLogo: 'P',
+                        companyImg: "{{ asset('assets/pln-1.avif') }}",
                         companyBg: 'bg-cyan-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -583,6 +601,7 @@
                         workType: 'Part-time',
                         companyName: 'Telkom Indonesia',
                         companyLogo: 'T',
+                        companyImg: "{{ asset('assets/telkom-id.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -599,6 +618,7 @@
                         workType: 'Contract',
                         companyName: 'Toyota Astra Motor',
                         companyLogo: 'T',
+                        companyImg: "{{ asset('assets/toyota-astra-motor.avif') }}",
                         companyBg: 'bg-rose-700',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -615,6 +635,7 @@
                         workType: 'Full-time',
                         companyName: 'Sisindokom Lintasbuana',
                         companyLogo: 'S',
+                        companyImg: "{{ asset('assets/sisindokom-1.avif') }}",
                         companyBg: 'bg-purple-600',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -631,6 +652,7 @@
                         workType: 'Freelance',
                         companyName: 'Yaksa Ersada Solusindo',
                         companyLogo: 'Y',
+                        companyImg: "{{ asset('assets/yaksa-ersada.avif') }}",
                         companyBg: 'bg-red-500',
                         location: 'Bekasi, West Java',
                         locationGroup: 'Jawa',
@@ -647,6 +669,7 @@
                         workType: 'Part-time',
                         companyName: 'Telkom Akses',
                         companyLogo: 'T',
+                        companyImg: "{{ asset('assets/telkom-akses.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'Tangerang, Banten',
                         locationGroup: 'Jabodetabek',
@@ -663,6 +686,7 @@
                         workType: 'Contract',
                         companyName: 'Sucofindo',
                         companyLogo: 'S',
+                        companyImg: "{{ asset('assets/Sucofindo.avif') }}",
                         companyBg: 'bg-blue-700',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -679,6 +703,7 @@
                         workType: 'Part-time',
                         companyName: 'Pelabuhan Indonesia',
                         companyLogo: 'P',
+                        companyImg: "{{ asset('assets/pelabuhanIndo.avif') }}",
                         companyBg: 'bg-sky-600',
                         location: 'North Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -695,6 +720,7 @@
                         workType: 'Freelance',
                         companyName: 'Tokopedia',
                         companyLogo: 'T',
+                        companyImg: "{{ asset('assets/tokped.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -711,6 +737,7 @@
                         workType: 'Full-time',
                         companyName: 'Shopee',
                         companyLogo: 'S',
+                        companyImg: "{{ asset('assets/Shoppie.avif') }}",
                         companyBg: 'bg-orange-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -727,6 +754,7 @@
                         workType: 'Internship',
                         companyName: 'Lazada',
                         companyLogo: 'L',
+                        companyImg: "{{ asset('assets/lazada.avif') }}",
                         companyBg: 'bg-purple-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -743,6 +771,7 @@
                         workType: 'Part-time',
                         companyName: 'Gojek',
                         companyLogo: 'G',
+                        companyImg: "{{ asset('assets/gojek.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -759,6 +788,7 @@
                         workType: 'Contract',
                         companyName: 'Grab',
                         companyLogo: 'G',
+                        companyImg: "{{ asset('assets/grab.avif') }}",
                         companyBg: 'bg-emerald-700',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -775,6 +805,7 @@
                         workType: 'Freelance',
                         companyName: 'Maxim',
                         companyLogo: 'M',
+                        companyImg: "{{ asset('assets/Maxim.avif') }}",
                         companyBg: 'bg-amber-400 text-black',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -791,6 +822,7 @@
                         workType: 'Full-time',
                         companyName: 'Blibli',
                         companyLogo: 'B',
+                        companyImg: "{{ asset('assets/blibli.avif') }}",
                         companyBg: 'bg-blue-500',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',

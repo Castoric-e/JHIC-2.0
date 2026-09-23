@@ -53,9 +53,9 @@
                     <!-- CARD 1: WHATSAPP -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- WHATSAPP ICON (Template <img> tag) -->
+                            <!-- WHATSAPP ICON (wa.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-whatsapp.avif') }}" alt="WhatsApp Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/wa.avif') }}" alt="WhatsApp Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 +62 822-1010-2006
@@ -72,9 +72,9 @@
                     <!-- CARD 2: INSTAGRAM -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- INSTAGRAM ICON (Template <img> tag) -->
+                            <!-- INSTAGRAM ICON (ig.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-instagram.avif') }}" alt="Instagram Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/ig.avif') }}" alt="Instagram Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 @idnboardingschool
@@ -88,9 +88,9 @@
                     <!-- CARD 3: EMAIL -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- EMAIL ICON (Template <img> tag) -->
+                            <!-- EMAIL ICON (gmail.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-email.avif') }}" alt="Email Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/gmail.avif') }}" alt="Email Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 info@idn.sch.id
@@ -104,15 +104,15 @@
                     <!-- CARD 4: FACEBOOK -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- FACEBOOK ICON (Template <img> tag) -->
+                            <!-- FACEBOOK ICON (fb.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-facebook.avif') }}" alt="Facebook Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/fb.avif') }}" alt="Facebook Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN Boarding School
                             </h2>
                         </div>
-                        <a href="https://facebook.com" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.facebook.com/idnboardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
                             Buka Facebook
                         </a>
                     </div>
@@ -120,15 +120,15 @@
                     <!-- CARD 5: TIKTOK -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- TIKTOK ICON (Template <img> tag) -->
+                            <!-- TIKTOK ICON (tt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-tiktok.avif') }}" alt="TikTok Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/tt.avif') }}" alt="TikTok Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN Boarding School
                             </h2>
                         </div>
-                        <a href="https://tiktok.com" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.tiktok.com/@idn.boardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
                             Buka Tiktok
                         </a>
                     </div>
@@ -136,15 +136,15 @@
                     <!-- CARD 6: YOUTUBE -->
                     <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
-                            <!-- YOUTUBE ICON (Template <img> tag) -->
+                            <!-- YOUTUBE ICON (yt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/icon-youtube.avif') }}" alt="YouTube Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/yt.avif') }}" alt="YouTube Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN TV
                             </h2>
                         </div>
-                        <a href="https://youtube.com" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.youtube.com/@IDNTV2022" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
                             Buka Youtube
                         </a>
                     </div>
