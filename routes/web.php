@@ -72,3 +72,4 @@ Route::get('/clear-cache', function () {
 
 Route::post('/api/chatbot/conversations', [ChatbotController::class, 'createConversation']);
 Route::post('/api/chatbot/chat', [ChatbotController::class, 'sendMessage']);
+Route::post('/api/chatbot/chat/stream', [ChatbotController::class, 'streamMessage']);

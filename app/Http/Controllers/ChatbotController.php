@@ -58,4 +58,61 @@ class ChatbotController extends Controller
             'detail' => $response->json('detail') ?? $response->body()
         ], $response->status());
     }
+
+    public function streamMessage(Request $request)
+    {
+        $baseUrl = rtrim(env('FASTAPI_CHATBOT_URL', 'https://fast-api-g0de.onrender.com'), '/');
+        $apiKey = env('FASTAPI_API_KEY', 'fastapichatbotbackend@2026');
+
+        $payload = [
+            'message' => $request->input('message'),
+        ];
+
+        if ($request->filled('conversation_id')) {
+            $payload['conversation_id'] = $request->input('conversation_id');
+        }
+
+        if ($request->filled('previous_response_id')) {
+            $payload['previous_response_id'] = $request->input('previous_response_id');
+        }
+
+        return response()->stream(function () use ($baseUrl, $apiKey, $payload) {
+            if (ob_get_level()) {
+                ob_end_clean();
+            }
+
+            $opts = [
+                'http' => [
+                    'method' => 'POST',
+                    'header' => "Content-Type: application/json\r\n" .
+                                "X-API-Key: {$apiKey}\r\n",
+                    'content' => json_encode($payload),
+                    'timeout' => 120,
+                ],
+            ];
+
+            $context = stream_context_create($opts);
+            $stream = @fopen("{$baseUrl}/api/v1/chat/stream", 'rb', false, $context);
+
+            if ($stream === false) {
+                echo json_encode(['error' => 'Gagal terhubung ke stream chatbot backend']);
+                return;
+            }
+
+            while (!feof($stream)) {
+                $buffer = fread($stream, 512);
+                if ($buffer !== false && strlen($buffer) > 0) {
+                    echo $buffer;
+                    flush();
+                }
+            }
+
+            fclose($stream);
+        }, 200, [
+            'Content-Type' => 'text/plain; charset=utf-8',
+            'Cache-Control' => 'no-cache, no-transform',
+            'X-Accel-Buffering' => 'no',
+            'Connection' => 'keep-alive',
+        ]);
+    }
 }

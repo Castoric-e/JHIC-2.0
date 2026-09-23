@@ -6,11 +6,17 @@ ENV WEB_ROOT=/var/www/html/public
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PORT=8080
 
+# PHP OPcache High Performance Tuning for <0.1s render
+ENV PHP_OPCACHE_ENABLE=1
+ENV PHP_OPCACHE_MEMORY_CONSUMPTION=128
+ENV PHP_OPCACHE_MAX_ACCELERATED_FILES=10000
+ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+
 WORKDIR /var/www/html
 
 # Switch to root to install required PHP extensions and setup system entrypoint script
 USER root
-RUN install-php-extensions bcmath gd pdo_mysql
+RUN install-php-extensions bcmath gd pdo_mysql opcache
 
 # Copy startup entrypoint script to system directory as root
 COPY entrypoint.sh /etc/entrypoint.d/99-laravel.sh

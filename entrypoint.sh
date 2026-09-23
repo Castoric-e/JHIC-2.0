@@ -23,9 +23,10 @@ php /var/www/html/artisan db:seed --force 2>&1 || echo "[WARNING] Database seed 
 # Create storage link
 php /var/www/html/artisan storage:link --force 2>/dev/null || true
 
-# Clear and optimize cache
-php /var/www/html/artisan config:clear 2>&1 || true
-php /var/www/html/artisan view:clear 2>&1 || true
-php /var/www/html/artisan route:clear 2>&1 || true
+# Optimize Laravel Production Caching for ultra-fast (<0.1s) response time
+php /var/www/html/artisan config:cache 2>&1 || true
+php /var/www/html/artisan route:cache 2>&1 || true
+php /var/www/html/artisan view:cache 2>&1 || true
+php /var/www/html/artisan event:cache 2>&1 || true
 
 echo "[INFO] Laravel startup entrypoint completed."

@@ -22,6 +22,10 @@ return new class extends Migration
             $table->text('content');
             $table->date('published_at');
             $table->timestamps();
+
+            // Performance Indexes
+            $table->index('category');
+            $table->index('published_at');
         });
     }
 

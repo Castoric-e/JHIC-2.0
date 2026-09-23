@@ -124,88 +124,115 @@
         };
 
         window.sendChatbotMessage = async function() {
-            const text = chatbotUserInput.value.trim();
-            if (!text || isWaitingResponse) return;
+    const text = chatbotUserInput.value.trim();
+    if (!text || isWaitingResponse) return;
 
-            // 1. Display User Message
-            appendUserMessage(text);
-            chatbotUserInput.value = "";
-            isWaitingResponse = true;
-            chatbotSendBtn.disabled = true;
+    // 1. Tampilkan Pesan Pengguna
+    appendUserMessage(text);
+    chatbotUserInput.value = "";
+    isWaitingResponse = true;
+    chatbotSendBtn.disabled = true;
 
-            // 2. Display Typing Indicator
-            const typingId = "chatbot-typing-" + Date.now();
-            appendTypingIndicator(typingId);
-            scrollToBottom();
+    // 2. Tampilkan Indikator Mengetik sementara
+    const typingId = "chatbot-typing-" + Date.now();
+    appendTypingIndicator(typingId);
+    scrollToBottom();
 
+    try {
+        // Inisialisasi sesi percakapan jika belum ada
+        if (!activeConversationId) {
             try {
-                // Step 1: Ensure active conversation session exists
-                if (!activeConversationId) {
-                    try {
-                        const initRes = await fetch('/api/chatbot/conversations', {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')?.content || "{{ csrf_token() }}"
-                            }
-                        });
-                        if (initRes.ok) {
-                            const initData = await initRes.json();
-                            activeConversationId = initData.conversation_id;
-                        }
-                    } catch (err) {
-                        console.warn("Gagal inisialisasi sesi chatbot, melanjutkan dengan default:", err);
-                    }
-                }
-
-                // Step 2: Send chat payload
-                const payload = { message: text };
-                if (activeConversationId) payload.conversation_id = activeConversationId;
-                if (activeResponseId) payload.previous_response_id = activeResponseId;
-
-                const response = await fetch('/api/chatbot/chat', {
+                const initRes = await fetch('/api/chatbot/conversations', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                         "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')?.content || "{{ csrf_token() }}"
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                removeElement(typingId);
-
-                if (!response.ok) {
-                    let errDetail = "Terjadi kesalahan pada server.";
-                    try {
-                        const errJson = await response.json();
-                        errDetail = errJson.detail || errDetail;
-                    } catch (e) {}
-
-                    if (response.status === 401) {
-                        appendErrorMessage("<b>Akses Ditolak (401):</b> API Key tidak cocok dengan backend.");
-                    } else if (response.status === 429) {
-                        appendErrorMessage("<b>Rate Limit (429):</b> Terlalu banyak permintaan. Silakan tunggu beberapa detik.");
-                    } else {
-                        appendErrorMessage(`<b>Error (${response.status}):</b> ${errDetail}`);
                     }
-                } else {
-                    const data = await response.json();
-                    if (data.response_id) activeResponseId = data.response_id;
-                    if (data.conversation_id) activeConversationId = data.conversation_id;
-                    appendBotMessage(formatBotResponse(data.response));
+                });
+                if (initRes.ok) {
+                    const initData = await initRes.json();
+                    activeConversationId = initData.conversation_id;
                 }
-
-            } catch (error) {
-                console.error("Fetch error:", error);
-                removeElement(typingId);
-                appendErrorMessage("<b>Gagal Menghubungi Server:</b> Silakan periksa koneksi internet Anda.");
-            } finally {
-                isWaitingResponse = false;
-                chatbotSendBtn.disabled = false;
-                scrollToBottom();
-                chatbotUserInput.focus();
+            } catch (err) {
+                console.warn("Gagal inisialisasi sesi chatbot:", err);
             }
-        };
+        }
+
+        const payload = { message: text };
+        if (activeConversationId) payload.conversation_id = activeConversationId;
+
+        // Kirim permintaan ke endpoint /api/chatbot/chat/stream di proxy Laravel Anda
+        const response = await fetch('/api/chatbot/chat/stream', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')?.content || "{{ csrf_token() }}"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        // Hapus indikator mengetik
+        removeElement(typingId);
+
+        if (!response.ok) {
+            let errDetail = "Terjadi kesalahan pada server.";
+            try {
+                const errJson = await response.json();
+                errDetail = errJson.detail || errDetail;
+            } catch (e) {}
+
+            if (response.status === 401) {
+                appendErrorMessage("<b>Akses Ditolak (401):</b> API Key tidak cocok dengan backend.");
+            } else if (response.status === 429) {
+                appendErrorMessage("<b>Rate Limit (429):</b> Terlalu banyak permintaan.");
+            } else {
+                appendErrorMessage(`<b>Error (${response.status}):</b> ${errDetail}`);
+            }
+        } else {
+            // Membaca aliran data stream kata demi kata (Real-Time)
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder("utf-8");
+            let fullText = "";
+
+            // Buat elemen bubble bot kosong terlebih dahulu
+            const div = document.createElement("div");
+            div.className = "flex gap-2.5 max-w-[88%] animate-fade-in self-start";
+            div.innerHTML = `
+                <div class="w-7 h-7 rounded-full bg-[#052753] text-white flex items-center justify-center text-xs shrink-0 shadow-sm mt-0.5 overflow-hidden">
+                    <img src="{{ asset('assets/chatbot/avatar.png') }}" class="w-full h-full object-cover" alt="AI">
+                </div>
+                <div class="msg-bubble-content p-3 px-4 rounded-2xl rounded-tl-xs text-[14px] leading-[20px] break-words bg-white text-[#181d27] shadow-sm border border-[#e9eaeb]">
+                </div>
+            `;
+            chatbotMessages.appendChild(div);
+            const contentBox = div.querySelector(".msg-bubble-content");
+
+            // Loop membaca setiap potongan teks yang masuk
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                const chunk = decoder.decode(value, { stream: true });
+                fullText += chunk;
+
+                // Update teks dan scroll ke bawah secara otomatis
+                contentBox.innerHTML = formatBotResponse(fullText);
+                scrollToBottom();
+            }
+        }
+
+    } catch (error) {
+        console.error("Fetch error:", error);
+        removeElement(typingId);
+        appendErrorMessage("<b>Gagal Menghubungi Server:</b> Silakan periksa koneksi internet Anda.");
+    } finally {
+        isWaitingResponse = false;
+        chatbotSendBtn.disabled = false;
+        scrollToBottom();
+        chatbotUserInput.focus();
+    }
+};
+
 
         // Voice Input (Web Speech API)
         window.toggleVoiceInput = function() {
