@@ -45,7 +45,6 @@ class AppServiceProvider extends ServiceProvider
                 URL::forceRootUrl($currentHost);
                 config(['app.url' => $currentHost]);
                 config(['app.asset_url' => $currentHost]);
-                Vite::useAssetUrl($currentHost . '/build');
             }
         }
     }
