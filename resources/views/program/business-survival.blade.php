@@ -50,7 +50,7 @@
                 <!-- Right Hero Image (bs-1.avif - 418x360, rounded-18px, border-8 30% white) -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[18px] overflow-hidden shadow-xl w-full max-w-[418px] h-[280px] sm:h-[320px] lg:h-[360px] relative bg-[#e9eaeb] flex items-center justify-center group">
-                        <img src="{{ asset('assets/business-1.avif') }}" 
+                        <img src="{{ asset('assets/program/business/business-1.avif') }}" 
                              alt="Program Business Survival IDN Boarding School" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -147,7 +147,7 @@
                 <!-- Right Image (bs-2.avif - 410x410, rounded-18px) -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[18px] overflow-hidden shadow-xl w-full max-w-[410px] h-[300px] sm:h-[360px] lg:h-[410px] relative bg-[#e9eaeb] flex items-center justify-center group">
-                        <img src="{{ asset('assets/business-2.avif') }}" 
+                        <img src="{{ asset('assets/program/business/business-2.avif') }}" 
                              alt="Kegiatan Business Survival" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -174,7 +174,7 @@
                         
                         <!-- Main Image (bs-3.avif - 455x330, rounded-18px) -->
                         <div class="w-full h-full rounded-[18px] overflow-hidden shadow-xl bg-[#e9eaeb] relative transition-all duration-500 ease-out group-hover/collage:shadow-2xl flex items-center justify-center">
-                            <img src="{{ asset('assets/business-3.avif') }}" 
+                            <img src="{{ asset('assets/program/business/business-3.avif') }}" 
                                  alt="Nilai Business Survival Utama" 
                                  class="w-full h-full object-cover group-hover/collage:scale-105 transition-transform duration-500"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -190,7 +190,7 @@
                         <div class="absolute -top-[20px] -left-[15px] sm:-top-[24px] sm:-left-[20px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:-rotate-12 hover:-translate-y-2 hover:z-40 cursor-pointer">
                             <div class="-rotate-5 shadow-[12px_12px_40px_rgba(0,4,45,0.16)] transition-all duration-300">
                                 <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg flex items-center justify-center">
-                                    <img src="{{ asset('assets/business-4.avif') }}" 
+                                    <img src="{{ asset('assets/program/business/business-4.avif') }}" 
                                          alt="Dokumentasi Business Survival 1" 
                                          class="w-full h-full object-cover"
                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -205,7 +205,7 @@
                         <div class="absolute -bottom-[20px] -right-[15px] sm:-bottom-[24px] sm:-right-[20px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:rotate-12 hover:translate-y-2 hover:z-40 cursor-pointer">
                             <div class="rotate-5 shadow-[12px_12px_40px_rgba(0,4,45,0.16)] transition-all duration-300">
                                 <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg flex items-center justify-center">
-                                    <img src="{{ asset('assets/business-5.avif') }}" 
+                                    <img src="{{ asset('assets/program/business/business-5.avif') }}" 
                                          alt="Dokumentasi Business Survival 2" 
                                          class="w-full h-full object-cover"
                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">

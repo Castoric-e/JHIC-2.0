@@ -8,7 +8,7 @@
             <!-- BRAND & SOCIALS -->
             <div class="flex flex-col gap-6 md:gap-8 w-full lg:w-[253px] shrink-0">
                 <a href="/" class="block">
-                    <img src="{{ asset('assets/logo_idn_footer.png') }}" alt="Logo IDN" class="h-[60px] sm:h-[72px] w-auto object-contain">
+                    <img src="{{ asset('assets/logos/logo_idn_footer.png') }}" alt="Logo IDN" class="h-[60px] sm:h-[72px] w-auto object-contain">
                 </a>
                 <div class="flex flex-col gap-4 md:gap-5 text-[14px] leading-[20px]">
                     <p class="text-[#414651] max-w-[400px] lg:max-w-none">
@@ -140,12 +140,12 @@
         <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 w-full pt-6 border-t border-[#e9eaeb] text-[13px] sm:text-[14px] text-[#414651] text-center">
             <span>© Copyright | 2026 IDN Boarding School.</span>
             <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-                <img src="{{ asset('assets/logo_jhic.png') }}" alt="JHIC Logo" class="h-6 sm:h-8 w-auto object-contain">
+                <img src="{{ asset('assets/logos/logo_jhic.png') }}" alt="JHIC Logo" class="h-6 sm:h-8 w-auto object-contain">
                 <div class="h-4 sm:h-5 w-px bg-[#e9eaeb]"></div>
-                <img src="{{ asset('assets/logo_jagoanhosting.png') }}" alt="Jagoan Hosting" class="h-6 sm:h-8 w-auto object-contain">
-                <img src="{{ asset('assets/logo_komdigi.png') }}" alt="Komdigi" class="h-6 sm:h-8 w-auto object-contain">
-                <img src="{{ asset('assets/logo_garuda.png') }}" alt="Garuda Spark" class="h-6 sm:h-8 w-auto object-contain">
-                <img src="{{ asset('assets/logo_ngalup.png') }}" alt="Ngalup" class="h-6 sm:h-8 w-auto object-contain">
+                <img src="{{ asset('assets/logos/logo_jagoanhosting.png') }}" alt="Jagoan Hosting" class="h-6 sm:h-8 w-auto object-contain">
+                <img src="{{ asset('assets/logos/logo_komdigi.png') }}" alt="Komdigi" class="h-6 sm:h-8 w-auto object-contain">
+                <img src="{{ asset('assets/logos/logo_garuda.png') }}" alt="Garuda Spark" class="h-6 sm:h-8 w-auto object-contain">
+                <img src="{{ asset('assets/logos/logo_ngalup.png') }}" alt="Ngalup" class="h-6 sm:h-8 w-auto object-contain">
             </div>
         </div>
 

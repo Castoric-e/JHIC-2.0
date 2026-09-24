@@ -75,7 +75,7 @@
         <!-- HEADER SECTION -->
         <div class="w-[1120px] pt-[60px] pb-5 flex flex-col gap-6 max-[1160px]:w-[90%] px-5">
             <a href="/" class="flex items-center gap-2 text-text-muted text-base font-medium cursor-pointer transition-colors duration-200 hover:text-brand-primary self-start">
-                <img src="{{ asset('assets/arrow_left.svg') }}" alt="Back icon" class="w-5 h-5">
+                <img src="{{ asset('assets/icons/arrow_left.svg') }}" alt="Back icon" class="w-5 h-5">
                 Kembali ke artikel
             </a>
             
@@ -126,7 +126,7 @@
             
             <div class="flex items-center gap-3 text-sm text-text-muted">
                 <div class="flex items-center gap-1.5">
-                    <img src="{{ asset('assets/calendar.svg') }}" alt="Calendar icon" class="w-4 h-4">
+                    <img src="{{ asset('assets/icons/calendar.svg') }}" alt="Calendar icon" class="w-4 h-4">
                     <span>{{ date('d F Y', strtotime($article->published_at)) }}</span>
                 </div>
                 <div class="w-px h-3.5 bg-border-custom"></div>
@@ -232,7 +232,7 @@
                             <h3 class="text-[16px] font-semibold text-[#181d27] leading-[24px] line-clamp-3 group-hover:text-[#0c61cf] transition-colors duration-200">{{ $related->title }}</h3>
                             <div class="flex items-center gap-[8px] text-[12px] text-[#717680]">
                                 <div class="flex items-center gap-[4px]">
-                                    <img src="{{ asset('assets/calendar_alt.svg') }}" alt="Calendar small" class="w-[14px] h-[14px] shrink-0 opacity-70">
+                                    <img src="{{ asset('assets/icons/calendar_alt.svg') }}" alt="Calendar small" class="w-[14px] h-[14px] shrink-0 opacity-70">
                                     <span>{{ date('j F Y', strtotime($related->published_at)) }}</span>
                                 </div>
                                 <div class="w-px h-[12px] bg-[#d9d9d9] shrink-0"></div>

@@ -14,9 +14,10 @@ ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
 
 WORKDIR /var/www/html
 
-# Switch to root to install required PHP extensions and setup system entrypoint script
+# Switch to root to install required PHP extensions, Node.js, and setup system entrypoint script
 USER root
 RUN install-php-extensions bcmath gd pdo_mysql opcache
+RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/*
 
 # Copy startup entrypoint script to system directory as root
 COPY entrypoint.sh /etc/entrypoint.d/99-laravel.sh
@@ -25,8 +26,11 @@ RUN sed -i 's/\r$//' /etc/entrypoint.d/99-laravel.sh && chmod +x /etc/entrypoint
 # Switch to www-data for application files and composer
 USER www-data
 
-# Copy source code with correct permissions (including compiled public/build assets)
+# Copy source code with correct permissions
 COPY --chown=www-data:www-data . .
+
+# Install Node dependencies and build production assets with Vite
+RUN npm ci && npm run build
 
 # Install PHP dependencies for production
 RUN composer install --no-dev --optimize-autoloader

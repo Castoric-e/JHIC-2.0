@@ -50,7 +50,7 @@
                 <!-- Right Hero Image -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[24px] lg:rounded-[32px] overflow-hidden shadow-[0px_12px_40px_rgba(0,0,0,0.08)] border border-slate-200/80 w-full max-w-[548px] h-[260px] sm:h-[320px] lg:h-[360px] relative bg-slate-100 group">
-                        <img src="{{ asset('assets/image-ekskul.avif') }}" 
+                        <img src="{{ asset('assets/ekskul/image-ekskul.avif') }}" 
                              alt="Kegiatan Ekstrakurikuler IDN" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -77,7 +77,7 @@
                     <div class="bg-white rounded-[24px] flex flex-col justify-between transition-all duration-300 group">
                         <div>
                             <div class="rounded-[20px] overflow-hidden border border-slate-200/80 h-[220px] sm:h-[260px] lg:h-[280px] w-full bg-slate-100 relative">
-                                <img src="{{ asset('assets/memanah.avif') }}" 
+                                <img src="{{ asset('assets/ekskul/memanah.avif') }}" 
                                      alt="Ekstrakurikuler Memanah" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
@@ -96,7 +96,7 @@
                     <div class="bg-white rounded-[24px] flex flex-col justify-between transition-all duration-300 group">
                         <div>
                             <div class="rounded-[20px] overflow-hidden border border-slate-200/80 h-[220px] sm:h-[260px] lg:h-[280px] w-full bg-slate-100 relative">
-                                <img src="{{ asset('assets/renang.avif') }}" 
+                                <img src="{{ asset('assets/ekskul/renang.avif') }}" 
                                      alt="Ekstrakurikuler Berenang" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
@@ -115,7 +115,7 @@
                     <div class="bg-white rounded-[24px] flex flex-col justify-between transition-all duration-300 group">
                         <div>
                             <div class="rounded-[20px] overflow-hidden border border-slate-200/80 h-[220px] sm:h-[260px] lg:h-[280px] w-full bg-slate-100 relative">
-                                <img src="{{ asset('assets/berkuda.avif') }}" 
+                                <img src="{{ asset('assets/ekskul/berkuda.avif') }}" 
                                      alt="Ekstrakurikuler Berkuda" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
@@ -134,7 +134,7 @@
                     <div class="bg-white rounded-[24px] flex flex-col justify-between transition-all duration-300 group">
                         <div>
                             <div class="rounded-[20px] overflow-hidden border border-slate-200/80 h-[220px] sm:h-[260px] lg:h-[280px] w-full bg-slate-100 relative">
-                                <img src="{{ asset('assets/beladiri.avif') }}" 
+                                <img src="{{ asset('assets/ekskul/beladiri.avif') }}" 
                                      alt="Ekstrakurikuler Bela Diri" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>

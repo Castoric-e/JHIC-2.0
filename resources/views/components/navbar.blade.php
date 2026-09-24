@@ -45,7 +45,7 @@
         
         <!-- LOGO BRAND -->
         <a href="/" class="flex items-center shrink-0">
-            <img src="{{ asset('assets/logo_idn.png') }}" alt="Logo IDN Boarding School" class="h-7 sm:h-8 w-auto block">
+            <img src="{{ asset('assets/logos/logo_idn.png') }}" alt="Logo IDN Boarding School" class="h-7 sm:h-8 w-auto block">
         </a>
 
         <!-- NAVIGATION MENU (DESKTOP) -->
@@ -196,7 +196,7 @@
             </a>
 
             <!-- Artikel -->
-            <a href="/artikel/idn-relawan-dan-markaz-bersama-as-sunnah-salurkan-bantuan-bencana-banjir-di-bali" 
+            <a href="/artikel" 
                class="text-[16px] font-semibold py-1 transition-colors {{ $isArtikel ? 'text-[#0c61cf]' : 'text-[#414651] hover:text-[#0c61cf]' }}">
                 Artikel
             </a>
@@ -205,24 +205,6 @@
             <a href="/kontak" 
                class="text-[16px] font-semibold py-1 transition-colors {{ $isKontak ? 'text-[#0c61cf]' : 'text-[#414651] hover:text-[#0c61cf]' }}">
                 Kontak
-            </a>
-
-            <!-- IT Camp -->
-            <a href="/program/it-camp" 
-               class="text-[16px] font-semibold py-1 transition-colors {{ $currentActiveSub === 'it-camp' ? 'text-[#0c61cf]' : 'text-[#414651] hover:text-[#0c61cf]' }}">
-                IT Camp
-            </a>
-
-            <!-- LDKS -->
-            <a href="/program/ldks" 
-               class="text-[16px] font-semibold py-1 transition-colors {{ $currentActiveSub === 'ldks' ? 'text-[#0c61cf]' : 'text-[#414651] hover:text-[#0c61cf]' }}">
-                LDKS
-            </a>
-
-            <!-- IDN Bersyukur -->
-            <a href="/program/idn-bersyukur" 
-               class="text-[16px] font-semibold py-1 transition-colors {{ $currentActiveSub === 'idn-bersyukur' ? 'text-[#0c61cf]' : 'text-[#414651] hover:text-[#0c61cf]' }}">
-                IDN Bersyukur
             </a>
         </div>
 

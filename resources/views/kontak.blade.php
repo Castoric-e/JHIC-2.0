@@ -55,7 +55,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- WHATSAPP ICON (wa.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/wa.avif') }}" alt="WhatsApp Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/wa.avif') }}" alt="WhatsApp Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 +62 822-1010-2006
@@ -74,7 +74,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- INSTAGRAM ICON (ig.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/ig.avif') }}" alt="Instagram Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/ig.avif') }}" alt="Instagram Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 @idnboardingschool
@@ -90,7 +90,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- EMAIL ICON (gmail.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/gmail.avif') }}" alt="Email Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/gmail.avif') }}" alt="Email Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 info@idn.sch.id
@@ -106,7 +106,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- FACEBOOK ICON (fb.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/fb.avif') }}" alt="Facebook Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/fb.avif') }}" alt="Facebook Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN Boarding School
@@ -122,7 +122,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- TIKTOK ICON (tt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/tt.avif') }}" alt="TikTok Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/tt.avif') }}" alt="TikTok Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN Boarding School
@@ -138,7 +138,7 @@
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- YOUTUBE ICON (yt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
-                                <img src="{{ asset('assets/yt.avif') }}" alt="YouTube Icon" class="w-10 h-10 object-contain">
+                                <img src="{{ asset('assets/icons/yt.avif') }}" alt="YouTube Icon" class="w-10 h-10 object-contain">
                             </div>
                             <h2 class="font-semibold text-[20px] sm:text-[24px] leading-[32px] text-[#181d27]">
                                 IDN TV

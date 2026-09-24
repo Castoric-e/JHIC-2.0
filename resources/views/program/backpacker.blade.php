@@ -50,7 +50,7 @@
                 <!-- Right Hero Image (bp-11-negara.avif) -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[24px] lg:rounded-[32px] overflow-hidden shadow-[0px_12px_40px_rgba(0,0,0,0.08)] w-full max-w-[548px] h-[260px] sm:h-[320px] lg:h-[360px] relative bg-slate-100 group">
-                        <img src="{{ asset('assets/backpacker-satu.avif') }}" 
+                        <img src="{{ asset('assets/program/backpacker/backpacker-satu.avif') }}" 
                              alt="Program Backpacker 11 Negara IDN" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -139,7 +139,7 @@
                 <!-- Right Image (open-house.avif) -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
                     <div class="rounded-[24px] lg:rounded-[32px] overflow-hidden shadow-lg w-full max-w-[548px] h-[260px] sm:h-[320px] lg:h-[360px] relative bg-slate-100 group">
-                        <img src="{{ asset('assets/backpacker-dua.avif') }}" 
+                        <img src="{{ asset('assets/program/backpacker/backpacker-dua.avif') }}" 
                              alt="Studi Lapangan Backpacker IDN" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -157,7 +157,7 @@
                     
                     <!-- Main Image (backpacker-tiga.avif - 455x330 rounded-18px) -->
                     <div class="w-full h-full rounded-[18px] overflow-hidden shadow-xl bg-slate-200 relative transition-all duration-500 ease-out group-hover/collage:shadow-2xl cursor-pointer">
-                        <img src="{{ asset('assets/backpacker-tiga.avif') }}" 
+                        <img src="{{ asset('assets/program/backpacker/backpacker-tiga.avif') }}" 
                              alt="Dokumentasi Backpacker" 
                              class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/collage:scale-105">
                     </div>
@@ -166,7 +166,7 @@
                     <div class="absolute -top-[20px] -left-[15px] sm:-top-[30px] sm:-left-[30px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:-rotate-12 hover:-translate-y-2 hover:z-40 cursor-pointer">
                         <div class="-rotate-5 shadow-2xl transition-all duration-300">
                             <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg group/mini1">
-                                <img src="{{ asset('assets/backpacker-mini1.avif') }}" 
+                                <img src="{{ asset('assets/program/backpacker/backpacker-mini1.avif') }}" 
                                      alt="Kegiatan Backpacker 1" 
                                      class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/mini1:scale-110">
                             </div>
@@ -177,7 +177,7 @@
                     <div class="absolute -bottom-[20px] -right-[15px] sm:-bottom-[30px] sm:-right-[30px] z-20 transition-all duration-300 ease-out hover:scale-110 hover:rotate-12 hover:translate-y-2 hover:z-40 cursor-pointer">
                         <div class="rotate-5 shadow-2xl transition-all duration-300">
                             <div class="w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[8px] overflow-hidden bg-white shadow-lg group/mini2">
-                                <img src="{{ asset('assets/backpacker-mini2.avif') }}" 
+                                <img src="{{ asset('assets/program/backpacker/backpacker-mini2.avif') }}" 
                                      alt="Kegiatan Backpacker 2" 
                                      class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/mini2:scale-110">
                             </div>

@@ -47,10 +47,10 @@
 
                 <!-- Search & Major Filter Bar -->
                 <div class="pt-6 max-w-[674px] mx-auto">
-                    <div class="bg-white p-2 md:p-2.5 rounded-full border border-[#e9eaeb] shadow-lg flex flex-col sm:flex-row items-center gap-2 relative">
+                    <div class="bg-white p-3 sm:p-2.5 rounded-2xl sm:rounded-full border border-[#e9eaeb] shadow-lg flex flex-col sm:flex-row items-center gap-2.5 sm:gap-2 relative">
                         
                         <!-- Search Keyword Input -->
-                        <div class="flex-1 flex items-center gap-2 px-4 w-full">
+                        <div class="flex-1 flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-0 bg-[#f8fafc] sm:bg-transparent rounded-xl sm:rounded-none border border-[#e2e8f0] sm:border-none w-full">
                             <svg class="w-5 h-5 text-[#717680] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
@@ -63,18 +63,18 @@
                         <!-- Divider -->
                         <div class="hidden sm:block w-px h-8 bg-[#e9eaeb]"></div>
 
-                        <!-- Jurusan Selection Dropdown (Matching Gambar 2 Spec) -->
+                        <!-- Jurusan Selection Dropdown -->
                         <div class="relative w-full sm:w-auto" @click.outside="majorDropdownOpen = false">
                             <button @click="majorDropdownOpen = !majorDropdownOpen" 
                                     type="button" 
-                                    class="w-full sm:w-auto px-4 py-2.5 rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between gap-3 border border-[#e2e8f0] transition-colors">
+                                    class="w-full sm:w-auto px-4 py-2.5 rounded-xl sm:rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between gap-3 border border-[#e2e8f0] transition-colors">
                                 <span x-text="selectedMajor === 'Semua' ? 'Pilih Jurusan' : selectedMajor" class="font-semibold text-[#0c61cf]"></span>
                                 <svg class="w-4 h-4 text-[#717680] transition-transform duration-200" :class="{'rotate-180': majorDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                 </svg>
                             </button>
 
-                            <!-- Dropdown Popup Menu (Spec Gambar 2) -->
+                            <!-- Dropdown Popup Menu -->
                             <div x-show="majorDropdownOpen" 
                                  x-transition:enter="transition ease-out duration-150"
                                  x-transition:enter-start="opacity-0 scale-95 -translate-y-2"
@@ -83,7 +83,7 @@
                                  x-transition:leave-start="opacity-100 scale-100 translate-y-0"
                                  x-transition:leave-end="opacity-0 scale-95 -translate-y-2"
                                  x-cloak
-                                 class="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
+                                 class="absolute left-0 sm:left-auto sm:right-0 mt-2 w-full sm:w-48 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
                                 
                                 <!-- Dropdown Header / All -->
                                 <div @click="selectMajor('Semua')" 
@@ -130,7 +130,7 @@
                         <!-- Action Button -->
                         <button type="button" 
                                 @click="applySearch()"
-                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#0b54b5] text-white px-6 py-3 rounded-full font-semibold text-sm md:text-base transition-colors shadow-md shrink-0">
+                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#0b54b5] text-white px-6 py-2.5 sm:py-2.5 rounded-xl sm:rounded-full font-semibold text-sm md:text-base transition-colors shadow-md shrink-0">
                             Cari Kerja
                         </button>
 
@@ -482,7 +482,7 @@
                         workType: 'Contract',
                         companyName: 'Digideep',
                         companyLogo: 'D',
-                        companyImg: "{{ asset('assets/Digdeep.avif') }}",
+                        companyImg: "{{ asset('assets/partners/Digdeep.avif') }}",
                         companyBg: 'bg-indigo-600',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -499,7 +499,7 @@
                         workType: 'Contract',
                         companyName: 'Tenos Data Teknologi',
                         companyLogo: 'T',
-                        companyImg: "{{ asset('assets/tenos-data-teknologi.avif') }}",
+                        companyImg: "{{ asset('assets/partners/tenos-data-teknologi.avif') }}",
                         companyBg: 'bg-amber-500',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -516,7 +516,7 @@
                         workType: 'Contract',
                         companyName: 'Indekstat',
                         companyLogo: 'I',
-                        companyImg: "{{ asset('assets/indekstat.avif') }}",
+                        companyImg: "{{ asset('assets/partners/indekstat.avif') }}",
                         companyBg: 'bg-orange-500',
                         location: 'Greater Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -533,7 +533,7 @@
                         workType: 'Full-time',
                         companyName: 'Alfahuma Rekayasa Teknologi',
                         companyLogo: 'A',
-                        companyImg: "{{ asset('assets/alfahuma-rekayasa.avif') }}",
+                        companyImg: "{{ asset('assets/partners/alfahuma-rekayasa.avif') }}",
                         companyBg: 'bg-blue-600',
                         location: 'Bekasi, West Java',
                         locationGroup: 'Jawa',
@@ -550,7 +550,7 @@
                         workType: 'Part-time',
                         companyName: 'Pertamina',
                         companyLogo: 'P',
-                        companyImg: "{{ asset('assets/pertamina.avif') }}",
+                        companyImg: "{{ asset('assets/partners/pertamina.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -567,7 +567,7 @@
                         workType: 'Freelance',
                         companyName: 'Vektora Studio',
                         companyLogo: 'V',
-                        companyImg: "{{ asset('assets/vektora-studio.avif') }}",
+                        companyImg: "{{ asset('assets/partners/vektora-studio.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'Surakarta, Central Java',
                         locationGroup: 'Jawa',
@@ -584,7 +584,7 @@
                         workType: 'Internship',
                         companyName: 'PLN',
                         companyLogo: 'P',
-                        companyImg: "{{ asset('assets/pln-1.avif') }}",
+                        companyImg: "{{ asset('assets/partners/pln-1.avif') }}",
                         companyBg: 'bg-cyan-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -601,7 +601,7 @@
                         workType: 'Part-time',
                         companyName: 'Telkom Indonesia',
                         companyLogo: 'T',
-                        companyImg: "{{ asset('assets/telkom-id.avif') }}",
+                        companyImg: "{{ asset('assets/partners/telkom-id.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -618,7 +618,7 @@
                         workType: 'Contract',
                         companyName: 'Toyota Astra Motor',
                         companyLogo: 'T',
-                        companyImg: "{{ asset('assets/toyota-astra-motor.avif') }}",
+                        companyImg: "{{ asset('assets/partners/toyota-astra-motor.avif') }}",
                         companyBg: 'bg-rose-700',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -635,7 +635,7 @@
                         workType: 'Full-time',
                         companyName: 'Sisindokom Lintasbuana',
                         companyLogo: 'S',
-                        companyImg: "{{ asset('assets/sisindokom-1.avif') }}",
+                        companyImg: "{{ asset('assets/partners/sisindokom-1.avif') }}",
                         companyBg: 'bg-purple-600',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -652,7 +652,7 @@
                         workType: 'Freelance',
                         companyName: 'Yaksa Ersada Solusindo',
                         companyLogo: 'Y',
-                        companyImg: "{{ asset('assets/yaksa-ersada.avif') }}",
+                        companyImg: "{{ asset('assets/partners/yaksa-ersada.avif') }}",
                         companyBg: 'bg-red-500',
                         location: 'Bekasi, West Java',
                         locationGroup: 'Jawa',
@@ -669,7 +669,7 @@
                         workType: 'Part-time',
                         companyName: 'Telkom Akses',
                         companyLogo: 'T',
-                        companyImg: "{{ asset('assets/telkom-akses.avif') }}",
+                        companyImg: "{{ asset('assets/partners/telkom-akses.avif') }}",
                         companyBg: 'bg-red-600',
                         location: 'Tangerang, Banten',
                         locationGroup: 'Jabodetabek',
@@ -686,7 +686,7 @@
                         workType: 'Contract',
                         companyName: 'Sucofindo',
                         companyLogo: 'S',
-                        companyImg: "{{ asset('assets/Sucofindo.avif') }}",
+                        companyImg: "{{ asset('assets/partners/Sucofindo.avif') }}",
                         companyBg: 'bg-blue-700',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -703,7 +703,7 @@
                         workType: 'Part-time',
                         companyName: 'Pelabuhan Indonesia',
                         companyLogo: 'P',
-                        companyImg: "{{ asset('assets/pelabuhanIndo.avif') }}",
+                        companyImg: "{{ asset('assets/partners/pelabuhanIndo.avif') }}",
                         companyBg: 'bg-sky-600',
                         location: 'North Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -720,7 +720,7 @@
                         workType: 'Freelance',
                         companyName: 'Tokopedia',
                         companyLogo: 'T',
-                        companyImg: "{{ asset('assets/tokped.avif') }}",
+                        companyImg: "{{ asset('assets/partners/tokped.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -737,7 +737,7 @@
                         workType: 'Full-time',
                         companyName: 'Shopee',
                         companyLogo: 'S',
-                        companyImg: "{{ asset('assets/Shoppie.avif') }}",
+                        companyImg: "{{ asset('assets/partners/Shoppie.avif') }}",
                         companyBg: 'bg-orange-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -754,7 +754,7 @@
                         workType: 'Internship',
                         companyName: 'Lazada',
                         companyLogo: 'L',
-                        companyImg: "{{ asset('assets/lazada.avif') }}",
+                        companyImg: "{{ asset('assets/partners/lazada.avif') }}",
                         companyBg: 'bg-purple-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -771,7 +771,7 @@
                         workType: 'Part-time',
                         companyName: 'Gojek',
                         companyLogo: 'G',
-                        companyImg: "{{ asset('assets/gojek.avif') }}",
+                        companyImg: "{{ asset('assets/partners/gojek.avif') }}",
                         companyBg: 'bg-emerald-600',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -788,7 +788,7 @@
                         workType: 'Contract',
                         companyName: 'Grab',
                         companyLogo: 'G',
-                        companyImg: "{{ asset('assets/grab.avif') }}",
+                        companyImg: "{{ asset('assets/partners/grab.avif') }}",
                         companyBg: 'bg-emerald-700',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -805,7 +805,7 @@
                         workType: 'Freelance',
                         companyName: 'Maxim',
                         companyLogo: 'M',
-                        companyImg: "{{ asset('assets/Maxim.avif') }}",
+                        companyImg: "{{ asset('assets/partners/Maxim.avif') }}",
                         companyBg: 'bg-amber-400 text-black',
                         location: 'South Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',
@@ -822,7 +822,7 @@
                         workType: 'Full-time',
                         companyName: 'Blibli',
                         companyLogo: 'B',
-                        companyImg: "{{ asset('assets/blibli.avif') }}",
+                        companyImg: "{{ asset('assets/partners/blibli.avif') }}",
                         companyBg: 'bg-blue-500',
                         location: 'Central Jakarta, DKI Jakarta',
                         locationGroup: 'Jabodetabek',

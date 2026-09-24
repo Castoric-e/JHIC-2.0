@@ -17,7 +17,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'tim-basket-smp-idn-juara-1-jabodetabek-di-hexagon-fest-an-nahl-ciangsana'],
             [
                 'title' => "Tim Basket SMP IDN Juara 1 JABODETABEK di Hexagon Fest An Nahl Ciangsana",
-                'image' => 'basket-hitam.avif',
+                'image' => 'ekskul/basket-hitam.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-01-11',
@@ -59,7 +59,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'tim-basket-idn-bungkam-stigma-pesantren-kaku-juara-1-di-lapangan-juga-bisa'],
             [
                 'title' => "Tim Basket IDN Bungkam Stigma Pesantren Kaku! Juara 1 di Lapangan Juga Bisa!",
-                'image' => 'basket-putih.avif',
+                'image' => 'ekskul/basket-putih.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -84,7 +84,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'santri-smp-idn-jonggol-raih-perak-olimpiade-bahasa-inggris-posn'],
             [
                 'title' => "Santri SMP IDN Jonggol Raih Perak Olimpiade Bahasa Inggris POSN",
-                'image' => 'juara-3-smp.avif',
+                'image' => 'prestasi/juara-3-smp.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-02-01',
@@ -116,7 +116,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'santri-smp-idn-jonggol-raih-emas-olimpiade-bahasa-inggris-posn'],
             [
                 'title' => "Santri SMP IDN Jonggol Raih Emas Olimpiade Bahasa Inggris POSN",
-                'image' => 'juara-1-smp.avif',
+                'image' => 'prestasi/juara-1-smp.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-02-01',
@@ -148,7 +148,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'juara-1-lomba-robot-sumo-nasional-2025'],
             [
                 'title' => "Juara 1 Lomba Robot Sumo Nasional 2025",
-                'image' => 'robot-sumo.avif',
+                'image' => 'pages/home/robot-sumo.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -182,7 +182,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'juara-1-lomba-jenius-medlab-2025'],
             [
                 'title' => "Juara 1 Lomba Jenius Medlab 2025",
-                'image' => 'juara-1-akhwat.avif',
+                'image' => 'prestasi/juara-1-akhwat.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -212,7 +212,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'boarding-school-islami-terbaik-raih-juara-2-3-mazesolving-robotik-nasional'],
             [
                 'title' => "Boarding School Islami Terbaik Raih Juara 2 & 3 Mazesolving Robotik Nasional",
-                'image' => 'juara-smp.avif',
+                'image' => 'prestasi/juara-smp.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -236,7 +236,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'juara-3-mobile-uiux-competition-di-udinus-semarang'],
             [
                 'title' => "Juara 3 Mobile UI/UX Competition di UDINUS Semarang",
-                'image' => 'juara-lomba.avif',
+                'image' => 'prestasi/juara-lomba.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -260,7 +260,7 @@ class ArticleSeeder extends Seeder
             ['slug' => 'smk-jurusan-rpl-rekomendasi-dan-prospek-masa-depan'],
             [
                 'title' => "SMK Jurusan RPL Rekomendasi dan Prospek Masa Depan",
-                'image' => 'view-idn.avif',
+                'image' => 'pages/home/view-idn.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -349,7 +349,7 @@ Kalau kamu ingin menguasai teknologi, punya karya nyata sebelum lulus, sekaligus
             ['slug' => 'idn-relawan-dan-markaz-bersama-as-sunnah-salurkan-bantuan-bencana-banjir-di-bali'],
             [
                 'title' => "IDN Relawan dan Markaz Bersama As-Sunnah Salurkan Bantuan Bencana Banjir di Bali",
-                'image' => 'kerja-bakti.avif',
+                'image' => 'pages/tentang-kami/kerja-bakti.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -377,7 +377,7 @@ Kalau kamu ingin menguasai teknologi, punya karya nyata sebelum lulus, sekaligus
             ['slug' => 'siswa-smk-jalan-kaki-sejauh-72-km-dari-lereng-gunung-lawu-di-solo'],
             [
                 'title' => "Siswa SMK Jalan Kaki Sejauh 72 KM dari Lereng Gunung Lawu di Solo",
-                'image' => 'apel-pagi.avif',
+                'image' => 'pages/tentang-kami/apel-pagi.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -439,7 +439,7 @@ Kalau kamu ingin menguasai teknologi, punya karya nyata sebelum lulus, sekaligus
             ['slug' => 'dari-malaysia-sekolah-di-bogor-kenal-idn-dari-siswa-backpacker-di-istanbul'],
             [
                 'title' => "Dari Malaysia Sekolah di Bogor: Kenal IDN Dari Siswa Backpacker di Istanbul",
-                'image' => 'bp-11-negara.avif',
+                'image' => 'program/backpacker/bp-11-negara.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -487,7 +487,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => '6-siswa-sukseskan-program-idn-mengajar-internasional-belanda-dan-arab-saudi'],
             [
                 'title' => "6 Siswa Sukseskan Program IDN Mengajar Internasional Belanda dan Arab Saudi",
-                'image' => 'dokum-open-house.avif',
+                'image' => 'pages/home/dokum-open-house.avif',
                 'category' => 'Event',
                 'read_time' => '5 menit',
                 'published_at' => '2025-08-18',
@@ -526,7 +526,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'pameran-teknologi-karya-siswa-idn-open-house-2025'],
             [
                 'title' => "Pameran Teknologi Karya Siswa: IDN Open House 2025",
-                'image' => 'open-house.avif',
+                'image' => 'pages/home/open-house.avif',
                 'category' => 'News & Event',
                 'read_time' => '5 menit',
                 'published_at' => '2025-08-15',
@@ -589,7 +589,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'dari-pamijahan-bogor-siswa-idn-boarding-school-mengajar-coding-di-malaysia'],
             [
                 'title' => "Dari Pamijahan Bogor, Siswa IDN Boarding School Mengajar Coding di Malaysia",
-                'image' => 'mengajar-malaysia.avif',
+                'image' => 'program/ngajar/mengajar-malaysia.avif',
                 'category' => 'Event',
                 'read_time' => '5 menit',
                 'published_at' => '2025-06-27',
@@ -639,7 +639,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'backpacker-school-satu-satunya-di-indonesia-berangkatkan-30-siswa-jelajahi-20-negara'],
             [
                 'title' => "Backpacker School Satu-Satunya di Indonesia! Berangkatkan 30 Siswa Jelajahi 20 Negara",
-                'image' => 'poster.avif',
+                'image' => 'pages/home/poster.avif',
                 'category' => 'Event',
                 'read_time' => '5 menit',
                 'published_at' => '2025-07-11',
@@ -718,7 +718,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'santriwati-smk-idn-boarding-school-akhwat-raih-juara-1-nasional-infographic-competition'],
             [
                 'title' => "Santriwati SMK IDN Boarding School Akhwat Raih Juara 1 Nasional Infographic Competition",
-                'image' => 'juara-1-akhwat-uiux.avif',
+                'image' => 'prestasi/juara-1-akhwat-uiux.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -752,7 +752,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'deklarasi-anti-bullying-dan-stop-kekerasan-idn-boarding-school'],
             [
                 'title' => "Deklarasi Anti-Bullying dan Stop Kekerasan IDN Boarding School.",
-                'image' => 'smp-mengajar.avif',
+                'image' => 'program/ngajar/smp-mengajar.avif',
                 'category' => 'Berita',
                 'read_time' => '3 menit',
                 'published_at' => '2024-08-19',
@@ -795,7 +795,7 @@ Instagram: @idnboardingschool</p>"
             ['slug' => 'siswi-smk-idn-akhwat-raih-juara-2-kompetisi-uiux-tech-fest-instiki'],
             [
                 'title' => "Siswi SMK IDN Akhwat Raih Juara 2 Kompetisi UI/UX Tech Fest INSTIKI",
-                'image' => 'juara-2-akhwat.avif',
+                'image' => 'prestasi/juara-2-akhwat.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',
@@ -849,7 +849,7 @@ Follow sosial media kami:<br>
             ['slug' => 'siswa-smk-idn-juara-2-nasional-networking-di-universitas-udayana'],
             [
                 'title' => "Siswa SMK IDN Juara 2 Nasional Networking di Universitas Udayana",
-                'image' => 'azzam.avif',
+                'image' => 'pages/tentang-kami/azzam.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2024-05-12',
@@ -899,7 +899,7 @@ Fasilitas lengkap:</p>
             ['slug' => 'siswa-idn-juara-1-coding-scratch-nasional-di-iibs-almaahira-malang'],
             [
                 'title' => "Siswa IDN Juara 1 Coding Scratch Nasional di IIBS Almaahira Malang",
-                'image' => 'juara-rayyan.avif',
+                'image' => 'prestasi/juara-rayyan.avif',
                 'category' => 'Prestasi',
                 'read_time' => '3 menit',
                 'published_at' => '2026-04-11',
@@ -922,8 +922,8 @@ Fasilitas lengkap:</p>
             ['slug' => 'izin-operasional-smk-idn-bogor-resmi-terbit'],
             [
                 'title' => "Izin Operasional SMK IDN Bogor Resmi Terbit",
-                'image' => 'izin-operasional-banner.avif',
-                'detail_image' => 'izin-operasional.avif',
+                'image' => 'pages/ppdb/izin-operasional-banner.avif',
+                'detail_image' => 'pages/ppdb/izin-operasional.avif',
                 'category' => 'News & Event',
                 'read_time' => '3 menit',
                 'published_at' => '2025-10-02',

@@ -27,10 +27,10 @@
 
     <!-- 2. HERO HEADER SECTION (Figma Node 19889:6006 - py-[110px], px-[160px]) -->
     <section class="w-full max-w-full overflow-hidden flex flex-col items-center mt-16 md:mt-0 py-12 md:py-[90px] lg:py-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#fafafa]">
-        <div class="w-full max-w-[706px] lg:max-w-[1120px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-14">
+        <div class="w-full max-w-[706px] xl:max-w-[1120px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 md:gap-14">
             
             <!-- LEFT TEXT CONTAINER (650px width in Figma) -->
-            <div class="w-full lg:w-[650px] max-w-full flex flex-col gap-3 items-start text-left shrink-0">
+            <div class="w-full xl:w-[650px] max-w-full flex flex-col gap-3 items-start text-left shrink-0">
                 <span class="text-[#717680] text-[15px] md:text-[16px] font-normal">Tentang Kami</span>
                 
                 <div class="flex flex-col gap-6 items-start text-left w-full">
@@ -46,9 +46,9 @@
                 </div>
             </div>
 
-            <!-- RIGHT IMAGE CONTAINER (Figma Tablet: full width matching content block above) -->
-            <div class="w-full max-w-[706px] lg:w-[410px] lg:max-w-[410px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[300px] shrink-0 relative rounded-[18px] bg-[#eaecf0] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] flex items-center justify-center overflow-hidden mx-auto lg:mx-0">
-                <img src="{{ asset('assets/ojan.avif') }}" alt="Team-OSIS" class="w-full h-full object-cover">
+            <!-- RIGHT IMAGE CONTAINER (Stack below text on mobile/tablet/laptop, side-by-side on xl) -->
+            <div class="w-full max-w-[706px] xl:w-[410px] xl:max-w-[410px] h-[300px] sm:h-[400px] md:h-[450px] xl:h-[300px] shrink-0 relative rounded-[18px] bg-[#eaecf0] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] flex items-center justify-center overflow-hidden mx-auto xl:mx-0">
+                <img src="{{ asset('assets/pages/tentang-kami/ojan.avif') }}" alt="Team-OSIS" class="w-full h-full object-cover">
             </div>
 
         </div>
@@ -80,7 +80,7 @@
             <!-- IMAGE & USER BADGE CONTAINER (Bottom on Mobile/Tablet per Figma Node 20123:29917) -->
             <div class="w-full flex flex-col items-center gap-6 order-2 lg:order-1 shrink-0 lg:w-[410px]">
                 <div class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:w-[410px] aspect-square relative rounded-[18px] bg-[#eaecf0] flex items-center justify-center overflow-hidden border-8 border-white/40 shadow-sm mx-auto lg:mx-0">
-                    <img src="{{ asset('assets/Mr Beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/pages/tentang-kami/Mr Beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
                 </div>
 
                 <!-- USER BADGE (Centered on Mobile/Tablet) -->
@@ -98,10 +98,10 @@
 
     <!-- 4. VISI & MISI SECTION (Figma Node 19889:6023 - bg-[#f5f5f5], py-[110px]) -->
     <section class="w-full max-w-full overflow-hidden flex flex-col items-center py-12 md:py-[90px] lg:py-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#f5f5f5]">
-        <div class="w-full max-w-[706px] lg:max-w-[1120px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-14 relative">
+        <div class="w-full max-w-[706px] xl:max-w-[1120px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-10 md:gap-14 relative">
             
-            <!-- LEFT VISI & MISI CONTENT -->
-            <div class="w-full lg:flex-1 flex flex-col gap-8 justify-center items-start text-left">
+            <!-- LEFT VISI & MISI CONTENT (Text on top for mobile/tablet/laptop) -->
+            <div class="w-full xl:flex-1 flex flex-col gap-8 justify-center items-start text-left">
                 <!-- VISI -->
                 <div class="flex flex-col gap-3 items-start w-full">
                     <span class="text-[#717680] text-[16px] font-normal uppercase tracking-wider">VISI</span>
@@ -134,21 +134,21 @@
                 </div>
             </div>
 
-            <!-- RIGHT VISI MISI IMAGE PLACEHOLDERS (500x374px main card with 2 floating rotated card images) -->
-            <div class="w-full max-w-[500px] lg:w-[500px] shrink-0 relative my-8 lg:my-0">
+            <!-- RIGHT VISI MISI IMAGE PLACEHOLDERS (Image collage underneath text) -->
+            <div class="w-full max-w-[500px] xl:w-[500px] shrink-0 relative my-8 xl:my-0 p-4 sm:p-6">
                 <!-- MAIN CENTER CARD -->
-                <div class="w-full h-[300px] sm:h-[374px] relative rounded-[18px] bg-[#eaecf0] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] overflow-hidden flex items-center justify-center">
-                    <img src="{{ asset('assets/jonggol ikhwan.avif') }}" alt="Visi Misi IDN Boarding School" class="w-full h-full object-cover">
+                <div class="w-full h-[260px] sm:h-[340px] md:h-[374px] relative rounded-[18px] bg-[#eaecf0] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] overflow-hidden flex items-center justify-center">
+                    <img src="{{ asset('assets/campuses/jonggol ikhwan.avif') }}" alt="Visi Misi IDN Boarding School" class="w-full h-full object-cover">
                 </div>
 
                 <!-- FLOATING TOP-RIGHT ROTATED CARD -->
-                <div class="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 w-[160px] h-[100px] rounded-[12px] bg-white shadow-xl overflow-hidden transform rotate-6 z-10 transition-transform duration-300 hover:rotate-0">
-                    <img src="{{ asset('assets/backpacker.avif') }}" alt="Backpacker IDN" class="w-full h-full object-cover">
+                <div class="absolute top-0 right-0 w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[12px] bg-white shadow-xl overflow-hidden transform rotate-6 z-10 transition-transform duration-300 hover:rotate-0">
+                    <img src="{{ asset('assets/program/backpacker/backpacker.avif') }}" alt="Backpacker IDN" class="w-full h-full object-cover">
                 </div>
 
                 <!-- FLOATING BOTTOM-LEFT ROTATED CARD -->
-                <div class="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 w-[160px] h-[100px] rounded-[12px] bg-white shadow-xl overflow-hidden transform -rotate-6 z-10 transition-transform duration-300 hover:rotate-0">
-                    <img src="{{ asset('assets/basket.avif') }}" alt="Kegiatan Santri IDN" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 w-[130px] sm:w-[160px] h-[80px] sm:h-[100px] rounded-[12px] bg-white shadow-xl overflow-hidden transform -rotate-6 z-10 transition-transform duration-300 hover:rotate-0">
+                    <img src="{{ asset('assets/ekskul/basket.avif') }}" alt="Kegiatan Santri IDN" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -176,10 +176,10 @@
             <!-- 3 MAJOR CARDS CONTAINER -->
             <div class="flex flex-col gap-8 w-full">
                 
-                <!-- CARD 01: TKJ (Figma Node 19889:6045 - p-[48px], bg-white, rounded-[20px]) -->
-                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-[48px] flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-[56px] w-full">
+                <!-- CARD 01: TKJ -->
+                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-8 lg:p-[48px] flex flex-col xl:flex-row items-start justify-between gap-8 xl:gap-[40px] w-full max-w-full overflow-hidden">
                     <!-- LEFT COLUMN -->
-                    <div class="flex flex-col gap-4 items-start text-left w-full lg:w-[326px] shrink-0">
+                    <div class="flex flex-col gap-4 items-start text-left w-full xl:w-[300px] shrink-0">
                         <div class="flex flex-col gap-0.5 w-full">
                             <span class="font-semibold text-[36px] md:text-[40px] leading-[44px] md:leading-[50px] text-[#cee3ff]">01</span>
                             <span class="text-[#0c61cf] text-[14px] font-normal">Network Engineer</span>
@@ -195,10 +195,10 @@
                         </div>
                     </div>
 
-                    <!-- MATERI & PROSPEK CONTAINER (Side-by-side on Tablet & Desktop) -->
-                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 lg:gap-[56px] items-start w-full lg:w-auto shrink-0">
+                    <!-- MATERI & PROSPEK CONTAINER -->
+                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-8 lg:gap-10 items-start w-full xl:w-auto flex-1 max-w-full overflow-hidden">
                         <!-- MIDDLE COLUMN: MATERI UTAMA -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[300px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[260px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Materi Utama</span>
                             <div class="flex flex-col gap-3 w-full">
                                 <div class="flex items-center gap-2 text-[#717680] text-[15px] md:text-[16px]">
@@ -234,22 +234,22 @@
                         </div>
 
                         <!-- RIGHT COLUMN: PROSPEK KARIER -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[175px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[200px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Prospek Karier</span>
-                            <div class="flex flex-wrap flex-col gap-3 w-full">
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Cloud Engineer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Network Administrator</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Security Engineer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">IT Support</span>
+                            <div class="flex flex-col gap-2.5 w-full">
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Cloud Engineer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Network Administrator</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Security Engineer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">IT Support</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CARD 02: RPL (Figma Node 19889:6090 - p-[48px], bg-white, rounded-[20px]) -->
-                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-[48px] flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-[56px] w-full">
+                <!-- CARD 02: RPL -->
+                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-8 lg:p-[48px] flex flex-col xl:flex-row items-start justify-between gap-8 xl:gap-[40px] w-full max-w-full overflow-hidden">
                     <!-- LEFT COLUMN -->
-                    <div class="flex flex-col gap-4 items-start text-left w-full lg:w-[326px] shrink-0">
+                    <div class="flex flex-col gap-4 items-start text-left w-full xl:w-[300px] shrink-0">
                         <div class="flex flex-col gap-0.5 w-full">
                             <span class="font-semibold text-[36px] md:text-[40px] leading-[44px] md:leading-[50px] text-[#cee3ff]">02</span>
                             <span class="text-[#0c61cf] text-[14px] font-normal">Software Developer</span>
@@ -265,10 +265,10 @@
                         </div>
                     </div>
 
-                    <!-- MATERI & PROSPEK CONTAINER (Side-by-side on Tablet & Desktop) -->
-                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 lg:gap-[56px] items-start w-full lg:w-auto shrink-0">
+                    <!-- MATERI & PROSPEK CONTAINER -->
+                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-8 lg:gap-10 items-start w-full xl:w-auto flex-1 max-w-full overflow-hidden">
                         <!-- MIDDLE COLUMN: MATERI UTAMA -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[300px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[260px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Materi Utama</span>
                             <div class="flex flex-col gap-3 w-full">
                                 <div class="flex items-center gap-2 text-[#717680] text-[15px] md:text-[16px]">
@@ -304,22 +304,22 @@
                         </div>
 
                         <!-- RIGHT COLUMN: PROSPEK KARIER -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[188px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[200px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Prospek Karier</span>
-                            <div class="flex flex-wrap flex-col gap-3 w-full">
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Web Developer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Mobile App Developer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Quality Assurance Tester</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Software Engineer</span>
+                            <div class="flex flex-col gap-2.5 w-full">
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Web Developer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Mobile App Developer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Quality Assurance Tester</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Software Engineer</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CARD 03: DKV (Figma Node 19889:6135 - p-[48px], bg-white, rounded-[20px]) -->
-                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-[48px] flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-[56px] w-full">
+                <!-- CARD 03: DKV -->
+                <div class="bg-white border border-[#e9eaeb] rounded-[20px] p-6 md:p-8 lg:p-[48px] flex flex-col xl:flex-row items-start justify-between gap-8 xl:gap-[40px] w-full max-w-full overflow-hidden">
                     <!-- LEFT COLUMN -->
-                    <div class="flex flex-col gap-4 items-start text-left w-full lg:w-[326px] shrink-0">
+                    <div class="flex flex-col gap-4 items-start text-left w-full xl:w-[300px] shrink-0">
                         <div class="flex flex-col gap-0.5 w-full">
                             <span class="font-semibold text-[36px] md:text-[40px] leading-[44px] md:leading-[50px] text-[#cee3ff]">03</span>
                             <span class="text-[#0c61cf] text-[14px] font-normal">UI/UX Designer</span>
@@ -335,10 +335,10 @@
                         </div>
                     </div>
 
-                    <!-- MATERI & PROSPEK CONTAINER (Side-by-side on Tablet & Desktop) -->
-                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 lg:gap-[56px] items-start w-full lg:w-auto shrink-0">
+                    <!-- MATERI & PROSPEK CONTAINER -->
+                    <div class="flex flex-col sm:flex-row gap-8 sm:gap-8 lg:gap-10 items-start w-full xl:w-auto flex-1 max-w-full overflow-hidden">
                         <!-- MIDDLE COLUMN: MATERI UTAMA -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[300px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[260px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Materi Utama</span>
                             <div class="flex flex-col gap-3 w-full">
                                 <div class="flex items-center gap-2 text-[#717680] text-[15px] md:text-[16px]">
@@ -374,13 +374,13 @@
                         </div>
 
                         <!-- RIGHT COLUMN: PROSPEK KARIER -->
-                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-[180px] shrink-0">
+                        <div class="flex flex-col gap-4 items-start text-left w-full sm:w-1/2 xl:w-[200px] flex-1">
                             <span class="text-[#717680] text-[14px] font-normal">Prospek Karier</span>
-                            <div class="flex flex-wrap flex-col gap-3 w-full">
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">UI/UX Designer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Video Editor & Animator</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">3D Designer</span>
-                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit">Graphic Designer</span>
+                            <div class="flex flex-col gap-2.5 w-full">
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">UI/UX Designer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Video Editor & Animator</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">3D Designer</span>
+                                <span class="bg-white border border-[#e9eaeb] text-[#181d27] px-3.5 py-2 rounded-full text-[14px] w-fit max-w-full">Graphic Designer</span>
                             </div>
                         </div>
                     </div>
@@ -437,7 +437,7 @@
                 <div class="flex flex-col gap-8 w-full">
                     <!-- IMAGE PLACEHOLDER (500px height - Empty placeholder per directive) -->
                     <div class="w-full h-[300px] sm:h-[500px] rounded-[20px] bg-[#eaecf0] border-4 border-[#e9eaeb] flex items-center justify-center overflow-hidden">
-                        <img src="{{ asset('assets/idn_jonggol.avif') }}" alt="IDN Jonggol" class="w-full h-full object-cover">
+                        <img src="{{ asset('assets/campuses/idn_jonggol.avif') }}" alt="IDN Jonggol" class="w-full h-full object-cover">
                     </div>
 
                     <!-- INFO ROW -->
@@ -489,7 +489,7 @@
                     <!-- SCHOOL 2: IDN Akhwat -->
                     <div class="flex flex-col gap-6 w-full">
                         <div class="w-full h-[250px] sm:h-[350px] rounded-[20px] bg-[#eaecf0] flex items-center justify-center overflow-hidden">
-                            <img src="{{ asset('assets/idn_akhwat.avif') }}" alt="IDN Akhwat" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/campuses/idn_akhwat.avif') }}" alt="IDN Akhwat" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <div class="flex flex-col gap-4 items-start w-full">
@@ -532,7 +532,7 @@
                     <!-- SCHOOL 3: IDN Solo -->
                     <div class="flex flex-col gap-6 w-full">
                         <div class="w-full h-[250px] sm:h-[350px] rounded-[20px] bg-[#eaecf0] flex items-center justify-center overflow-hidden">
-                            <img src="{{ asset('assets/idn_solo.avif') }}" alt="IDN Solo" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/campuses/idn_solo.avif') }}" alt="IDN Solo" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <div class="flex flex-col gap-4 items-start w-full">
@@ -575,7 +575,7 @@
                     <!-- SCHOOL 4: IDN Pamijahan -->
                     <div class="flex flex-col gap-6 w-full">
                         <div class="w-full h-[250px] sm:h-[350px] rounded-[20px] bg-[#eaecf0] flex items-center justify-center overflow-hidden">
-                            <img src="{{ asset('assets/idn_pamijahan.avif') }}" alt="IDN Pamijahan" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/campuses/idn_pamijahan.avif') }}" alt="IDN Pamijahan" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <div class="flex flex-col gap-4 items-start w-full">
@@ -618,7 +618,7 @@
                     <!-- SCHOOL 5: IDN Sentul -->
                     <div class="flex flex-col gap-6 w-full">
                         <div class="w-full h-[250px] sm:h-[350px] rounded-[20px] bg-[#eaecf0] flex items-center justify-center overflow-hidden">
-                            <img src="{{ asset('assets/idn_sentul.avif') }}" alt="IDN Sentul" class="w-full h-full object-cover">
+                            <img src="{{ asset('assets/campuses/idn_sentul.avif') }}" alt="IDN Sentul" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <div class="flex flex-col gap-4 items-start w-full">

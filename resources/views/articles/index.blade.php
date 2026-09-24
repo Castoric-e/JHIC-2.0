@@ -34,10 +34,10 @@
         <!-- Hero Header Section -->
         <section class="w-full bg-[#fafafa]">
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[160px] pt-10 md:pt-16 lg:pt-[110px] pb-8 md:pb-12 lg:pb-[60px]">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-[56px] items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-[56px] items-center">
                     
                     <!-- Left Hero Content -->
-                    <div class="lg:col-span-6 xl:col-span-7 flex flex-col gap-3 md:gap-4 max-w-[516px]">
+                    <div class="lg:col-span-7 flex flex-col gap-3 md:gap-4 w-full lg:max-w-[516px]">
                         <span class="text-[#717680] text-sm md:text-base font-normal">Kabar Terbaru Kami</span>
                         
                         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold text-[#0b0d12] tracking-[-2.24px] leading-tight lg:leading-[68px] font-['Funnel_Display',sans-serif]">
@@ -50,9 +50,9 @@
                     </div>
 
                     <!-- Right Hero Image Frame -->
-                    <div class="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
-                        <div class="border-8 border-white/40 rounded-[18px] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] w-full lg:w-[548px] max-w-[548px] h-[260px] sm:h-[320px] lg:h-[370px] shrink-0 overflow-hidden relative bg-slate-200">
-                            <img src="{{ asset('assets/' . rawurlencode('artikel-img.avif')) }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end w-full">
+                        <div class="border-8 border-white/40 rounded-[18px] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] w-full max-w-[548px] h-[260px] sm:h-[320px] lg:h-[340px] xl:h-[370px] shrink-0 overflow-hidden relative bg-slate-200">
+                            <img src="{{ asset('assets/pages/articles/artikel-img.avif') }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
                         </div>
                     </div>
 

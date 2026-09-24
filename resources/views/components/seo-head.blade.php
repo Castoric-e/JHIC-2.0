@@ -2,7 +2,7 @@
     'title' => "IDN Boarding School - Menghafal Al-Qur'an, Membangun Teknologi",
     'description' => "IDN Boarding School adalah Sekolah SMP & SMA IT Terbaik di Bogor yang berfokus pada Menghafal Al-Qur'an dan Penguasaan Teknologi (IT), Coding, Cyber Security, dan UI/UX.",
     'keywords' => "IDN Boarding School, Sekolah IT Bogor, SMP IT Bogor, SMA IT Terbaik, Boarding School Tahfizh, Sekolah Coding, PPDB IDN",
-    'image' => asset('assets/logo_idn.png'),
+    'image' => asset('assets/logos/logo_idn.png'),
     'type' => "website",
     'article' => null
 ])
@@ -37,7 +37,7 @@
     '@type' => 'EducationalOrganization',
     'name' => 'IDN Boarding School',
     'url' => url('/'),
-    'logo' => asset('assets/logo_idn.png'),
+    'logo' => asset('assets/logos/logo_idn.png'),
     'description' => "Sekolah SMP & SMA IT Terbaik di Bogor yang berfokus pada Menghafal Al-Qur'an dan Penguasaan Teknologi (IT).",
     'address' => [
         '@type' => 'PostalAddress',
@@ -77,7 +77,7 @@
         'name' => 'IDN Boarding School',
         'logo' => [
             '@type' => 'ImageObject',
-            'url' => asset('assets/logo_idn.png')
+            'url' => asset('assets/logos/logo_idn.png')
         ]
     ],
     'description' => $description
