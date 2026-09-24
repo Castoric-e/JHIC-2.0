@@ -80,7 +80,7 @@
             <!-- IMAGE & USER BADGE CONTAINER (Bottom on Mobile/Tablet per Figma Node 20123:29917) -->
             <div class="w-full flex flex-col items-center gap-6 order-2 lg:order-1 shrink-0 lg:w-[410px]">
                 <div class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:w-[410px] aspect-square relative rounded-[18px] bg-[#eaecf0] flex items-center justify-center overflow-hidden border-8 border-white/40 shadow-sm mx-auto lg:mx-0">
-                    <img src="{{ asset('assets/pages/tentang-kami/Mr%20Beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/pages/tentang-kami/Mr Beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
                 </div>
 
                 <!-- USER BADGE (Centered on Mobile/Tablet) -->
@@ -138,7 +138,7 @@
             <div class="w-full max-w-[500px] xl:w-[500px] shrink-0 relative my-8 xl:my-0 p-4 sm:p-6">
                 <!-- MAIN CENTER CARD -->
                 <div class="w-full h-[260px] sm:h-[340px] md:h-[374px] relative rounded-[18px] bg-[#eaecf0] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] overflow-hidden flex items-center justify-center">
-                    <img src="{{ asset('assets/campuses/jonggol%20ikhwan.avif') }}" alt="Visi Misi IDN Boarding School" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/campuses/jonggol ikhwan.avif') }}" alt="Visi Misi IDN Boarding School" class="w-full h-full object-cover">
                 </div>
 
                 <!-- FLOATING TOP-RIGHT ROTATED CARD -->

@@ -71,7 +71,7 @@
             <!-- RIGHT HERO IMAGE (Full width on mobile/tablet) -->
             <div class="w-full lg:w-[449px] h-[320px] sm:h-[400px] lg:h-[456px] shrink-0 relative mt-4 lg:mt-0">
                 <div class="w-full h-full rounded-[18px] shadow-[12px_12px_56px_0px_rgba(0,4,45,0.16)] overflow-hidden bg-slate-200">
-                    <img src="{{ asset('assets/pages/home/Main%20Image.avif') }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/pages/home/Main Image.avif') }}" alt="Gedung IDN Boarding School" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -354,28 +354,28 @@
             <!-- AWARDS GRID (1 column on mobile/tablet, 2 on desktop - 550x312px) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full justify-items-center">
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%201.avif') }}" alt="Pencapaian Wisudawan 1" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 1.avif') }}" alt="Pencapaian Wisudawan 1" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%202.avif') }}" alt="Pencapaian Wisudawan 2" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 2.avif') }}" alt="Pencapaian Wisudawan 2" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%203.avif') }}" alt="Pencapaian Wisudawan 3" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 3.avif') }}" alt="Pencapaian Wisudawan 3" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%204.avif') }}" alt="Pencapaian Wisudawan 4" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 4.avif') }}" alt="Pencapaian Wisudawan 4" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%205.avif') }}" alt="Pencapaian Wisudawan 5" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 5.avif') }}" alt="Pencapaian Wisudawan 5" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%206.avif') }}" alt="Pencapaian Wisudawan 6" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 6.avif') }}" alt="Pencapaian Wisudawan 6" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%207.avif') }}" alt="Pencapaian Wisudawan 7" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 7.avif') }}" alt="Pencapaian Wisudawan 7" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
                 <div class="group w-full max-w-[550px] aspect-[550/312] rounded-[14px] overflow-hidden bg-slate-200 shadow-sm border border-[#e9eaeb] transition-all duration-300 hover:shadow-md">
-                    <img src="{{ asset('assets/prestasi/Award%20Image%208.avif') }}" alt="Pencapaian Wisudawan 8" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
+                    <img src="{{ asset('assets/prestasi/Award Image 8.avif') }}" alt="Pencapaian Wisudawan 8" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105">
                 </div>
             </div>
 
