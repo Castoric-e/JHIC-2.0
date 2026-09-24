@@ -41,7 +41,11 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
             $this->app['request']->server->set('HTTPS', 'on');
             if (request()->getHost()) {
-                URL::forceRootUrl(request()->schemeAndHttpHost());
+                $currentHost = request()->schemeAndHttpHost();
+                URL::forceRootUrl($currentHost);
+                config(['app.url' => $currentHost]);
+                config(['app.asset_url' => $currentHost]);
+                Vite::useAssetUrl($currentHost . '/build');
             }
         }
     }
