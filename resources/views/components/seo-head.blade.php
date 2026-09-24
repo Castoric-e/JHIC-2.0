@@ -84,6 +84,3 @@
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endif
-
-<!-- Tailwind CSS v4 Fallback Script for Production/Railway -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
