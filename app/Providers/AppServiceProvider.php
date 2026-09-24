@@ -40,6 +40,9 @@ class AppServiceProvider extends ServiceProvider
         ) {
             URL::forceScheme('https');
             $this->app['request']->server->set('HTTPS', 'on');
+            if (request()->getHost()) {
+                URL::forceRootUrl(request()->schemeAndHttpHost());
+            }
         }
     }
 }
