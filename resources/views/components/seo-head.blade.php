@@ -85,5 +85,9 @@
 </script>
 @endif
 
+<!-- Alpine.js Collapse Plugin & Core Script -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 <!-- Tailwind CSS v4 Fallback Script for Production/Railway -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
