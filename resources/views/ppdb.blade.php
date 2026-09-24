@@ -71,7 +71,7 @@
 
             <!-- RIGHT HERO ILLUSTRATION IMAGE -->
             <div class="w-full max-w-[460px] lg:w-[460px] h-[260px] sm:h-[290px] shrink-0 relative flex items-center justify-start mt-4 lg:mt-0">
-                <img src="{{ asset('assets/pages/home/virtual%20ngaji.avif') }}" alt="Penerimaan Santri Baru IDN" class="max-w-full max-h-full object-contain object-left">
+                <img src="{{ asset('assets/pages/home/virtual-ngaji.avif') }}" alt="Penerimaan Santri Baru IDN" class="max-w-full max-h-full object-contain object-left">
             </div>
 
         </div>
@@ -159,7 +159,7 @@
             
             <!-- LEFT ILLUSTRATION IMAGE -->
             <div class="w-full max-w-[450px] lg:w-[450px] h-[260px] sm:h-[284px] shrink-0 relative flex items-center justify-start">
-                <img src="{{ asset('assets/pages/home/virtual%20buku.avif') }}" alt="Persyaratan Administrasi IDN" class="max-w-full max-h-full object-contain object-left">
+                <img src="{{ asset('assets/pages/home/virtual-buku.avif') }}" alt="Persyaratan Administrasi IDN" class="max-w-full max-h-full object-contain object-left">
             </div>
 
             <!-- RIGHT CONTENT -->
