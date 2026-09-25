@@ -266,7 +266,7 @@
                         <button @click="goTo(i)" 
                                 type="button" 
                                 class="transition-all duration-300 focus:outline-none cursor-pointer"
-                                :class="activeIndex === i ? 'w-7 h-2.5 bg-[#0c61cf] rounded-full' : 'w-2.5 h-2.5 bg-[#d5d7da] hover:bg-slate-400 rounded-full'"
+                                :class="activeIndex === i ? 'w-2.5 h-2.5 bg-[#0c61cf] rounded-full' : 'w-2.5 h-2.5 bg-[#d5d7da] hover:bg-slate-400 rounded-full'"
                                 :aria-label="`Go to slide ${i + 1}`">
                         </button>
                     </template>

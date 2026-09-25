@@ -1,3 +1,165 @@
+## 2026-09-25 - Match 'Kenapa Memilih IDN' Section with Figma & User Reference Image
+
+### Sedang / Sudah Membuat
+
+- Menyesuaikan section "Kenapa Memilih IDN Boarding School?" di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) dan styling hover di [app.css](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/css/app.css) agar 100% presisi dengan desain Figma (Node `19900:12369`) dan gambar referensi user:
+  - Mengubah warna latar belakang section menjadi `bg-[#f5f5f5]` (sesuai Figma `--bg-tertiary: #f5f5f5`), sehingga kartu putih `bg-white rounded-[18px]` tampil kontras, bersih, dan menonjol.
+  - Memperbarui seluruh ikon pada 6 card agar sesuai dengan ikon Hugeicons pada Figma:
+    1. **Sekolah IT Terbaik**: Ikon Globe (`globe-earth`).
+    2. **Ekstrakurikuler Menarik**: Ikon Bola Sepak (`football`).
+    3. **Pengajar Profesional**: Ikon Topi Toga / Wisuda (`graduation-cap`).
+    4. **Program Unggulan**: Ikon Piala (`trophy`).
+    5. **Pesantren Berbasis IT**: Ikon Perisai Centang (`shield-check`).
+    6. **Full Praktik**: Ikon Laptop (`laptop`).
+  - Menyelaraskan status default dan hover pada seluruh kartu:
+    - Seluruh 6 kartu memiliki status default yang seragam (kartu putih dengan tombol lingkaran bergaris tepi abu-abu `border-2 border-[#e9eaeb]` dan ikon abu-abu).
+    - Kartu ke-3 ("Pengajar Profesional") di gambar referensi merupakan contoh status saat kartu di-hover (`:hover`). Kini ketika kartu apa pun di-hover, border kartu berubah menjadi biru `#0c61cf`, mendapat bayangan halus `shadow-[0px_4px_20px_rgba(0,0,0,0.08)]`, dan tombol lingkaran berubah menjadi latar biru muda `bg-[#f0f6fe]` dengan border biru `#0c61cf` serta ikon biru `#0c61cf`.
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `resources/css/app.css`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Card "Pengajar Profesional" kini berstatus default sama seperti card lainnya, dan seluruh card memiliki animasi transisi hover biru yang mulus sesuai desain.
+
+## 2026-09-25 - Fix Marquee Hover Position Jump via Web Animations playbackRate
+
+### Sedang / Sudah Membuat
+
+- Memperbaiki bug lompatan posisi (*position jumping / glitch*) pada carousel marquee "Kerjasama Industri" di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) dan [app.css](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/css/app.css).
+- **Penyebab Masalah**: Mengubah properti CSS `animation-duration` secara dinamis saat hover menyebabkan kalkulasi *timeline progress* pada browser menghitung ulang `(elapsedTime % newDuration)`, sehingga posisi elemen langsung melompat drastis ke titik lain dan berganti kartu seketika.
+- **Solusi**:
+  - Menghapus aturan `animation-duration` pada hover di [app.css](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/css/app.css).
+  - Mengimplementasikan Web Animations API native melalui Alpine.js `x-init` dengan memodifikasi `animation.playbackRate`:
+    - Saat kursor masuk (`mouseenter` / `touchstart`), `playbackRate` diturunkan ke `0.25` (melambat 4x lipat).
+    - Saat kursor keluar (`mouseleave` / `touchend`), `playbackRate` dikembalikan ke `1.0` (kecepatan normal).
+  - Mekanisme `playbackRate` hanya memperlambat laju jam animasi tanpa mengubah progres posisi saat itu sedikit pun, sehingga kartu yang sedang ditunjuk tetap berada persis di tempatnya dan melambat dengan sangat mulus (*zero jump / 100% seamless*).
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `resources/css/app.css`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Marquee kini melambat secara mulus tanpa melompat atau berganti kartu seketika saat di-hover.
+
+## 2026-09-25 - Single Row Horizontal Metric Stats Bar on Mobile
+
+
+### Sedang / Sudah Membuat
+
+- Mengubah tata letak bilah metrik statistik (*metric stats bar*) di bawah hero header pada [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) agar pada tampilan mobile tampil dalam 1 baris horizontal berjajar 4 kolom (*single horizontal row with 4 columns*), tidak lagi bertumpuk atas-bawah (2x2) sesuai gambar referensi yang dikirim user.
+- Mengubah kelas grid dari `grid-cols-2 md:grid-cols-4` menjadi `grid-cols-4` secara konsisten di semua ukuran layar.
+- Memastikan ketiga garis batas vertikal pemisah (`border-r border-[#e9eaeb]`) aktif di antara masing-masing metrik (antara 10+ Tahun Berdiri, 5 Cabang, 1.500+ Alumni Sukses, dan 1 Milyar+ Penghasilan Siswa).
+- Menyesuaikan ukuran tipografi responsif pada mobile (`text-[17px] sm:text-[24px] md:text-[28px]` untuk angka dan `text-[10.5px] xs:text-[12px] sm:text-[14px] md:text-[16px]` untuk label) agar seluruh teks muat rapi dalam satu baris tanpa terpotong atau saling tumpang tindih.
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Bilah metrik pada mobile kini tampil 1 baris horizontal penuh sejajar 4 kolom dengan garis pemisah vertikal rapi, persis seperti gambar yang dikirimkan.
+
+## 2026-09-25 - Center Last Row University Logos on Mobile View
+
+### Sedang / Sudah Membuat
+
+- Memperbaiki tata letak baris terakhir logo universitas alumni pada section "Universitas Alumni IDN Boarding School" di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php).
+- Pada tampilan mobile (`grid-cols-4`), terdapat total 50 universitas yang menghasilkan 12 baris berisi 4 logo dan baris ke-13 berisi 2 logo sisa (Universitas Airlangga dan Universiti Putra Malaysia) yang sebelumnya menempel di sisi kiri (kolom 1 dan kolom 2).
+- Menambahkan kelas utilitas responsif `max-sm:col-start-2` pada item ke-49 serta selektor `max-sm:[&>:nth-child(4n+1):nth-last-child(2)]:col-start-2` pada kontainer grid.
+- Dengan aturan ini, logo ke-49 otomatis mulai pada kolom ke-2 dan logo ke-50 menempati kolom ke-3 (kolom 1 dan kolom 4 kosong), sehingga kedua logo di baris terakhir berada tepat di tengah (*perfectly centered*) secara simetris dan rapi.
+- Pada tampilan tablet (`sm:` dan `md:`) serta desktop (`lg:`), tata letak kolom otomatis tetap simetris dan terdistribusi sempurna tanpa terpengaruh.
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Dua logo universitas terakhir di baris paling bawah kini berada persis di tengah pada layar mobile/HP.
+
+## 2026-09-25 - Match Testimonial Icons (Quote, Star, Profile) 100% with Figma Reference
+
+### Sedang / Sudah Membuat
+
+- Menyesuaikan seluruh ikon pada kartu testimoni di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) agar 100% persis dengan gambar referensi dan desain Figma (Node `19900:12609`):
+  - **Ikon Petik Dua (*Quote Icon*)**: Mengganti teks font tanda petik (`“`) dengan SVG path resmi Figma node `19594:8668` (tanda petik ganda outline biru IDN `#0c61cf` dengan sudut membulat berukuran 32x32px).
+  - **Ikon Bintang (*Star Rating Icon*)**: Mengganti teks unicode bintang (`★★★★★`) dengan 5 SVG path resmi bintang Figma node `19594:8670` berwarna oranye `#dc6903` berukuran 24x24px dengan jarak rapat `gap-[2px]`.
+  - **Ikon Foto Profil (*User Profile Avatar*)**: Mengganti emoji/avatar placeholder dengan SVG lingkaran profil pengguna resmi Figma node `19594:8678` (`user-circle` berwarna abu-abu `#717680` berukuran 42x42px).
+  - **Teks Testimoni Suryanto Hinarto**: Melengkapi kutipan testimoni sesuai gambar referensi dan Figma: menambahkan kalimat *"Para lulusan IDN memiliki karakter yang bertanggung jawab terhadap tugas yang diberikan, kepribadian yang baik, serta mampu bekerja sama dalam tim dengan sangat baik."*
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Seluruh kartu testimoni (Perusahaan, Wali Santri, dan Alumni) kini memiliki tampilan ikon petik dua, bintang rating, dan avatar profil yang 100% identik dengan desain referensi.
+
+## 2026-09-25 - Implement Smooth Side-Sliding Carousel Track with Perfect Spacing & Unclipped Shadow
+
+### Sedang / Sudah Membuat
+
+- Mengembalikan efek animasi geser horizontal dari samping (*side-sliding carousel animation*) pada tab testimoni "Apa Kata Mereka Tentang IDN?" di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) sesuai permintaan user (`transition-transform duration-500 ease-in-out` dengan `transform: translateX(0%)`, `translateX(-100%)`, dan `translateX(-200%)`).
+- Memastikan tidak ada kartu dari slide berikutnya yang mengintip atau menempel (*no card peeking / sticking*) pada saat posisi diam (idle):
+  - Setiap slide tab (Perusahaan, Wali Santri, Alumni) diatur memiliki lebar tepat 100% viewport (`w-full shrink-0`) di dalam kontainer `overflow-hidden`.
+  - Kartu pada tab aktif tidak lagi terhimpit atau berdampingan tanpa batas dengan kartu dari tab selanjutnya.
+- Mengatasi masalah bayangan terpotong (*clipped shadow*):
+  - Menggunakan teknik padding vertikal `py-4 -my-4` pada kontainer `overflow-hidden` sehingga bayangan atas dan bawah (`shadow-sm` dan efek hover `hover:shadow-md`) memiliki ruang leluasa (16px) dan tidak terpotong.
+  - Menambahkan padding horizontal `px-1 sm:px-2` di bagian dalam setiap slide agar bayangan di sisi kiri dan kanan kartu terluar tetap utuh dan indah tanpa terpotong batas overflow.
+- Memperbaiki ikon jurusan DKV pada section "Jurusan yang ada di IDN Boarding School" di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) menjadi ikon Lucide *pen-tool* (mata pena kaligrafi / *fountain pen nib*) dengan sudut diagonal presisi 100% sesuai referensi desain.
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `AI_log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Saat tab "Wali Santri", "Alumni", atau "Perusahaan" diklik, transisi kartu bergeser mulus dan elegan dari samping (*sliding transition*).
+- Tidak ada kartu dari tab lain yang mengintip atau menempel di sisi kanan saat sedang aktif.
+- Seluruh bayangan kartu testimoni (`box-shadow`) tampil utuh tanpa terpotong di semua sisi.
+
+
 ## 2026-09-25 - Precision Vertical Centering for Button Arrow Icons
 
 ### Sedang / Sudah Membuat
@@ -2653,5 +2815,44 @@ DONE
 
 ### Catatan
 - Penyebab utama hover terasa tidak smooth di local adalah ketiadaan proses `npm run dev` (atau belum dilakukan `npm run build` setelah mengubah kode Blade), serta ketidaksinkronan transisi warna dan transform pada SVG arrow.
+
+## 2026-09-25 - Pembaruan Icon Jurusan DKV di Halaman Home Menjadi Pen Tool 100% Persis
+
+### Sedang / Sudah Membuat
+- Mengganti icon jurusan Desain Komunikasi Visual (DKV) pada section "Jurusan yang ada di IDN Boarding School" di [resources/views/welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php) dari icon pensil menjadi icon vector pen tool (pen nib) berorientasi diagonal -45° lengkap dengan collar band, slit tengah, dan lubang sirkular (breather hole) 100% persis sesuai dengan gambar referensi.
+- Mempertahankan styling lingkaran pembungkus: `w-12 h-12 rounded-full border border-[#c2d8f5] bg-white flex items-center justify-center text-[#0c61cf]`.
+- Menjalankan `npm run build` dengan hasil sukses (Exit Code 0).
+- Menjalankan test suite PHPUnit dengan hasil seluruh tes lulus (Exit Code 0).
+
+### File
+- `resources/views/welcome.blade.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Icon SVG vector pen tool kini 100% identik dengan tangkapan layar yang diberikan user dan konsisten dengan styling IDN Blue `#0c61cf`.
+
+## 2026-09-25 - Perbaikan Shadow Terpotong pada Section Testimoni Home
+
+### Sedang / Sudah Membuat
+- Memperbaiki masalah box-shadow kartu testimoni yang terpotong tajam pada section *"Apa Kata Mereka Tentang IDN?"* di [resources/views/welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php).
+- Menambahkan padding vertikal dan horizontal pada container slider yang memiliki `overflow-hidden` menggunakan class `-my-6 py-6 -mx-4 px-4`. Hal ini memberikan ruang napas 24px di atas dan bawah serta 16px di kiri dan kanan sehingga bayangan (`shadow-sm` dan `hover:shadow-md`) dapat memudar secara halus dan natural tanpa terpotong garis batas container.
+- Mengatur wrapper kartu menjadi `items-stretch` dan kartu menjadi `lg:flex-1` agar tinggi kartu konsisten dan lebar terdistribusi rata.
+- Menjalankan `npm run build` sukses (Exit Code 0).
+- Memverifikasi pengujian dengan PHPUnit seluruh tes lulus (Exit Code 0).
+
+### File
+- `resources/views/welcome.blade.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Efek bayangan (box shadow) kartu kini terlihat penuh dan lembut tanpa ada bagian yang terpotong di tepi atas, bawah, maupun samping.
+
+
 
 

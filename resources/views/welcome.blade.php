@@ -16,6 +16,7 @@
         
         <!-- Alpine.js for Interactive Component State -->
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <style>[x-cloak] { display: none !important; }</style>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -72,22 +73,22 @@
         </div>
 
         <!-- METRIC CONTAINER (1120px width x 120px height, centered) -->
-        <div class="w-[1120px] max-w-full mx-auto border-t border-b border-[#e9eaeb] py-4 mt-6 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 text-center px-4">
-            <div class="border-r border-[#e9eaeb] px-4 md:px-6 py-3 flex flex-col gap-1 items-center">
-                <span class="font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[38px] text-[#0c61cf]">10+</span>
-                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Tahun Berdiri</span>
+        <div class="w-[1120px] max-w-full mx-auto border-t border-b border-[#e9eaeb] py-3 sm:py-4 mt-6 md:mt-10 grid grid-cols-4 text-center px-1 sm:px-4">
+            <div class="border-r border-[#e9eaeb] px-1 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-col gap-1 items-center justify-center">
+                <span class="font-bold text-[17px] sm:text-[24px] md:text-[28px] leading-tight md:leading-[38px] text-[#0c61cf]">10+</span>
+                <span class="text-[#717680] text-[10.5px] xs:text-[12px] sm:text-[14px] md:text-[16px] leading-tight md:leading-[24px]">Tahun Berdiri</span>
             </div>
-            <div class="md:border-r border-[#e9eaeb] px-4 md:px-6 py-3 flex flex-col gap-1 items-center">
-                <span class="font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[38px] text-[#0c61cf]">5</span>
-                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Cabang</span>
+            <div class="border-r border-[#e9eaeb] px-1 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-col gap-1 items-center justify-center">
+                <span class="font-bold text-[17px] sm:text-[24px] md:text-[28px] leading-tight md:leading-[38px] text-[#0c61cf]">5</span>
+                <span class="text-[#717680] text-[10.5px] xs:text-[12px] sm:text-[14px] md:text-[16px] leading-tight md:leading-[24px]">Cabang</span>
             </div>
-            <div class="border-r border-[#e9eaeb] px-4 md:px-6 py-3 flex flex-col gap-1 items-center">
-                <span class="font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[38px] text-[#0c61cf]">1.500+</span>
-                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Alumni Sukses</span>
+            <div class="border-r border-[#e9eaeb] px-1 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-col gap-1 items-center justify-center">
+                <span class="font-bold text-[17px] sm:text-[24px] md:text-[28px] leading-tight md:leading-[38px] text-[#0c61cf]">1.500+</span>
+                <span class="text-[#717680] text-[10.5px] xs:text-[12px] sm:text-[14px] md:text-[16px] leading-tight md:leading-[24px]">Alumni Sukses</span>
             </div>
-            <div class="px-4 md:px-6 py-3 flex flex-col gap-1 items-center">
-                <span class="font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[38px] text-[#0c61cf]">1 Milyar+</span>
-                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Penghasilan Siswa</span>
+            <div class="px-1 sm:px-4 md:px-6 py-2 sm:py-3 flex flex-col gap-1 items-center justify-center">
+                <span class="font-bold text-[17px] sm:text-[24px] md:text-[28px] leading-tight md:leading-[38px] text-[#0c61cf]">1 Milyar+</span>
+                <span class="text-[#717680] text-[10.5px] xs:text-[12px] sm:text-[14px] md:text-[16px] leading-tight md:leading-[24px]">Penghasilan Siswa</span>
             </div>
         </div>
 
@@ -95,7 +96,7 @@
 
 
     <!-- 3. KENAPA MEMILIH IDN BOARDING SCHOOL? (Figma Node 19900:12369) -->
-    <section class="w-full max-w-full overflow-hidden flex flex-col items-center py-12 md:py-[90px] bg-white">
+    <section class="w-full max-w-full overflow-hidden flex flex-col items-center py-16 md:py-[110px] bg-[#f5f5f5]">
         <div class="w-[1120px] max-w-full mx-auto flex flex-col items-center gap-6 md:gap-8 px-4 sm:px-6">
             
             <!-- SECTION HEADER -->
@@ -109,13 +110,17 @@
             </div>
 
             <!-- 6 CARDS GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
                 
                 <!-- Card 1: Sekolah IT Terbaik -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9.5"/>
+                            <path d="M12 2.5a14.5 14.5 0 0 1 0 19a14.5 14.5 0 0 1 0-19z"/>
+                            <path d="M2.5 12h19"/>
+                            <path d="M4.5 7h15"/>
+                            <path d="M4.5 17h15"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -125,10 +130,16 @@
                 </div>
 
                 <!-- Card 2: Ekstrakurikuler Menarik -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9.5"/>
+                            <polygon points="12,8.2 15.6,10.8 14.2,15.2 9.8,15.2 8.4,10.8"/>
+                            <line x1="12" y1="8.2" x2="12" y2="2.5"/>
+                            <line x1="15.6" y1="10.8" x2="21.1" y2="8.9"/>
+                            <line x1="14.2" y1="15.2" x2="18.2" y2="19.8"/>
+                            <line x1="9.8" y1="15.2" x2="5.8" y2="19.8"/>
+                            <line x1="8.4" y1="10.8" x2="2.9" y2="8.9"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -138,11 +149,11 @@
                 </div>
 
                 <!-- Card 3: Pengajar Profesional -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 3.5L1 9l11 5.5l9-4.5v6.5h2V9L12 3.5z"/>
+                            <path d="M5 12.8v3.7c0 2.5 3.1 4.5 7 4.5s7-2 7-4.5v-3.7l-7 3.5-7-3.5z"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -152,10 +163,14 @@
                 </div>
 
                 <!-- Card 4: Program Unggulan -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H3.5a2 2 0 0 1-2-2V5.5a2 2 0 0 1 2-2H6"/>
+                            <path d="M18 9h2.5a2 2 0 0 0 2-2V5.5a2 2 0 0 0-2-2H18"/>
+                            <path d="M4 3.5h16v5.5a8 8 0 0 1-8 8 8 8 0 0 1-8-8V3.5z"/>
+                            <path d="M12 17v3"/>
+                            <path d="M8 20.5h8"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -165,10 +180,11 @@
                 </div>
 
                 <!-- Card 5: Pesantren Berbasis IT -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.5L4 5.5v6c0 5.25 3.4 10.15 8 11.5 4.6-1.35 8-6.25 8-11.5v-6l-8-3z"/>
+                            <path d="M9 12l2 2 4-4"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -178,10 +194,12 @@
                 </div>
 
                 <!-- Card 6: Full Praktik -->
-                <div class="feature-card bg-white border-2 border-[#e9eaeb] rounded-[18px] p-5 flex flex-col gap-4 items-start w-full">
-                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <div class="feature-card group bg-white rounded-[18px] p-5 md:p-6 flex flex-col gap-4 items-start w-full cursor-pointer">
+                    <div class="feature-icon-btn bg-white border-2 border-[#e9eaeb] w-12 h-12 rounded-full flex items-center justify-center text-[#414651] shrink-0 transition-colors duration-200">
+                        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3.5" y="4.5" width="17" height="11" rx="2"/>
+                            <path d="M2 18.5h20"/>
+                            <path d="M10 18.5a2 2 0 0 0 4 0"/>
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -293,8 +311,11 @@
                     <div class="flex flex-col gap-6 w-full items-start">
                         <div class="flex items-center justify-between w-full">
                             <div class="w-12 h-12 rounded-full border border-[#c2d8f5] bg-white flex items-center justify-center text-[#0c61cf]">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
+                                    <path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
+                                    <path d="m2.3 2.3 7.286 7.286" />
+                                    <circle cx="11" cy="11" r="2" />
                                 </svg>
                             </div>
                             <span class="bg-[#d9e7f9] text-[#0c61cf] px-3 py-1 rounded-full text-[12px] font-semibold">DKV</span>
@@ -386,14 +407,26 @@
                 <h2 class="font-heading font-bold text-[28px] md:text-[32px] leading-[38px] md:leading-[42px] text-[#0b0d12]">
                     Kerjasama Industri
                 </h2>
-                <div class="text-[#717680] text-[15px] md:text-[16px] leading-[24px] max-w-[750px]">
+                <div class="text-[#717680] text-[15px] md:text-[16px] leading-[24px] max-w-[1000px]">
                     <p>IDN Boarding School telah menjalin kerjasama dengan berbagai perusahaan, baik nasional maupun internasional</p>
                     <p>untuk mendukung berbagai program, dan pengembangan karir para siswa.</p>
                 </div>
             </div>
 
             <!-- MARQUEE LOGO TICKER CONTAINER -->
-            <div class="w-full overflow-hidden relative py-4 group">
+            <div class="w-full overflow-hidden relative py-4 group"
+                 x-data
+                 x-init="
+                    const mq = $el.querySelector('.animate-marquee');
+                    const setSpeed = (rate) => {
+                        const anims = mq ? mq.getAnimations() : [];
+                        anims.forEach(a => a.playbackRate = rate);
+                    };
+                    $el.addEventListener('mouseenter', () => setSpeed(0.25));
+                    $el.addEventListener('mouseleave', () => setSpeed(1));
+                    $el.addEventListener('touchstart', () => setSpeed(0.25), { passive: true });
+                    $el.addEventListener('touchend', () => setSpeed(1), { passive: true });
+                 ">
                 <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-[#fafafa] to-transparent z-10 pointer-events-none"></div>
                 <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-[#fafafa] to-transparent z-10 pointer-events-none"></div>
 
@@ -594,7 +627,7 @@
                     ['name' => 'Universitas Diponegoro (UNDIP)', 'img' => 'Univ diponegoro.avif'],
                     ['name' => 'Kütahya Dumlupınar Üniversitesi', 'img' => 'dumlupinar universitesi kutahya.avif'],
                     ['name' => 'Swiss German University (SGU)', 'img' => 'SGU.avif'],
-                    ['name' => 'Universitas Negeri Jakarta (UNJ)', 'img' => 'UJ.avif'],
+                    ['name' => 'Universitas Gadjah Mada (UGM)', 'img' => 'UJ.avif'],
                     ['name' => 'Universitas Pembangunan Nasional "Veteran" Jakarta (UPNVJ)', 'img' => 'UNIJA.avif'],
                     ['name' => 'Universitas Indraprasta PGRI (UNINDRA)', 'img' => 'PGRI.avif'],
                     ['name' => 'Universitas Komputer Indonesia (UNIKOM)', 'img' => 'UNIKOM.avif'],
@@ -604,7 +637,7 @@
                     ['name' => 'Harbour.Space University', 'img' => 'harbour space university.avif'],
                     ['name' => 'Universitas Lampung (UNILA)', 'img' => 'univ lampung.avif'],
                     ['name' => 'Universitas Borneo Tarakan (UBT)', 'img' => 'univ borneo tarakan.avif'],
-                    ['name' => 'Universitas Gadjah Mada (UGM)', 'img' => 'UP.avif'],
+                    ['name' => 'Universitas Pancasila (UP)', 'img' => 'UP.avif'],
                     ['name' => 'Universitas Esa Unggul (UAI / UEU)', 'img' => 'UAI.avif'],
                     ['name' => 'Universitas Teknologi Sumbawa (UTS)', 'img' => 'UTS.avif'],
                     ['name' => 'Universitas Airlangga (UNAIR)', 'img' => 'UNAIR.avif'],
@@ -612,13 +645,13 @@
                 ];
             @endphp
 
-            <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3 sm:gap-4 md:gap-5 w-full max-w-[1120px] mx-auto px-4 justify-items-center md:max-lg:[&>:nth-child(7n+1):last-child]:col-span-7 md:max-lg:[&>:nth-child(7n+1):last-child]:justify-self-center">
+            <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3 sm:gap-4 md:gap-5 w-full max-w-[1120px] mx-auto px-4 justify-items-center max-sm:[&>:nth-child(4n+1):nth-last-child(2)]:col-start-2 md:max-lg:[&>:nth-child(7n+1):last-child]:col-span-7 md:max-lg:[&>:nth-child(7n+1):last-child]:justify-self-center">
                 @foreach($allUniversities as $index => $u)
                 @php
                     $uName = is_array($u) ? $u['name'] : $u;
                     $uImg = is_array($u) && isset($u['img']) ? $u['img'] : null;
                 @endphp
-                <div class="univ-card bg-white w-[72px] sm:w-[94px] h-[72px] sm:h-[94px] rounded-[14px] sm:rounded-[18px] flex items-center justify-center cursor-pointer shadow-2xs"
+                <div class="univ-card bg-white w-[72px] sm:w-[94px] h-[72px] sm:h-[94px] rounded-[14px] sm:rounded-[18px] flex items-center justify-center cursor-pointer shadow-2xs {{ $loop->iteration === 49 ? 'max-sm:col-start-2' : '' }}"
                      onmousemove="const r=this.getBoundingClientRect(); this.style.setProperty('--mouse-x', (event.clientX-r.left)+'px'); this.style.setProperty('--mouse-y', (event.clientY-r.top)+'px');">
                     
                     @if($uImg)
@@ -671,49 +704,73 @@
             </div>
 
             <!-- TESTIMONIAL CARDS SLIDER CONTAINER -->
-            <div class="w-full overflow-hidden">
+            <div class="w-full overflow-hidden py-4 -my-4">
                 <div class="flex w-full transition-transform duration-500 ease-in-out"
                      :style="activeTab === 'Perusahaan' ? 'transform: translateX(0%);' : (activeTab === 'Wali Santri' ? 'transform: translateX(-100%);' : 'transform: translateX(-200%);')">
                     
                     <!-- TAB 1: PERUSAHAAN TESTIMONIALS -->
-                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-center justify-center">
+                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-stretch justify-center px-1 sm:px-2">
                         
                         <!-- Perusahaan 1 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:max-w-[530px] lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4 md:gap-5">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     “Team alumni SMK IDN siap untuk diberikan Tugas, dapat task dan mampu belajar cepat untuk menyesuaikan Tugas Technical yang cukup dynamis. Adanya team IDN sangat membantu akselerasi Teknis dan kompetensi terhadap kebutuhan Mobile Developer dan Kebutuhan Network Operation Center, IT & Internet Service . Semoga IDN Terus menghasilkan SDM yang terlatih baik soft skill atau pun hardskill.”
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Nugroho Wibisono</h4>
-                                    <span class="text-[#717680] text-[12px]">General Manager IT & Cyber Security Telkomsat</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Nugroho Wibisono</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">General Manager IT & Cyber Security Telkomsat</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Perusahaan 2 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:max-w-[530px] lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4 md:gap-5">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
-                                    MobileCom telah beberapa kali merekut siswa dan alumni IDN, dan yang dapat kami sampaikan adalah bahwa kami benar-benar puas dan bangga dengan pendidikan yang diberikan IDN Boarding School kepada para siswanya; kami sangat yakin bahwa IDN telah berhasil menumbuhkan ketangguhan mental dan kemampuan mereka untuk memasuki dunia kerja dengan lancar.
+                                    MobileCom telah beberapa kali merekrut siswa dan alumni IDN, dan yang dapat kami sampaikan adalah bahwa kami benar-benar puas dan bangga dengan pendidikan yang diberikan IDN Boarding School kepada para siswanya; kami sangat yakin bahwa IDN telah berhasil menumbuhkan ketangguhan mental dan kemampuan mereka untuk memasuki dunia kerja dengan lancar. Para lulusan IDN memiliki karakter yang bertanggung jawab terhadap tugas yang diberikan, kepribadian yang baik, serta mampu bekerja sama dalam tim dengan sangat baik.
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Suryanto Hinarto</h4>
-                                    <span class="text-[#717680] text-[12px]">CTO MobileCom</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Suryanto Hinarto</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">CTO MobileCom</span>
                                 </div>
                             </div>
                         </div>
@@ -721,64 +778,100 @@
                     </div>
 
                     <!-- TAB 2: WALI SANTRI TESTIMONIALS -->
-                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-center justify-center">
+                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-stretch justify-center px-1 sm:px-2">
                         
                         <!-- Wali Santri 1 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     "Awalnya ragu, tapi sekarang sangat bersyukur! Setelah beberapa bulan di IDN Boarding School, anak saya jadi jauh lebih mandiri, disiplin, dan sopan. Kemampuan IT-nya pun melesat hingga sudah bisa bikin website sendiri."
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Abu Athallah</h4>
-                                    <span class="text-[#717680] text-[12px]">Walisantri SMK IDN</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Abu Athallah</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Walisantri SMK IDN</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Wali Santri 2 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     'IDN Boarding School pilihan tepat! Kedua anak kami makin mandiri dan percaya diri berkat pendidikan adab, IT, hingga public speaking dan entrepreneurship.'
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Abu Kuswandi</h4>
-                                    <span class="text-[#717680] text-[12px]">Walisantri SMP IDN</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Abu Kuswandi</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Walisantri SMP IDN</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Wali Santri 3 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     'Bersekolah di IDN Boarding School membawa dampak luar biasa. Anak kami yang tadinya pendiam kini tumbuh menjadi lebih percaya diri dan berani tampil.'
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Abu Fauzan</h4>
-                                    <span class="text-[#717680] text-[12px]">Walisantri SMK IDN</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Abu Fauzan</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Walisantri SMK IDN</span>
                                 </div>
                             </div>
                         </div>
@@ -786,70 +879,105 @@
                     </div>
 
                     <!-- TAB 3: ALUMNI TESTIMONIALS -->
-                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-center justify-center">
+                    <div class="w-full shrink-0 flex flex-col lg:flex-row gap-5 items-stretch justify-center px-1 sm:px-2">
                         
                         <!-- Alumni 1 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     IDN adalah starting point saya di dunia IT, disana saya pertama kali mengenal pemrograman, pertama kali terjun ke dunia industri (PKL), dan pertama kali public speaking.
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Hafidz Naufal</h4>
-                                    <span class="text-[#717680] text-[12px]">Alumni SMK IDN · Angkatan 0</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Hafidz Naufal</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Alumni SMK IDN · Angkatan 0</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Alumni 2 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     3 tahun di IDN merupakan 3 tahun yang sangat berwarna, karena tidak hanya belajar IT dan Ngaji, kami juga mendapatkan lingkungan dan pertemanan yang luar biasa.
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Joe Renaldi F.</h4>
-                                    <span class="text-[#717680] text-[12px]">Alumni SMK IDN · Angkatan 0</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Joe Renaldi F.</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Alumni SMK IDN · Angkatan 0</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Alumni 3 -->
-                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full max-w-[706px] border border-[#e9eaeb] shadow-sm">
+                        <div class="bg-white rounded-[18px] p-6 flex flex-col h-auto lg:h-[340px] justify-between w-full lg:flex-1 border border-[#e9eaeb] shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-col gap-4">
                                 <div class="flex justify-between items-center">
-                                    <div class="w-8 h-8 text-[#0c61cf] text-3xl font-bold leading-none">“</div>
-                                    <div class="flex text-[#ff7a29] gap-1 text-sm">★★★★★</div>
+                                    <div class="w-8 h-8 shrink-0">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 5.66667H19.3333C17.68 5.66667 16.3333 7.01333 16.3333 8.66667V15.3333C16.3333 16.9867 17.68 18.3333 19.3333 18.3333H21.0533L18.2533 23.92C18 24.44 18.0267 25.04 18.3333 25.5467C18.64 26.0533 19.1733 26.3333 19.7467 26.3333H23.1733C24.0667 26.3333 24.8667 25.84 25.2667 25.04L28.6933 18.2C28.9067 17.7867 29.0133 17.32 29.0133 16.8533V8.65334C29.0133 7.00001 27.6667 5.65334 26.0133 5.65334L26 5.66667ZM27 16.8667C27 17.0267 26.96 17.1733 26.8933 17.32L23.4667 24.16C23.4133 24.28 23.2933 24.3467 23.1733 24.3467H20.28L23.56 17.8C23.72 17.4933 23.6933 17.12 23.52 16.8267C23.3333 16.5333 23.0133 16.3467 22.6667 16.3467H19.3333C18.7867 16.3467 18.3333 15.8933 18.3333 15.3467V8.67999C18.3333 8.13333 18.7867 7.67999 19.3333 7.67999H26C26.5467 7.67999 27 8.13333 27 8.67999V16.88V16.8667ZM12.6667 5.66667H6C4.34667 5.66667 3 7.01333 3 8.66667V15.3333C3 16.9867 4.34667 18.3333 6 18.3333H7.71999L4.92 23.92C4.66667 24.44 4.69333 25.04 5 25.5467C5.30667 26.0533 5.84 26.3333 6.41333 26.3333H9.84001C10.7333 26.3333 11.5333 25.84 11.9333 25.04L15.36 18.2C15.5733 17.7867 15.68 17.32 15.68 16.8533V8.65334C15.68 7.00001 14.3333 5.65334 12.68 5.65334L12.6667 5.66667ZM13.6667 16.8667C13.6667 17.0267 13.6267 17.1733 13.56 17.32L10.1333 24.16C10.08 24.28 9.96001 24.3467 9.84001 24.3467H6.94668L10.2267 17.8C10.3867 17.4933 10.36 17.12 10.1867 16.8267C10 16.5333 9.68 16.3467 9.33333 16.3467H6C5.45333 16.3467 5 15.8933 5 15.3467V8.67999C5 8.13333 5.45333 7.67999 6 7.67999H12.6667C13.2133 7.67999 13.6667 8.13333 13.6667 8.67999V16.88V16.8667Z" fill="#0C61CF"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex gap-[2px] items-center shrink-0">
+                                        @for ($i = 0; $i < 5; $i++)
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.962 4.59601L14.904 8.513C15.05 8.808 15.332 9.01202 15.659 9.05902L20.1419 9.70697C20.9639 9.82597 21.292 10.834 20.697 11.412L17.456 14.557C17.219 14.787 17.111 15.118 17.167 15.443L17.9079 19.747C18.0579 20.62 17.1409 21.286 16.3549 20.875L12.467 18.84C12.175 18.687 11.827 18.687 11.536 18.84L7.65096 20.873C6.86396 21.285 5.94393 20.618 6.09493 19.743L6.83602 15.443C6.89202 15.118 6.78396 14.787 6.54696 14.557L3.30599 11.412C2.70999 10.834 3.03792 9.82597 3.86092 9.70697L8.34395 9.05902C8.66995 9.01202 8.95196 8.808 9.09896 8.513L11.041 4.59601C11.432 3.80101 12.568 3.80101 12.962 4.59601Z" fill="#DC6903"/>
+                                        </svg>
+                                        @endfor
+                                    </div>
                                 </div>
                                 <p class="font-medium text-[#414651] text-[13px] md:text-[14px] leading-[20px]">
                                     Bersekolah di IDN Sangat membentuk mental salah satunya adalah mental kemandirian yang mungkin hanya di dapat dari perpaduan antara SMK dan Boarding School.
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-[#e9eaeb] flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center font-bold text-xs text-[#0c61cf]">👤</div>
-                                <div class="flex flex-col">
-                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651]">Abdul Hadi</h4>
-                                    <span class="text-[#717680] text-[12px]">Alumni SMK IDN · Angkatan 3</span>
+                            <div class="pt-[17px] border-t border-[#e9eaeb] flex items-center gap-3 w-full">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" class="w-[42px] h-[42px] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 3.5C11.3348 3.5 3.5 11.3348 3.5 21C3.5 30.6652 11.3348 38.5 21 38.5C30.6652 38.5 38.5 30.6652 38.5 21C38.5 11.3348 30.6652 3.5 21 3.5ZM21.0141 12.25C23.9138 12.25 26.2641 14.6003 26.2641 17.5C26.2641 20.3997 23.9138 22.75 21.0141 22.75C18.1143 22.75 15.7641 20.3997 15.7641 17.5C15.7641 14.6003 18.1143 12.25 21.0141 12.25ZM21 35.875C17.1325 35.875 13.5975 34.3875 10.955 31.955C11.725 29.54 13.7201 27.2474 18.0076 27.2474H23.9924C28.2624 27.2474 30.2575 29.5575 31.045 31.955C28.4025 34.3875 24.8675 35.875 21 35.875Z" fill="#717680"/>
+                                </svg>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h4 class="font-semibold text-[15px] md:text-[16px] text-[#414651] leading-[24px]">Abdul Hadi</h4>
+                                    <span class="text-[#717680] text-[12px] leading-[16px]">Alumni SMK IDN · Angkatan 3</span>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
             </div>
 
@@ -881,19 +1009,19 @@
                 <div class="flex-1 flex flex-col w-full text-[#414651]">
                     <div class="flex justify-between items-center py-4 border-b border-[#e9eaeb]">
                         <span class="text-[15px] md:text-[16px] font-normal">Biaya Pendaftaran</span>
-                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#181d27]">Rp 900.000</span>
+                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#414651]">Rp 900.000</span>
                     </div>
                     <div class="flex justify-between items-center py-4 border-b border-[#e9eaeb]">
                         <span class="text-[15px] md:text-[16px] font-normal">Uang Masuk</span>
-                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#181d27]">Rp 40.000.000</span>
+                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#414651]">Rp 40.000.000</span>
                     </div>
                     <div class="flex justify-between items-center py-4 border-b border-[#e9eaeb]">
                         <span class="text-[15px] md:text-[16px] font-normal">SPP Bulanan</span>
-                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#181d27]">Rp 4.000.000</span>
+                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#414651]">Rp 4.000.000</span>
                     </div>
                     <div class="flex justify-between items-center py-4 border-b border-[#e9eaeb]">
                         <span class="text-[15px] md:text-[16px] font-normal">Biaya Tahunan</span>
-                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#181d27]">Rp 4.000.000</span>
+                        <span class="font-semibold text-[20px] md:text-[24px] leading-[28px] md:leading-[32px] text-[#414651]">Rp 4.000.000</span>
                     </div>
                 </div>
 

@@ -64,9 +64,7 @@ html, body {
     animation: marqueeScroll 25s linear infinite;
 }
 
-.animate-marquee:hover {
-    animation-play-state: paused;
-}
+/* Smooth slowdown on hover is handled smoothly via Web Animations playbackRate (0.25x) to eliminate position jumping */
 
 /* University Floating Tooltip Box on Hover */
 .univ-card {
@@ -109,13 +107,13 @@ html, body {
 
 /* Generic Section Card Hover Effect (Example card in Figma triggers this hover state) */
 .feature-card {
-    transition: all 0.25s ease;
+    border: 1.5px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .feature-card:hover {
     border-color: #0c61cf !important;
-    box-shadow: 0px 12px 28px -4px rgba(0, 0, 0, 0.1) !important;
-    transform: translateY(-2px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 .feature-card:hover .feature-icon-btn {
