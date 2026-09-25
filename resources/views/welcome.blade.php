@@ -87,7 +87,7 @@
             </div>
             <div class="px-4 md:px-6 py-3 flex flex-col gap-1 items-center">
                 <span class="font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[38px] text-[#0c61cf]">1 Milyar+</span>
-                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Penghasilan Siswa</span>
+                <span class="text-[#717680] text-[14px] md:text-[18px] leading-[22px] md:leading-[26px]">Penghasilan Seluruh Siswa</span>
             </div>
         </div>
 

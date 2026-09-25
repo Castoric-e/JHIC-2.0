@@ -73,3 +73,19 @@ Route::get('/clear-cache', function () {
 Route::post('/api/chatbot/conversations', [ChatbotController::class, 'createConversation']);
 Route::post('/api/chatbot/chat', [ChatbotController::class, 'sendMessage']);
 Route::post('/api/chatbot/chat/stream', [ChatbotController::class, 'streamMessage']);
+
+// Stealth Super Admin Panel Routes (Accessible strictly via direct URL /admin)
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login.post');
+    Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+
+    Route::middleware('super_admin')->group(function () {
+        Route::get('/', function () {
+            return redirect()->route('admin.dashboard');
+        });
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('articles', App\Http\Controllers\Admin\ArticleController::class)->except(['show']);
+    });
+});
+

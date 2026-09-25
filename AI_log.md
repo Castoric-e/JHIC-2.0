@@ -1,3 +1,29 @@
+## 2026-09-25 - Sleek Search Bar Redesign & Button Removal on Career Center
+
+### Sedang / Sudah Membuat
+
+- Menghapus tombol *"Cari Kerja"* pada bar pencarian hero section di [career-center.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/career-center.blade.php), karena sistem pencarian dan filter sudah berjalan secara instan dan reaktif (*real-time reactive filtering*) via Alpine.js (`x-model="searchQuery"` dan `selectedMajor`).
+- Menyempurnakan desain kapsul pencarian agar tampak modern, minimalis, dan *clean*:
+  - Memperluas area input kata kunci dengan ikon kaca pembesar berwarna biru khas IDN (`#0c61cf`), placeholder yang intuitif, serta tombol *clear search* interaktif (`x-show="searchQuery"`).
+  - Menyematkan pembatas vertikal halus (*divider*) antara kolom input dan pemilih jurusan.
+  - Mempercantik tombol dropdown jurusan di sebelah kanan bar dengan styling kapsul elegan dan label jurusannya.
+  - Menghaluskan bayangan (*shadow*) dan efek hover kapsul bar (`shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:border-[#c2d8f5] hover:shadow-[0px_6px_28px_rgba(12,97,207,0.1)]`).
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/career-center.blade.php`
+- `AI_Log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Desain bar pencarian Career Center kini terlihat jauh lebih rapi, bersih, dan modern tanpa tombol yang berlebihan, sementara fungsionalitas pencarian tetap responsif dan instan.
+- Aset Vite telah dikompilasi ulang dengan sukses.
+
 ## 2026-09-25 - Precision Vertical Centering for Button Arrow Icons
 
 ### Sedang / Sudah Membuat
@@ -2653,5 +2679,56 @@ DONE
 
 ### Catatan
 - Penyebab utama hover terasa tidak smooth di local adalah ketiadaan proses `npm run dev` (atau belum dilakukan `npm run build` setelah mengubah kode Blade), serta ketidaksinkronan transisi warna dan transform pada SVG arrow.
+
+## 2026-09-25 - Implementasi Custom Super Admin Panel (Stealth Access /admin)
+
+### Sedang / Sudah Membuat
+- Menambahkan kolom `role` pada tabel `users` (default: `'super_admin'`) via migration `database/migrations/2026_09_25_000001_add_role_to_users_table.php`.
+- Menyiapkan seeder `AdminSeeder` dengan akun default Super Admin: `admin@idn.sch.id` (password: `password123`).
+- Mengimplementasikan middleware `SuperAdminMiddleware` untuk memproteksi seluruh rute `/admin/*` hanya untuk akun ber-role `super_admin`.
+- Menerapkan arsitektur *Stealth URL Access* pada rute `/admin`:
+  1. Akses langsung melalui URL `http://127.0.0.1:8000/admin` tanpa adanya tombol / petunjuk apapun di antarmuka publik.
+  2. Pengguna belum login otomatis di-redirect ke `/admin/login`.
+  3. Pengguna yang sudah terautentikasi otomatis di-redirect ke `/admin/dashboard`.
+- Membangun antarmuka halaman login Super Admin `resources/views/admin/login.blade.php` dengan branding IDN Boarding School, input email & password (dengan toggle show/hide), remember me, dan indikator status error.
+- Membangun master layout `resources/views/admin/layouts/app.blade.php` bertema warna biru IDN (`#0c61cf`), sidebar responsive mobile-drawer, header informatif, profil Super Admin, serta tombol logout aman.
+- Membangun dashboard analitik `resources/views/admin/dashboard.blade.php` yang menampilkan ringkasan jumlah artikel, kategori aktif, status sistem, quick actions, dan daftar artikel terbaru.
+- Membangun modul CMS Artikel lengkap:
+  1. Halaman daftar artikel `resources/views/admin/articles/index.blade.php` dengan pencarian teks, filter dropdown kategori, thumbnail preview, pagination, dan modal konfirmasi hapus interaktif via Alpine.js.
+  2. Formulir tambah artikel baru `resources/views/admin/articles/create.blade.php` dengan drag-and-drop image upload preview, auto-slug generator, dan helper tag pemformatan konten.
+  3. Formulir edit artikel `resources/views/admin/articles/edit.blade.php` dengan preview gambar saat ini dan opsi ganti gambar.
+- Membuat unit/feature test suite `tests/Feature/AdminPanelTest.php` mencakup 10 skenario pengujian: redirect tamu, rendering login, autentikasi super admin, proteksi rute, dashboard, serta operasi CRUD artikel dan logout (10/10 test lulus 100%).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000001_add_role_to_users_table.php`
+- `database/seeders/AdminSeeder.php`
+- `app/Models/User.php`
+- `app/Http/Middleware/SuperAdminMiddleware.php`
+- `bootstrap/app.php`
+- `app/Http/Controllers/Admin/AuthController.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `app/Http/Controllers/Admin/ArticleController.php`
+- `routes/web.php`
+- `resources/views/admin/login.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `resources/views/admin/dashboard.blade.php`
+- `resources/views/admin/articles/index.blade.php`
+- `resources/views/admin/articles/create.blade.php`
+- `resources/views/admin/articles/edit.blade.php`
+- `tests/Feature/AdminPanelTest.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Panel administrasi hanya memiliki 1 role tunggal yaitu `Super Admin` dengan hak akses penuh ke seluruh sistem.
+- Tidak ada sedikitpun tombol atau tautan ke `/admin` di navbar, hero, maupun footer halaman publik, sehingga akses terjaga kerahasiaannya.
+- Semua pengujian Laravel (`php artisan test`) lulus 100% (12 passing tests, 37 assertions).
+- Kompilasi aset frontend Tailwind CSS v4 berhasil tanpa error.
+
+### Pekerjaan Selanjutnya
+- Melakukan verifikasi login langsung di browser melalui URL `http://127.0.0.1:8000/admin`.
 
 

@@ -47,29 +47,40 @@
 
                 <!-- Search & Major Filter Bar -->
                 <div class="pt-6 max-w-[674px] mx-auto">
-                    <div class="bg-white p-3 sm:p-2.5 rounded-2xl sm:rounded-full border border-[#e9eaeb] shadow-lg flex flex-col sm:flex-row items-center gap-2.5 sm:gap-2 relative">
+                    <div class="bg-white p-2.5 sm:p-2 sm:pl-5 sm:pr-2.5 rounded-2xl sm:rounded-full border border-[#e9eaeb] shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:border-[#c2d8f5] hover:shadow-[0px_6px_28px_rgba(12,97,207,0.1)] transition-all duration-200 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 relative">
                         
                         <!-- Search Keyword Input -->
-                        <div class="flex-1 flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-0 bg-[#f8fafc] sm:bg-transparent rounded-xl sm:rounded-none border border-[#e2e8f0] sm:border-none w-full">
-                            <svg class="w-5 h-5 text-[#717680] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex-1 flex items-center gap-3 px-3.5 sm:px-0 py-2 sm:py-1 bg-[#f8fafc] sm:bg-transparent rounded-xl sm:rounded-none border border-[#e2e8f0] sm:border-none w-full">
+                            <svg class="w-5 h-5 text-[#0c61cf] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                             <input type="text" 
                                    x-model="searchQuery" 
-                                   placeholder="Pilih posisi/pekerjaan..." 
+                                   placeholder="Pilih posisi atau kata kunci pekerjaan..." 
                                    class="w-full bg-transparent text-sm md:text-base text-[#181d27] placeholder-[#717680] focus:outline-none">
+                            <button x-show="searchQuery && searchQuery.length > 0" 
+                                    @click="searchQuery = ''" 
+                                    type="button" 
+                                    x-cloak
+                                    class="text-[#717680] hover:text-[#181d27] p-1 shrink-0 transition-colors cursor-pointer"
+                                    title="Hapus pencarian">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
                         </div>
 
                         <!-- Divider -->
-                        <div class="hidden sm:block w-px h-8 bg-[#e9eaeb]"></div>
+                        <div class="hidden sm:block w-px h-8 bg-[#e9eaeb] shrink-0"></div>
 
                         <!-- Jurusan Selection Dropdown -->
-                        <div class="relative w-full sm:w-auto" @click.outside="majorDropdownOpen = false">
+                        <div class="relative w-full sm:w-auto shrink-0" @click.outside="majorDropdownOpen = false">
                             <button @click="majorDropdownOpen = !majorDropdownOpen" 
                                     type="button" 
-                                    class="w-full sm:w-auto px-4 py-2.5 rounded-xl sm:rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between gap-3 border border-[#e2e8f0] transition-colors">
+                                    class="w-full sm:w-auto px-4 py-2.5 rounded-xl sm:rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between sm:justify-start gap-2.5 border border-[#e2e8f0] transition-all duration-200 cursor-pointer">
+                                <span class="text-[#717680] text-xs font-normal hidden sm:inline">Jurusan:</span>
                                 <span x-text="selectedMajor === 'Semua' ? 'Pilih Jurusan' : selectedMajor" class="font-semibold text-[#0c61cf]"></span>
-                                <svg class="w-4 h-4 text-[#717680] transition-transform duration-200" :class="{'rotate-180': majorDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-[#717680] transition-transform duration-200 shrink-0" :class="{'rotate-180': majorDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                 </svg>
                             </button>
@@ -83,12 +94,12 @@
                                  x-transition:leave-start="opacity-100 scale-100 translate-y-0"
                                  x-transition:leave-end="opacity-0 scale-95 -translate-y-2"
                                  x-cloak
-                                 class="absolute left-0 sm:left-auto sm:right-0 mt-2 w-full sm:w-48 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
+                                 class="absolute left-0 sm:left-auto sm:right-0 mt-2 w-full sm:w-52 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
                                 
                                 <!-- Dropdown Header / All -->
                                 <div @click="selectMajor('Semua')" 
                                      :class="selectedMajor === 'Semua' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>Semua Jurusan</span>
                                     <template x-if="selectedMajor === 'Semua'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -98,7 +109,7 @@
                                 <!-- TKJ -->
                                 <div @click="selectMajor('TKJ')" 
                                      :class="selectedMajor === 'TKJ' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>TKJ</span>
                                     <template x-if="selectedMajor === 'TKJ'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -108,7 +119,7 @@
                                 <!-- RPL -->
                                 <div @click="selectMajor('RPL')" 
                                      :class="selectedMajor === 'RPL' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>RPL</span>
                                     <template x-if="selectedMajor === 'RPL'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -118,7 +129,7 @@
                                 <!-- DKV -->
                                 <div @click="selectMajor('DKV')" 
                                      :class="selectedMajor === 'DKV' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>DKV</span>
                                     <template x-if="selectedMajor === 'DKV'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -126,13 +137,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Action Button -->
-                        <button type="button" 
-                                @click="applySearch()"
-                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#094fa5] hover:shadow-lg text-white px-6 py-2.5 sm:py-2.5 rounded-xl sm:rounded-full font-semibold text-sm md:text-base transition-all duration-200 shadow-md shrink-0">
-                            Cari Kerja
-                        </button>
 
                     </div>
                 </div>
