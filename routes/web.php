@@ -54,7 +54,29 @@ Route::get('/program/{slug?}', function ($slug = null) {
 });
 
 Route::get('/career-center', function () {
-    return view('career-center');
+    $jobs = \App\Models\CareerJob::active()
+        ->orderBy('id', 'asc')
+        ->get()
+        ->map(function ($j) {
+            return [
+                'id' => $j->id,
+                'title' => $j->title,
+                'major' => $j->major,
+                'salary' => $j->salary,
+                'workLocation' => $j->work_location,
+                'workType' => $j->work_type,
+                'companyName' => $j->company_name,
+                'companyLogo' => $j->company_logo_char,
+                'companyImg' => $j->company_img ? asset($j->company_img) : null,
+                'companyBg' => $j->company_bg,
+                'location' => $j->location,
+                'locationGroup' => $j->location_group,
+                'postedTime' => $j->posted_time,
+                'postTimeCategory' => $j->post_time_category,
+                'applyUrl' => $j->apply_url,
+            ];
+        });
+    return view('career-center', compact('jobs'));
 });
 
 Route::get('/kontak', function () {
@@ -86,6 +108,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         });
         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
         Route::resource('articles', App\Http\Controllers\Admin\ArticleController::class)->except(['show']);
+        Route::resource('career', App\Http\Controllers\Admin\CareerJobController::class)->except(['show']);
+        Route::patch('career/{career}/toggle', [App\Http\Controllers\Admin\CareerJobController::class, 'toggle'])->name('career.toggle');
     });
 });
 

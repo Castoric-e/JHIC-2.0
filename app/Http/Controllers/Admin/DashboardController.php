@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\CareerJob;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -15,6 +16,9 @@ class DashboardController extends Controller
     {
         $totalArticles = Article::count();
         $categoriesCount = Article::distinct('category')->count('category');
+        $totalJobs = CareerJob::count();
+        $activeJobsCount = CareerJob::active()->count();
+
         $recentArticles = Article::orderBy('published_at', 'desc')
             ->orderBy('id', 'desc')
             ->take(6)
@@ -28,6 +32,8 @@ class DashboardController extends Controller
         return view('admin.dashboard', compact(
             'totalArticles',
             'categoriesCount',
+            'totalJobs',
+            'activeJobsCount',
             'recentArticles',
             'categoryDistribution'
         ));

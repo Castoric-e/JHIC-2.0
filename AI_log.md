@@ -2731,4 +2731,89 @@ DONE
 ### Pekerjaan Selanjutnya
 - Melakukan verifikasi login langsung di browser melalui URL `http://127.0.0.1:8000/admin`.
 
+## 2026-09-25 - Implementasi CMS Career Center Dinamis pada Super Admin Panel
+
+### Sedang / Sudah Membuat
+- Membuat tabel `career_jobs` pada database melalui migration `database/migrations/2026_09_25_000002_create_career_jobs_table.php` lengkap dengan indexing jurusan, tipe kerja, sistem kerja, dan status aktif.
+- Membuat Eloquent Model `app/Models/CareerJob.php` dengan fillable, casting boolean, dan scope query `active()`.
+- Menyiapkan seeder `CareerJobSeeder.php` yang memigrasikan seluruh 21 lowongan mitra industri eksisting ke PostgreSQL, menjaga data asli 100% utuh.
+- Mengubah rute publik `/career-center` di `routes/web.php` dan tampilan `resources/views/career-center.blade.php` agar membaca data lowongan secara dinamis dari database via injection `@json($jobs)` ke Alpine.js `careerCenterData()`.
+- Menambahkan modul CRUD Career Center di panel Super Admin:
+  1. Controller `app/Http/Controllers/Admin/CareerJobController.php` dengan fitur filter pencarian, filter jurusan, filter status, tambah lowongan, edit, upload logo perusahaan, hapus, dan aksi cepat toggle aktif/tutup.
+  2. Halaman daftar lowongan `resources/views/admin/career/index.blade.php` dengan badge jurusan (RPL, TKJ, DKV), status aktif/tutup interaktif, pagination, dan modal hapus.
+  3. Formulir tambah lowongan `resources/views/admin/career/create.blade.php` dan edit `resources/views/admin/career/edit.blade.php`.
+- Menambahkan menu navigasi "Career Center" pada sidebar master layout `resources/views/admin/layouts/app.blade.php`.
+- Menghubungkan statistik lowongan karir aktif ke kartu ringkasan di dashboard `app/Http/Controllers/Admin/DashboardController.php` dan `resources/views/admin/dashboard.blade.php`.
+- Menambahkan 6 skenario feature test untuk Career Center pada `tests/Feature/AdminPanelTest.php` (total 18/18 test suite lulus 100%).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000002_create_career_jobs_table.php`
+- `app/Models/CareerJob.php`
+- `database/seeders/CareerJobSeeder.php`
+- `routes/web.php`
+- `resources/views/career-center.blade.php`
+- `app/Http/Controllers/Admin/CareerJobController.php`
+- `resources/views/admin/career/index.blade.php`
+- `resources/views/admin/career/create.blade.php`
+- `resources/views/admin/career/edit.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `resources/views/admin/dashboard.blade.php`
+- `tests/Feature/AdminPanelTest.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Halaman publik `/career-center` kini 100% dinamis dan sinkron langsung dengan Super Admin Panel.
+- Fitur pencarian, filter jurusan (RPL/TKJ/DKV), filter sistem kerja (Onsite/Hybrid/Remote), dan filter tipe kerja di halaman publik tetap berjalan mulus dan reaktif via Alpine.js.
+- Super Admin dapat menutup atau mengaktifkan kembali lowongan hanya dengan 1 klik tombol status tanpa harus menghapus data.
+- Seluruh 18 automated tests lulus (100% Passing, 55 assertions).
+
+## 2026-09-25 - Pemulihan Presisi 21 Data Lowongan Bawaan Asli Career Center & Sinkronisasi Logo Partner
+
+### Sedang / Sudah Membuat
+- Mengoreksi data seeder pada `database/seeders/CareerJobSeeder.php` dengan mengembalikan ke-21 data perusahaan dan posisi asli default bawaan desain:
+  1. Digideep (`assets/partners/Digdeep.avif`)
+  2. Tenos Data Teknologi (`assets/partners/tenos-data-teknologi.avif`)
+  3. Indekstat (`assets/partners/indekstat.avif`)
+  4. Alfahuma Rekayasa Teknologi (`assets/partners/alfahuma-rekayasa.avif`)
+  5. Pertamina (`assets/partners/pertamina.avif`)
+  6. Vektora Studio (`assets/partners/vektora-studio.avif`)
+  7. PLN (`assets/partners/pln-1.avif`)
+  8. Telkom Indonesia (`assets/partners/telkom-id.avif`)
+  9. Toyota Astra Motor (`assets/partners/toyota-astra-motor.avif`)
+  10. Sisindokom Lintasbuana (`assets/partners/sisindokom-1.avif`)
+  11. Yaksa Ersada Solusindo (`assets/partners/yaksa-ersada.avif`)
+  12. Telkom Akses (`assets/partners/telkom-akses.avif`)
+  13. Sucofindo (`assets/partners/Sucofindo.avif`)
+  14. Pelabuhan Indonesia (`assets/partners/pelabuhanIndo.avif`)
+  15. Tokopedia (`assets/partners/tokped.avif`)
+  16. Shopee (`assets/partners/Shoppie.avif`)
+  17. Lazada (`assets/partners/lazada.avif`)
+  18. Gojek (`assets/partners/gojek.avif`)
+  19. Grab (`assets/partners/grab.avif`)
+  20. Maxim (`assets/partners/Maxim.avif`)
+  21. Blibli (`assets/partners/blibli.avif`)
+- Mendaftarkan `CareerJobSeeder` dan `AdminSeeder` ke dalam `DatabaseSeeder.php` agar pemanggilan `php artisan db:seed` secara otomatis menyegarkan seluruh tabel database.
+- Melakukan truncate dan re-seed tabel `career_jobs` dengan sukses (Exit code 0).
+- Memastikan seluruh 21 file logo mitra industri terverifikasi ada secara fisik pada `public/assets/partners/` dan ter-render dengan sempurna tanpa broken image.
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/seeders/CareerJobSeeder.php`
+- `database/seeders/DatabaseSeeder.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Seluruh 21 lowongan bawaan asli kini kembali 100% persis seperti semula dengan gambar logo resmi masing-masing.
+- Semua tes lulus 100%.
+
+
+
 

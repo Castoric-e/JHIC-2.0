@@ -82,7 +82,16 @@
                         <svg class="w-5 h-5 shrink-0 {{ request()->routeIs('admin.articles.create') ? 'text-white' : 'text-[#64748b]' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <span>Tambah Artikel Baru</span>
+                        <span>Tambah Artikel</span>
+                    </a>
+
+                    <!-- Career Center (Karir & Magang) -->
+                    <a href="{{ route('admin.career.index') }}" 
+                        class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 {{ request()->routeIs('admin.career.*') ? 'bg-[#0c61cf] text-white shadow-sm' : 'text-[#475569] hover:bg-[#f1f5f9] hover:text-[#0f172a]' }}">
+                        <svg class="w-5 h-5 shrink-0 {{ request()->routeIs('admin.career.*') ? 'text-white' : 'text-[#64748b]' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Career Center</span>
                     </a>
 
                     <div class="pt-4 px-3 py-1.5 text-[10px] font-bold text-[#94a3b8] uppercase tracking-wider">
