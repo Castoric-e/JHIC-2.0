@@ -26,10 +26,10 @@
     <!-- Header Navigation -->
     <x-navbar active="program" activeSub="business-survival" />
 
-    <main class="flex-1 w-full pt-[106px]">
+    <main class="flex-1 w-full">
 
         <!-- Hero Section (Matching Figma Spec 100%) -->
-        <section class="w-full bg-[#fafafa] py-12 lg:py-[72px]">
+        <section class="w-full bg-[#fafafa] pt-[130px] md:pt-[160px] pb-12 lg:pb-[72px]">
             <div class="max-w-[1240px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                 
                 <!-- Left Text Info -->

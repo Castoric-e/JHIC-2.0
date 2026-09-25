@@ -29,7 +29,7 @@
     <main class="w-full flex-grow flex flex-col items-center">
 
         <!-- HERO & CONTACT CARDS SECTION (Figma Node 19889:5497) -->
-        <section class="w-full max-w-full overflow-hidden flex flex-col items-center mt-16 md:mt-0 py-12 md:py-[90px] lg:py-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#fafafa]">
+        <section class="w-full max-w-full overflow-hidden flex flex-col items-center pt-[130px] md:pt-[160px] pb-12 md:pb-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#fafafa]">
             <div class="w-full max-w-[706px] lg:max-w-[1120px] mx-auto flex flex-col gap-10 md:gap-[64px]">
                 
                 <!-- HEADER CONTENT (Figma Node 19889:5498 - w-[674px]) -->
@@ -51,7 +51,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
                     
                     <!-- CARD 1: WHATSAPP -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- WHATSAPP ICON (wa.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -61,16 +61,16 @@
                                 +62 822-1010-2006
                             </h2>
                         </div>
-                        <a href="https://wa.me/6282210102006" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] flex items-center justify-center gap-2 w-fit transition-all duration-300">
+                        <a href="https://wa.me/6282210102006" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] leading-none flex items-center justify-center gap-2 w-fit transition-all duration-200 ease-out">
                             <span>Chat Whatsapp</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                             </svg>
                         </a>
                     </div>
 
                     <!-- CARD 2: INSTAGRAM -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- INSTAGRAM ICON (ig.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -80,13 +80,13 @@
                                 @idnboardingschool
                             </h2>
                         </div>
-                        <a href="https://instagram.com/idnboardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://instagram.com/idnboardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-200 ease-out w-fit">
                             Buka Instagram
                         </a>
                     </div>
 
                     <!-- CARD 3: EMAIL -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- EMAIL ICON (gmail.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -96,13 +96,13 @@
                                 info@idn.sch.id
                             </h2>
                         </div>
-                        <a href="mailto:info@idn.sch.id" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="mailto:info@idn.sch.id" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-200 ease-out w-fit">
                             Kirim Email
                         </a>
                     </div>
 
                     <!-- CARD 4: FACEBOOK -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- FACEBOOK ICON (fb.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -112,13 +112,13 @@
                                 IDN Boarding School
                             </h2>
                         </div>
-                        <a href="https://www.facebook.com/idnboardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.facebook.com/idnboardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-200 ease-out w-fit">
                             Buka Facebook
                         </a>
                     </div>
 
                     <!-- CARD 5: TIKTOK -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- TIKTOK ICON (tt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -128,13 +128,13 @@
                                 IDN Boarding School
                             </h2>
                         </div>
-                        <a href="https://www.tiktok.com/@idn.boardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.tiktok.com/@idn.boardingschool" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-200 ease-out w-fit">
                             Buka Tiktok
                         </a>
                     </div>
 
                     <!-- CARD 6: YOUTUBE -->
-                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-300 group">
+                    <div class="bg-white border border-[#e9eaeb] hover:border-[#0c61cf] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[18px] p-5 sm:p-6 flex flex-col justify-between gap-8 h-full transition-all duration-200 ease-out group">
                         <div class="flex flex-col gap-6 items-start text-left w-full">
                             <!-- YOUTUBE ICON (yt.avif) -->
                             <div class="w-10 h-10 flex items-center justify-center shrink-0">
@@ -144,7 +144,7 @@
                                 IDN TV
                             </h2>
                         </div>
-                        <a href="https://www.youtube.com/@IDNTV2022" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-300 w-fit">
+                        <a href="https://www.youtube.com/@IDNTV2022" target="_blank" class="bg-white border-2 border-[#e9eaeb] text-[#414651] group-hover:border-[#0c61cf] group-hover:bg-[#0c61cf] group-hover:text-white px-5 py-3 rounded-full font-semibold text-[16px] transition-all duration-200 ease-out w-fit">
                             Buka Youtube
                         </a>
                     </div>
@@ -174,11 +174,17 @@
 
                 <!-- REGISTRATION CTA BUTTONS (Figma Node 19889:5549) -->
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 z-10">
-                    <a href="/ppdb" class="bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[16px] text-center hover:bg-gray-100 transition-colors shadow-sm">
-                        Mulai Pendaftaran
+                    <a href="/ppdb" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 hover:bg-slate-100 hover:shadow-md transition-all duration-200 shadow-sm">
+                        <span>Mulai Pendaftaran</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
                     </a>
-                    <a href="https://wa.me/6282210102006" target="_blank" class="bg-[#0c61cf] border border-[#d5d7da] text-white px-6 py-3 rounded-full font-semibold text-[16px] text-center hover:bg-[#0a52b3] transition-colors">
-                        Tanya Via WhatsApp
+                    <a href="https://wa.me/6282210102006" target="_blank" class="group bg-[#0c61cf] border border-[#d5d7da] text-white px-6 py-3 rounded-full font-semibold text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 hover:bg-[#094fa5] hover:border-white transition-all duration-200">
+                        <span>Tanya Via WhatsApp</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
                     </a>
                 </div>
             </div>

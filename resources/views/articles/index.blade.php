@@ -33,7 +33,7 @@
     <main class="flex-1 w-full">
         <!-- Hero Header Section -->
         <section class="w-full bg-[#fafafa]">
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[160px] pt-10 md:pt-16 lg:pt-[110px] pb-8 md:pb-12 lg:pb-[60px]">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[160px] pt-[130px] md:pt-[160px] pb-8 md:pb-12 lg:pb-[60px]">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-[56px] items-center">
                     
                     <!-- Left Hero Content -->
@@ -97,12 +97,6 @@
                         </div>
                         
                         <div class="p-6 md:p-8 space-y-4">
-                            <!-- Badge -->
-                            <div class="inline-flex items-center gap-2 bg-[#fcefee] border border-[#f14437] px-4 py-2 rounded-full">
-                                <span class="size-2.5 rounded-full bg-[#f14437]"></span>
-                                <span class="text-[#d92d21] font-medium text-xs md:text-sm">Berita Terpopuler</span>
-                            </div>
-
                             <!-- Meta info -->
                             <div class="flex items-center gap-3 text-[#717680] text-xs md:text-sm font-normal">
                                 <div class="flex items-center gap-1.5">
@@ -127,10 +121,10 @@
 
                             <!-- Read More Button -->
                             <div class="pt-2">
-                                <a href="{{ route('articles.show', $featuredArticle->slug) }}" class="inline-flex items-center gap-1.5 text-[#0c61cf] font-semibold text-sm md:text-base hover:gap-2.5 transition-all">
-                                    Read More
-                                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
+                                <a href="{{ route('articles.show', $featuredArticle->slug) }}" class="inline-flex items-center gap-1.5 text-[#0c61cf] font-semibold text-sm md:text-base leading-none group transition-all duration-200">
+                                    <span>Read More</span>
+                                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                     </svg>
                                 </a>
                             </div>
@@ -175,10 +169,10 @@
 
                                     <!-- Action -->
                                     <div class="pt-1 mt-auto">
-                                        <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-1.5 text-[#0c61cf] font-semibold text-xs md:text-sm hover:gap-2.5 transition-all">
-                                            Read More
-                                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
+                                        <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-1.5 text-[#0c61cf] font-semibold text-xs md:text-sm leading-none group transition-all duration-200">
+                                            <span>Read More</span>
+                                            <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                             </svg>
                                         </a>
                                     </div>
@@ -214,10 +208,10 @@
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
-                        <a href="/ppdb" class="w-full sm:w-auto text-center bg-white text-[#0c61cf] px-6 py-3.5 rounded-full font-semibold hover:bg-blue-50 transition-all shadow-md text-sm md:text-base">
+                        <a href="/ppdb" class="w-full sm:w-auto text-center bg-white text-[#0c61cf] px-6 py-3.5 rounded-full font-semibold hover:bg-slate-100 hover:shadow-md transition-all duration-200 shadow-sm text-sm md:text-base">
                             Lihat Pendaftaran
                         </a>
-                        <a href="https://wa.me/6282210102006" target="_blank" class="w-full sm:w-auto text-center border-2 border-white/80 text-white px-6 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all text-sm md:text-base">
+                        <a href="https://wa.me/6282210102006" target="_blank" class="w-full sm:w-auto text-center border-2 border-white/80 text-white px-6 py-3.5 rounded-full font-semibold hover:bg-white/10 hover:border-white transition-all duration-200 text-sm md:text-base">
                             Tanya Dulu Melalui WA
                         </a>
                     </div>

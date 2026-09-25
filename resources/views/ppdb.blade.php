@@ -26,18 +26,12 @@
     <x-navbar active="ppdb" />
 
     <!-- 2. HERO HEADER SECTION (Tablet max-w-[706px], Desktop max-w-[1120px]) -->
-    <section class="w-full max-w-full overflow-hidden flex flex-col items-center mt-20 lg:mt-0 py-12 md:py-[90px] lg:py-[110px] px-6 md:px-[64px] bg-[#fafafa]">
+    <section class="w-full max-w-full overflow-hidden flex flex-col items-center pt-[130px] md:pt-[160px] pb-12 md:pb-[110px] px-6 md:px-[64px] bg-[#fafafa]">
         <div class="w-full max-w-[706px] lg:max-w-[1120px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-10">
             
             <!-- LEFT TEXT CONTAINER (604px width) -->
             <div class="w-full lg:w-[604px] max-w-full flex flex-col gap-6 md:gap-8 items-start text-left">
                 
-                <!-- SLOGAN BADGE (Status Pendaftaran Dibuka) -->
-                <div class="bg-[#f0fdf4] border border-[#22c55e] flex items-center justify-center gap-2 px-4 py-1.5 rounded-full w-fit">
-                    <span class="w-3.5 h-3.5 rounded-full bg-[#22c55e] shrink-0"></span>
-                    <span class="text-[#16a34a] font-medium text-[14px] leading-[22px]">Status Pendaftaran Dibuka</span>
-                </div>
-
                 <!-- DESCRIPTION CONTAINER -->
                 <div class="flex flex-col gap-4 md:gap-6 items-start text-left w-full">
                     <!-- MAIN HEADING -->
@@ -54,15 +48,15 @@
 
                 <!-- BUTTON CONTAINER (Daftar PPDB & Login) -->
                 <div class="flex flex-wrap items-center justify-start gap-4 pt-2 w-full">
-                    <a href="#biaya-pendidikan" class="group bg-[#0c61cf] text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-300 hover:bg-[#094fa5] hover:shadow-md shrink-0">
+                    <a href="#biaya-pendidikan" class="group bg-[#0c61cf] text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-[#094fa5] hover:shadow-md shrink-0">
                         <span>Daftar PPDB</span>
-                        <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
-                    <a href="/login" class="group bg-white border border-[#e5e7eb] text-[#374151] px-8 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-slate-50 hover:border-[#0c61cf] shrink-0">
+                    <a href="/login" class="group bg-white border border-[#e5e7eb] text-[#374151] hover:text-[#0c61cf] px-8 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-slate-50 hover:border-[#0c61cf] shrink-0">
                         <span>Login</span>
-                        <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 text-[#374151] group-hover:text-[#0c61cf] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-all duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
@@ -375,15 +369,15 @@
 
             <!-- BUTTONS CONTAINER -->
             <div class="flex flex-wrap items-center gap-4 z-10">
-                <a href="#biaya-pendidikan" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-300 hover:bg-slate-100">
+                <a href="#biaya-pendidikan" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md">
                     <span>Mulai Pendaftaran</span>
-                    <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                 </a>
-                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-transparent border border-white/60 text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/10">
+                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-transparent border border-white/60 text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-white/10">
                     <span>Tanya Via WhatsApp</span>
-                    <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                 </a>

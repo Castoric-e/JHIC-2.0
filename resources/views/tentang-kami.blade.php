@@ -26,7 +26,7 @@
     <x-navbar active="tentang-kami" />
 
     <!-- 2. HERO HEADER SECTION (Figma Node 19889:6006 - py-[110px], px-[160px]) -->
-    <section class="w-full max-w-full overflow-hidden flex flex-col items-center mt-16 md:mt-0 py-12 md:py-[90px] lg:py-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#fafafa]">
+    <section class="w-full max-w-full overflow-hidden flex flex-col items-center pt-[130px] md:pt-[160px] pb-12 md:pb-[110px] px-6 md:px-[64px] lg:px-[160px] bg-[#fafafa]">
         <div class="w-full max-w-[706px] xl:max-w-[1120px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-8 md:gap-14">
             
             <!-- LEFT TEXT CONTAINER (650px width in Figma) -->
@@ -79,7 +79,7 @@
 
             <!-- IMAGE & USER BADGE CONTAINER (Bottom on Mobile/Tablet per Figma Node 20123:29917) -->
             <div class="w-full flex flex-col items-center gap-6 order-2 lg:order-1 shrink-0 lg:w-[410px]">
-                <div class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:w-[410px] aspect-square relative rounded-[18px] bg-[#eaecf0] flex items-center justify-center overflow-hidden border-8 border-white/40 shadow-sm mx-auto lg:mx-0">
+                <div class="w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:w-[410px] aspect-square relative rounded-[18px] bg-[#eaecf0] flex items-center justify-center overflow-hidden shadow-sm mx-auto lg:mx-0">
                     <img src="{{ asset('assets/pages/tentang-kami/mr-beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
                 </div>
 
@@ -88,7 +88,7 @@
                     <svg class="w-6 h-6 text-[#181d27] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                     </svg>
-                    <span class="font-semibold text-[16px] leading-[24px] text-black">Beny Fitriyanto, S.S., Gr.</span>
+                    <span class="font-semibold text-[16px] leading-[24px] text-black">Beny Fitriyanto, S.S., M.Pd., Gr.</span>
                 </div>
             </div>
 
@@ -403,7 +403,7 @@
                 </div>
 
                 <div class="z-10">
-                    <a href="https://wa.me/6282210102006" target="_blank" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 w-fit shadow-sm transition-all duration-300 hover:bg-slate-100">
+                    <a href="https://wa.me/6282210102006" target="_blank" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 w-fit shadow-sm transition-all duration-200 hover:bg-slate-100">
                         <span>Tanya Via Whatsapp</span>
                     </a>
                 </div>
@@ -683,15 +683,15 @@
 
             <!-- BUTTONS CONTAINER -->
             <div class="flex flex-wrap items-center gap-4 z-10">
-                <a href="/ppdb" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-300 hover:bg-slate-100">
+                <a href="/ppdb" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md">
                     <span>Mulai Pendaftaran</span>
-                    <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                 </a>
-                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-transparent border border-white/60 text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 transition-all duration-300 hover:bg-white/10">
+                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-transparent border border-white/60 text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-white/10">
                     <span>Tanya Via WhatsApp</span>
-                    <svg class="w-4 h-4 transition-transform duration-300 ease-out transform translate-x-0 group-hover:translate-x-1.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                 </a>

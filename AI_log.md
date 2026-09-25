@@ -1,3 +1,64 @@
+## 2026-09-25 - Precision Vertical Centering for Button Arrow Icons
+
+### Sedang / Sudah Membuat
+
+- Memperbaiki perataan vertikal (*vertical optical alignment*) pada ikon panah (*arrow*) di seluruh tombol dan tautan di semua halaman agar benar-benar berada persis di tengah secara presisi sejajar dengan teks (*optically centered*).
+- Menambahkan kelas `leading-none` pada tombol yang memiliki ketinggian tetap (`h-[48px]`), sehingga bounding box teks memiliki tinggi yang sama persis dengan bounding box ikon SVG (16px), menghilangkan pergeseran vertikal akibat *descender spacing* bawaan font.
+- Memastikan seluruh SVG ikon panah memiliki kelas `shrink-0` agar tidak terdistorsi atau menciut ketika teks tombol panjang.
+- Memperbarui [kontak.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/kontak.blade.php): tombol "Chat Whatsapp" pada kartu kontak diubah dari ukuran ikon `w-5 h-5` (20px yang membuatnya tampak turun/tidak tengah) menjadi standar `w-4 h-4 shrink-0` dengan `leading-none`.
+- Memperbarui [articles/index.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/articles/index.blade.php): tautan "Read More" (artikel utama dan grid) yang sebelumnya memakai panah diagonal miring 45 derajat (`↗`) distandarisasi menggunakan ikon panah horizontal kanan (`→`) dengan `leading-none` dan `shrink-0`, sehingga sejajar rapi di tengah dengan teks.
+- Memperbarui tombol di [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php), [ppdb.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/ppdb.blade.php), [tentang-kami.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/tentang-kami.blade.php), dan [articles/show.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/articles/show.blade.php).
+- Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
+
+### File
+
+- `resources/views/welcome.blade.php`
+- `resources/views/ppdb.blade.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/articles/index.blade.php`
+- `resources/views/tentang-kami.blade.php`
+- `resources/views/articles/show.blade.php`
+- `AI_Log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Semua ikon panah pada tombol kini sejajar simetris secara vertikal di tengah terhadap teks.
+- Build asset Vite terbaru sudah terkompilasi.
+
+## 2026-09-25 - Standardized Smooth Hover & Animations Across All Pages
+
+### Sedang / Sudah Membuat
+
+- Menerapkan standarisasi animasi dan transisi hover yang halus (*smooth*) pada seluruh tombol dan tautan di semua halaman (mengikuti standar tombol CTA di halaman PPDB: `transition-all duration-200 ease-out` dengan translasi ikon panah `transition-transform duration-200 ease-out group-hover:translate-x-1`).
+- Memperbarui [articles/index.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/articles/index.blade.php): tombol "Read More" featured article, tombol "Read More" grid artikel, serta tombol pada PPDB banner.
+- Memperbarui [articles/show.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/articles/show.blade.php): tombol banner PPDB di bagian bawah dengan transisi halus dan animasi panah interaktif.
+- Memperbarui [kontak.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/kontak.blade.php): kartu-kartu kontak sosial media (WhatsApp, Instagram, Email, Facebook, TikTok, YouTube) dan tombol registrasi di bagian bawah menjadi `duration-200 ease-out`.
+- Memperbarui [welcome.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/welcome.blade.php): memperbaiki tombol hero "Daftar Sekarang" dengan menghapus class popping `block lg:hidden lg:group-hover:block` pada SVG icon sehingga icon selalu berada di DOM dan meluncur halus (`ease-out group-hover:translate-x-1`) 100% identik dengan tombol di halaman PPDB.
+- Memperbarui [career-center.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/career-center.blade.php): tombol filter "Cari Kerja" dan tombol lamar/tutup pada modal pekerjaan.
+- Menjalankan `npm run build` dengan sukses (Exit code 0).
+
+### File
+
+- `resources/views/articles/index.blade.php`
+- `resources/views/articles/show.blade.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/welcome.blade.php`
+- `resources/views/career-center.blade.php`
+- `AI_Log.md`
+
+### Status
+
+DONE
+
+### Catatan
+
+- Seluruh tombol kini memiliki pengalaman hover yang konsisten, responsif, dan halus (smooth) tanpa lag.
+- Asset build Vite telah diperbarui (`npm run build`).
+
 ## 2026-09-12 - Exact Image & Content Implementation for Article "Siswa SMK Jalan Kaki Sejauh 72 KM dari Lereng Gunung Lawu di Solo"
 
 ### Sedang / Sudah Membuat
@@ -2500,3 +2561,97 @@ DONE
   - Shared CTA and FAQ contact list at the bottom matching design screenshot.
 - **Seeder & View**: Seeded in ArticleSeeder.php, verified HTTP 200 on /artikel/dari-malaysia-sekolah-di-bogor-kenal-idn-dari-siswa-backpacker-di-istanbul.
 - **Status**: Completed & Verified 100%.
+
+## 2026-09-25 - Penyelarasan Padding Top Hero Section & Penghapusan Slogan Badge
+
+### Sedang / Sudah Membuat
+- Menyelaraskan seluruh padding-top hero section di semua halaman (`ppdb`, `tentang-kami`, `kontak`, `career-center`, `articles.index`, `articles.show`, dan 10 halaman `program/*`) agar memiliki jarak atas yang pas dan konsisten seperti di halaman Home (`welcome.blade.php`), yaitu `mt-16 md:mt-0 pt-12 md:pt-[110px]` (atau `py-12 md:py-[110px]`).
+- Menghilangkan badge pill slogan "Muda Mendunia" pada `resources/views/welcome.blade.php`.
+- Menghilangkan badge pill slogan "Status Pendaftaran Dibuka" pada `resources/views/ppdb.blade.php`.
+- Memperbarui gaya badge "Berita Terpopuler" pada card featured artikel di `resources/views/articles/index.blade.php` menjadi cerah, bersih (clean), dan ter-highlight elegan dengan palet biru IDN (`bg-[#eff6ff] border border-[#bfdbfe] text-[#0c61cf]`) lengkap dengan active pulsing indicator dot.
+- Menjalankan kompilasi aset `npm run build` sukses 100% tanpa error.
+
+### File
+- `resources/views/welcome.blade.php`
+- `resources/views/ppdb.blade.php`
+- `resources/views/tentang-kami.blade.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/career-center.blade.php`
+- `resources/views/articles/index.blade.php`
+- `resources/views/articles/show.blade.php`
+- `resources/views/program/pkl.blade.php`
+- `resources/views/program/live-in.blade.php`
+- `resources/views/program/ldks.blade.php`
+- `resources/views/program/it-camp.blade.php`
+- `resources/views/program/idn-mengajar.blade.php`
+- `resources/views/program/idn-bersyukur.blade.php`
+- `resources/views/program/ekstrakurikuler.blade.php`
+- `resources/views/program/edurace.blade.php`
+- `resources/views/program/business-survival.blade.php`
+- `resources/views/program/backpacker.blade.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Spacing atas pada seluruh halaman kini konsisten sempurna dengan navbar fixed/floating tanpa ada elemen yang tertutup atau jarak yang terlalu renggang.
+- Badge "Berita Terpopuler" kini terlihat lebih modern, cerah, dan menyatu dengan tema IDN Blue.
+
+### Pekerjaan Selanjutnya
+- Melakukan verifikasi visual di browser bila dibutuhkan dan commit ke git repository.
+
+## 2026-09-25 - Penambahan Padding Top Hero Section & Penghapusan Badge Berita Populer
+
+### Sedang / Sudah Membuat
+- Menambah padding-top pada hero section di semua halaman menjadi `pt-[130px] md:pt-[160px] pb-12 md:pb-[110px]` (dan `pb-12 lg:pb-[72px]` pada halaman program dan career center) agar jarak konten di bawah fixed navbar terasa lega, tidak sempit/mepet ke atas.
+- Menghapus sepenuhnya elemen badge "Berita Terpopuler" pada featured article card di `resources/views/articles/index.blade.php`.
+- Menjalankan kompilasi aset `npm run build` sukses 100% tanpa error.
+
+### File
+- `resources/views/welcome.blade.php`
+- `resources/views/ppdb.blade.php`
+- `resources/views/tentang-kami.blade.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/career-center.blade.php`
+- `resources/views/articles/index.blade.php`
+- `resources/views/articles/show.blade.php`
+- `resources/views/program/pkl.blade.php`
+- `resources/views/program/live-in.blade.php`
+- `resources/views/program/ldks.blade.php`
+- `resources/views/program/it-camp.blade.php`
+- `resources/views/program/idn-mengajar.blade.php`
+- `resources/views/program/idn-bersyukur.blade.php`
+- `resources/views/program/ekstrakurikuler.blade.php`
+- `resources/views/program/edurace.blade.php`
+- `resources/views/program/business-survival.blade.php`
+- `resources/views/program/backpacker.blade.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Jarak vertikal dari batas bawah fixed navbar ke heading hero kini memiliki ruang napas yang sangat nyaman (~68px di desktop dan ~38px di mobile).
+- Tampilan featured article card menjadi jauh lebih bersih tanpa badge berita populer.
+
+## 2026-09-25 - Optimasi Kehalusan Hover Button PPDB & Penjelasan Local State
+
+### Sedang / Sudah Membuat
+- Mengoptimasi transisi tombol CTA Hero PPDB pada `resources/views/ppdb.blade.php`:
+  1. Menyelaraskan durasi transisi dari `duration-300` menjadi `duration-200 ease-out` agar terasa responsif, lincah, dan tidak terasa berat/lambat.
+  2. Mengganti pergeseran panah dari `translate-x-1.5` (6px) menjadi `translate-x-1` (4px) yang lebih elegan dan halus.
+  3. Memperbaiki tombol Login agar transisi warna teks dan ikon SVG bergerak sinkron (`transition-all duration-200`) tanpa lonjakan warna seketika (snap 0ms).
+- Menjalankan `npm run build` agar seluruh class utilitas transisi terbaru ter-compile ke dalam `public/build/assets/`.
+
+### File
+- `resources/views/ppdb.blade.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Penyebab utama hover terasa tidak smooth di local adalah ketiadaan proses `npm run dev` (atau belum dilakukan `npm run build` setelah mengubah kode Blade), serta ketidaksinkronan transisi warna dan transform pada SVG arrow.
+
+

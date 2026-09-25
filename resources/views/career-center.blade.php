@@ -31,9 +31,9 @@
     <!-- Header Navigation -->
     <x-navbar active="career-center" />
 
-    <main class="flex-1 w-full pt-[106px]">
+    <main class="flex-1 w-full">
         <!-- Hero Header Section -->
-        <section class="w-full bg-[#fafafa] py-12 lg:py-[72px] border-b border-[#e9eaeb]">
+        <section class="w-full bg-[#fafafa] pt-[130px] md:pt-[160px] pb-12 lg:pb-[72px] border-b border-[#e9eaeb]">
             <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[160px] text-center space-y-4">
                 <span class="text-[#717680] text-sm md:text-base font-normal tracking-wide">Career Center</span>
                 
@@ -130,7 +130,7 @@
                         <!-- Action Button -->
                         <button type="button" 
                                 @click="applySearch()"
-                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#0b54b5] text-white px-6 py-2.5 sm:py-2.5 rounded-xl sm:rounded-full font-semibold text-sm md:text-base transition-colors shadow-md shrink-0">
+                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#094fa5] hover:shadow-lg text-white px-6 py-2.5 sm:py-2.5 rounded-xl sm:rounded-full font-semibold text-sm md:text-base transition-all duration-200 shadow-md shrink-0">
                             Cari Kerja
                         </button>
 
@@ -422,11 +422,11 @@
 
                         <div class="pt-2 flex gap-3">
                             <button @click="alert('Lamaran Anda berhasil dikirim ke mitra IDN!'); selectedJobModal = null;" 
-                                    class="flex-1 bg-[#0c61cf] hover:bg-[#0b54b5] text-white py-3 rounded-full font-semibold text-center text-sm md:text-base shadow-md transition-colors">
+                                    class="flex-1 bg-[#0c61cf] hover:bg-[#094fa5] hover:shadow-lg text-white py-3 rounded-full font-semibold text-center text-sm md:text-base shadow-md transition-all duration-200">
                                 Lamar Pekerjaan Ini
                             </button>
                             <button @click="selectedJobModal = null" 
-                                    class="px-5 border border-[#e9eaeb] text-[#414651] hover:bg-slate-50 py-3 rounded-full font-semibold text-sm transition-colors">
+                                    class="px-5 border border-[#e9eaeb] text-[#414651] hover:bg-slate-100 hover:border-[#0c61cf] hover:text-[#0c61cf] py-3 rounded-full font-semibold text-sm transition-all duration-200">
                                 Tutup
                             </button>
                         </div>

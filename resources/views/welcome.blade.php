@@ -25,7 +25,7 @@
     <x-navbar active="beranda" />
 
     <!-- 2. HERO HEADER SECTION (Figma Node 19900:12342) -->
-    <section class="w-full max-w-full overflow-hidden flex flex-col items-center mt-16 md:mt-0 py-12 md:py-[110px] bg-[#fafafa]">
+    <section class="w-full max-w-full overflow-hidden flex flex-col items-center pt-[130px] md:pt-[160px] pb-12 md:pb-[110px] bg-[#fafafa]">
         
         <!-- MAIN CONTENT CONTAINER (1120px width, centered) -->
         <div class="w-[1120px] max-w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-14 py-4 px-4 sm:px-6">
@@ -33,12 +33,6 @@
             <!-- LEFT TEXT CONTAINER (615px width) -->
             <div class="w-full lg:w-[615px] max-w-full flex flex-col gap-6 md:gap-8 items-start text-left">
                 
-                <!-- SLOGAN BADGE -->
-                <div class="bg-white border border-[#d5d7da] flex items-center justify-center gap-2 px-4 py-2 rounded-full shadow-2xs">
-                    <span class="w-3.5 h-3.5 rounded-full bg-[#ff7a29] shrink-0"></span>
-                    <span class="text-[#0c61cf] font-medium text-[15px] md:text-[16px] leading-[24px]">Muda Mendunia</span>
-                </div>
-
                 <!-- DESCRIPTION CONTAINER -->
                 <div class="flex flex-col gap-4 md:gap-6 items-start text-left w-full">
                     <!-- MAIN HEADING (56px Geist/Funnel Display) -->
@@ -56,13 +50,13 @@
 
                 <!-- BUTTON CONTAINER (Left-aligned) -->
                 <div class="flex flex-wrap items-center justify-start gap-4 pt-2 w-full">
-                    <a href="/ppdb" class="group bg-[#0c61cf] text-white w-[195px] h-[48px] px-5 py-3 rounded-full font-semibold text-[16px] leading-[24px] flex items-center justify-center gap-2 shadow-[0px_2px_6px_rgba(12,97,207,0.32)] transition-all duration-200 hover:bg-[#094fa5] hover:shadow-md shrink-0">
+                    <a href="/ppdb" class="group bg-[#0c61cf] text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-[#094fa5] hover:shadow-md shrink-0">
                         <span>Daftar Sekarang</span>
-                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 block lg:hidden lg:group-hover:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
-                    <a href="/program" class="group bg-white border-2 border-[#e9eaeb] text-[#414651] w-[145px] h-[48px] px-5 py-3 rounded-full font-semibold text-[16px] leading-[24px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-slate-50 hover:border-[#0c61cf] shrink-0">
+                    <a href="/program" class="group bg-white border-2 border-[#e9eaeb] text-[#414651] hover:text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-slate-50 hover:border-[#0c61cf] shrink-0">
                         <span>Lihat Jurusan</span>
                     </a>
                 </div>
@@ -248,9 +242,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
+                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] leading-none flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
                         <span>Selengkapnya</span>
-                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
@@ -286,9 +280,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
+                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] leading-none flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
                         <span>Selengkapnya</span>
-                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
@@ -323,9 +317,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
+                    <a href="/program" class="group bg-[#0c61cf] text-white w-full h-[48px] rounded-full font-semibold text-[16px] leading-none flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
                         <span>Selengkapnya</span>
-                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
@@ -930,11 +924,17 @@
 
             <!-- BUTTONS CONTAINER -->
             <div class="flex flex-wrap items-center gap-4 z-10">
-                <a href="/ppdb" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 shadow-md transition-all duration-200 hover:bg-slate-100">
+                <a href="/ppdb" class="group bg-white text-[#0c61cf] px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md">
                     <span>Mulai Pendaftaran</span>
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
                 </a>
-                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-[#0c61cf] border border-[#d5d7da] text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5]">
+                <a href="https://wa.me/6282210102006" target="_blank" class="group bg-[#0c61cf] border border-[#d5d7da] text-white px-6 py-3 rounded-full font-semibold text-[15px] md:text-[16px] leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#094fa5] hover:border-white">
                     <span>Tanya Via WhatsApp</span>
+                    <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
                 </a>
             </div>
         </div>

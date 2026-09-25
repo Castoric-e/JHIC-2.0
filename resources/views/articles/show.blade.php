@@ -70,10 +70,10 @@
     <x-navbar active="artikel" />
 
     <!-- MAIN BODY -->
-    <div class="mt-[106px] w-full flex flex-col items-center">
+    <div class="w-full flex flex-col items-center">
         
         <!-- HEADER SECTION -->
-        <div class="w-[1120px] pt-[60px] pb-5 flex flex-col gap-6 max-[1160px]:w-[90%] px-5">
+        <div class="w-[1120px] pt-[130px] md:pt-[160px] pb-5 flex flex-col gap-6 max-[1160px]:w-[90%] px-5">
             <a href="/" class="flex items-center gap-2 text-text-muted text-base font-medium cursor-pointer transition-colors duration-200 hover:text-brand-primary self-start">
                 <img src="{{ asset('assets/icons/arrow_left.svg') }}" alt="Back icon" class="w-5 h-5">
                 Kembali ke artikel
@@ -254,8 +254,18 @@
                     <p class="text-white/85 text-base leading-normal">Gelombang 1 dibuka hingga kuota per jurusan terpenuhi. Daftar sekarang untuk mengamankan tempat dan mendapatkan potongan uang masuk.</p>
                 </div>
                 <div class="flex gap-4 items-center z-10">
-                    <a href="#" class="bg-white text-brand-primary py-3 px-6 rounded-full text-base font-semibold transition-all duration-200 hover:scale-[1.01] hover:shadow-[0px_4px_15px_rgba(255,255,255,0.2)]">Mulai Pendaftaran</a>
-                    <a href="#" class="bg-white/10 text-white py-3 px-6 rounded-full text-base font-semibold transition-all duration-200 hover:bg-white/20 hover:scale-[1.01]">Tanya Via WhatsApp</a>
+                    <a href="/ppdb" class="group bg-white text-[#0c61cf] py-3 px-6 rounded-full text-base font-semibold leading-none h-[48px] flex items-center justify-center gap-2 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md">
+                        <span>Mulai Pendaftaran</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/6282210102006" target="_blank" class="group bg-white/10 border border-white/20 text-white py-3 px-6 rounded-full text-base font-semibold leading-none h-[48px] flex items-center justify-center gap-2 transition-all duration-200 hover:bg-white/20 hover:border-white/40">
+                        <span>Tanya Via WhatsApp</span>
+                        <svg class="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
