@@ -284,5 +284,119 @@ class AdminPanelTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Cyber Forensics Officer');
     }
+
+    public function test_visitor_can_submit_contact_message(): void
+    {
+        $response = $this->post('/kontak', [
+            'name' => 'Fulan bin Fulan',
+            'phone' => '082210102006',
+            'email' => 'fulan@example.com',
+            'subject' => 'Informasi PPDB & Biaya Masuk',
+            'message' => 'Halo, apakah pendaftaran gelombang 1 masih dibuka?',
+        ]);
+
+        $response->assertStatus(302);
+        $this->assertDatabaseHas('contact_messages', [
+            'name' => 'Fulan bin Fulan',
+            'phone' => '082210102006',
+            'email' => 'fulan@example.com',
+            'is_read' => false,
+        ]);
+    }
+
+    public function test_guest_cannot_view_admin_messages(): void
+    {
+        $response = $this->get('/admin/messages');
+        $response->assertStatus(302);
+        $response->assertRedirect(route('admin.login'));
+    }
+
+    public function test_super_admin_can_view_messages_index(): void
+    {
+        $admin = $this->createAdmin();
+        \App\Models\ContactMessage::create([
+            'name' => 'Calon Wali Santri',
+            'phone' => '081234567890',
+            'subject' => 'Informasi PPDB & Biaya Masuk',
+            'message' => 'Ingin menanyakan pendaftaran santri baru',
+            'is_read' => false,
+        ]);
+
+        $response = $this->actingAs($admin)->get('/admin/messages');
+        $response->assertStatus(200);
+        $response->assertSee('Kotak Masuk');
+        $response->assertSee('Calon Wali Santri');
+    }
+
+    public function test_super_admin_can_view_message_detail_and_it_marks_as_read(): void
+    {
+        $admin = $this->createAdmin();
+        $msg = \App\Models\ContactMessage::create([
+            'name' => 'Ahmad Dahlan',
+            'phone' => '08987654321',
+            'email' => 'ahmad@example.com',
+            'subject' => 'Kurikulum IT (RPL, TKJ, DKV)',
+            'message' => 'Bagaimana silabus materi RPL di IDN?',
+            'is_read' => false,
+        ]);
+
+        $response = $this->actingAs($admin)->get("/admin/messages/{$msg->id}");
+        $response->assertStatus(200);
+        $response->assertSee('Ahmad Dahlan');
+        $response->assertSee('Bagaimana silabus materi RPL di IDN?');
+        $this->assertTrue($msg->fresh()->is_read);
+    }
+
+    public function test_super_admin_can_toggle_message_read_status(): void
+    {
+        $admin = $this->createAdmin();
+        $msg = \App\Models\ContactMessage::create([
+            'name' => 'Ibrahim',
+            'phone' => '081122334455',
+            'subject' => 'Pertanyaan Umum Lainnya',
+            'message' => 'Pertanyaan singkat',
+            'is_read' => true,
+        ]);
+
+        $response = $this->actingAs($admin)->patch("/admin/messages/{$msg->id}/toggle");
+        $response->assertStatus(302);
+        $this->assertFalse($msg->fresh()->is_read);
+    }
+
+    public function test_super_admin_can_update_message_notes(): void
+    {
+        $admin = $this->createAdmin();
+        $msg = \App\Models\ContactMessage::create([
+            'name' => 'Zubair',
+            'phone' => '087788990011',
+            'subject' => 'Program Beasiswa Santri',
+            'message' => 'Informasi beasiswa yatim',
+            'is_read' => true,
+        ]);
+
+        $response = $this->actingAs($admin)->patch("/admin/messages/{$msg->id}/notes", [
+            'admin_notes' => 'Sudah ditelepon panitia tgl 25 Sep, berkas dikirim via WA.',
+        ]);
+
+        $response->assertStatus(302);
+        $this->assertEquals('Sudah ditelepon panitia tgl 25 Sep, berkas dikirim via WA.', $msg->fresh()->admin_notes);
+    }
+
+    public function test_super_admin_can_delete_message(): void
+    {
+        $admin = $this->createAdmin();
+        $msg = \App\Models\ContactMessage::create([
+            'name' => 'Pesan Sampah',
+            'phone' => '0800000000',
+            'subject' => 'Pertanyaan Umum Lainnya',
+            'message' => 'Hapus pesan ini',
+            'is_read' => true,
+        ]);
+
+        $response = $this->actingAs($admin)->delete("/admin/messages/{$msg->id}");
+        $response->assertStatus(302);
+        $response->assertRedirect(route('admin.messages.index'));
+        $this->assertDatabaseMissing('contact_messages', ['id' => $msg->id]);
+    }
 }
 

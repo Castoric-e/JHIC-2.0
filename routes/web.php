@@ -79,9 +79,8 @@ Route::get('/career-center', function () {
     return view('career-center', compact('jobs'));
 });
 
-Route::get('/kontak', function () {
-    return view('kontak');
-});
+Route::get('/kontak', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+Route::post('/kontak', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/artikel/{slug}', [ArticleController::class, 'show'])->name('articles.show');
@@ -110,6 +109,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('articles', App\Http\Controllers\Admin\ArticleController::class)->except(['show']);
         Route::resource('career', App\Http\Controllers\Admin\CareerJobController::class)->except(['show']);
         Route::patch('career/{career}/toggle', [App\Http\Controllers\Admin\CareerJobController::class, 'toggle'])->name('career.toggle');
+        Route::resource('messages', App\Http\Controllers\Admin\ContactMessageController::class)->only(['index', 'show', 'destroy']);
+        Route::patch('messages/{message}/toggle', [App\Http\Controllers\Admin\ContactMessageController::class, 'toggle'])->name('messages.toggle');
+        Route::patch('messages/{message}/notes', [App\Http\Controllers\Admin\ContactMessageController::class, 'updateNotes'])->name('messages.notes');
     });
 });
 

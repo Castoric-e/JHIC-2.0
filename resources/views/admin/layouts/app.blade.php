@@ -94,6 +94,25 @@
                         <span>Career Center</span>
                     </a>
 
+                    <!-- Pesan Masuk (Kotak Masuk Kontak) -->
+                    @php
+                        $unreadMessagesBadge = \App\Models\ContactMessage::unread()->count();
+                    @endphp
+                    <a href="{{ route('admin.messages.index') }}" 
+                        class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 {{ request()->routeIs('admin.messages.*') ? 'bg-[#0c61cf] text-white shadow-sm' : 'text-[#475569] hover:bg-[#f1f5f9] hover:text-[#0f172a]' }}">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 shrink-0 {{ request()->routeIs('admin.messages.*') ? 'text-white' : 'text-[#64748b]' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span>Pesan Masuk</span>
+                        </div>
+                        @if($unreadMessagesBadge > 0)
+                            <span class="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none {{ request()->routeIs('admin.messages.*') ? 'bg-white text-[#0c61cf]' : 'bg-[#0c61cf] text-white' }} rounded-full shadow-sm">
+                                {{ $unreadMessagesBadge }}
+                            </span>
+                        @endif
+                    </a>
+
                     <div class="pt-4 px-3 py-1.5 text-[10px] font-bold text-[#94a3b8] uppercase tracking-wider">
                         Situs Utama
                     </div>

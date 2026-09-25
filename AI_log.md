@@ -2807,12 +2807,48 @@ DONE
 - `database/seeders/DatabaseSeeder.php`
 - `AI_Log.md`
 
+## 2026-09-25 - Implementasi Fitur Formulir Kontak Publik & Kotak Masuk Pesan Super Admin
+
+### Sedang / Sudah Membuat
+- Membuat tabel database dan migration `2026_09_25_000003_create_contact_messages_table.php` dengan kolom: `name`, `phone`, `email`, `subject`, `message`, `is_read`, dan `admin_notes`.
+- Membuat Eloquent Model [ContactMessage.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Models/ContactMessage.php) dengan helper scope `unread()` dan accessor `whatsapp_url` untuk tautan instan balasan WhatsApp (`https://wa.me/...`).
+- Menambahkan formulir interaktif konsultasi dan pertanyaan online pada [kontak.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/kontak.blade.php) dengan styling presisi Tailwind CSS khas IDN (`#0c61cf`, font Funnel Display & Geist, responsif desktop & mobile, notifikasi flash success & validation).
+- Membuat controller publik [ContactController.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Http/Controllers/ContactController.php) untuk validasi input dan penyimpanan pesan baru dari pengunjung.
+- Membuat controller Super Admin [ContactMessageController.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Http/Controllers/Admin/ContactMessageController.php) dengan kapabilitas:
+  1. Halaman daftar pesan `/admin/messages` lengkap dengan tab filter status (Semua / Belum Dibaca / Sudah Dibaca), filter dropdown topik, dan pencarian multi-kolom (nama, no WA, email, pesan).
+  2. Halaman detail pesan `/admin/messages/{id}` yang otomatis menandai pesan telah dibaca (`is_read = true`).
+  3. Tombol aksi cepat balas via WhatsApp (langsung membuka direct chat ke nomor pengirim dengan salam pembuka personal).
+  4. Tombol aksi balas via Email (`mailto:`).
+  5. Fitur pencatatan internal tindak lanjut (follow-up notes) staf admin.
+  6. Fitur toggle status dibaca / belum dibaca dan hapus pesan.
+- Mengintegrasikan menu "Pesan Masuk" pada sidebar Super Admin [app.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/admin/layouts/app.blade.php) lengkap dengan badge counter jumlah pesan belum dibaca secara dinamis.
+- Mengintegrasikan ringkasan statistik pesan dan tabel "Pesan Kontak & Konsultasi Terbaru" pada dashboard admin [dashboard.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/admin/dashboard.blade.php).
+- Menambahkan 7 unit feature test pada [AdminPanelTest.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/tests/Feature/AdminPanelTest.php) dan memverifikasi seluruh 25 automated tests lulus 100% (75 assertions).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000003_create_contact_messages_table.php`
+- `app/Models/ContactMessage.php`
+- `app/Http/Controllers/ContactController.php`
+- `app/Http/Controllers/Admin/ContactMessageController.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `routes/web.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/admin/messages/index.blade.php`
+- `resources/views/admin/messages/show.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `resources/views/admin/dashboard.blade.php`
+- `tests/Feature/AdminPanelTest.php`
+- `AI_Log.md`
+
 ### Status
 DONE
 
 ### Catatan
-- Seluruh 21 lowongan bawaan asli kini kembali 100% persis seperti semula dengan gambar logo resmi masing-masing.
-- Semua tes lulus 100%.
+- Form kontak publik pada `/kontak` terhubung langsung secara real-time ke Kotak Masuk Super Admin `/admin/messages`.
+- Super Admin dapat merespon pertanyaan calon wali santri dalam 1 klik langsung ke WhatsApp pengirim.
+- Seluruh 25 automated test pada `AdminPanelTest` lulus 100%.
+
 
 
 
