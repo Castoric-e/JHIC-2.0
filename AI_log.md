@@ -14,6 +14,16 @@
   - Menyelaraskan status default dan hover pada seluruh kartu:
     - Seluruh 6 kartu memiliki status default yang seragam (kartu putih dengan tombol lingkaran bergaris tepi abu-abu `border-2 border-[#e9eaeb]` dan ikon abu-abu).
     - Kartu ke-3 ("Pengajar Profesional") di gambar referensi merupakan contoh status saat kartu di-hover (`:hover`). Kini ketika kartu apa pun di-hover, border kartu berubah menjadi biru `#0c61cf`, mendapat bayangan halus `shadow-[0px_4px_20px_rgba(0,0,0,0.08)]`, dan tombol lingkaran berubah menjadi latar biru muda `bg-[#f0f6fe]` dengan border biru `#0c61cf` serta ikon biru `#0c61cf`.
+## 2026-09-25 - Sleek Search Bar Redesign & Button Removal on Career Center
+
+### Sedang / Sudah Membuat
+
+- Menghapus tombol *"Cari Kerja"* pada bar pencarian hero section di [career-center.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/career-center.blade.php), karena sistem pencarian dan filter sudah berjalan secara instan dan reaktif (*real-time reactive filtering*) via Alpine.js (`x-model="searchQuery"` dan `selectedMajor`).
+- Menyempurnakan desain kapsul pencarian agar tampak modern, minimalis, dan *clean*:
+  - Memperluas area input kata kunci dengan ikon kaca pembesar berwarna biru khas IDN (`#0c61cf`), placeholder yang intuitif, serta tombol *clear search* interaktif (`x-show="searchQuery"`).
+  - Menyematkan pembatas vertikal halus (*divider*) antara kolom input dan pemilih jurusan.
+  - Mempercantik tombol dropdown jurusan di sebelah kanan bar dengan styling kapsul elegan dan label jurusannya.
+  - Menghaluskan bayangan (*shadow*) dan efek hover kapsul bar (`shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:border-[#c2d8f5] hover:shadow-[0px_6px_28px_rgba(12,97,207,0.1)]`).
 - Menjalankan `npm run build` dengan hasil sukses (`Exit Code: 0`).
 
 ### File
@@ -21,6 +31,8 @@
 - `resources/views/welcome.blade.php`
 - `resources/css/app.css`
 - `AI_log.md`
+- `resources/views/career-center.blade.php`
+- `AI_Log.md`
 
 ### Status
 
@@ -159,6 +171,8 @@ DONE
 - Tidak ada kartu dari tab lain yang mengintip atau menempel di sisi kanan saat sedang aktif.
 - Seluruh bayangan kartu testimoni (`box-shadow`) tampil utuh tanpa terpotong di semua sisi.
 
+- Desain bar pencarian Career Center kini terlihat jauh lebih rapi, bersih, dan modern tanpa tombol yang berlebihan, sementara fungsionalitas pencarian tetap responsif dan instan.
+- Aset Vite telah dikompilasi ulang dengan sukses.
 
 ## 2026-09-25 - Precision Vertical Centering for Button Arrow Icons
 
@@ -2826,6 +2840,43 @@ DONE
 
 ### File
 - `resources/views/welcome.blade.php`
+## 2026-09-25 - Implementasi Custom Super Admin Panel (Stealth Access /admin)
+
+### Sedang / Sudah Membuat
+- Menambahkan kolom `role` pada tabel `users` (default: `'super_admin'`) via migration `database/migrations/2026_09_25_000001_add_role_to_users_table.php`.
+- Menyiapkan seeder `AdminSeeder` dengan akun default Super Admin: `admin@idn.sch.id` (password: `password123`).
+- Mengimplementasikan middleware `SuperAdminMiddleware` untuk memproteksi seluruh rute `/admin/*` hanya untuk akun ber-role `super_admin`.
+- Menerapkan arsitektur *Stealth URL Access* pada rute `/admin`:
+  1. Akses langsung melalui URL `http://127.0.0.1:8000/admin` tanpa adanya tombol / petunjuk apapun di antarmuka publik.
+  2. Pengguna belum login otomatis di-redirect ke `/admin/login`.
+  3. Pengguna yang sudah terautentikasi otomatis di-redirect ke `/admin/dashboard`.
+- Membangun antarmuka halaman login Super Admin `resources/views/admin/login.blade.php` dengan branding IDN Boarding School, input email & password (dengan toggle show/hide), remember me, dan indikator status error.
+- Membangun master layout `resources/views/admin/layouts/app.blade.php` bertema warna biru IDN (`#0c61cf`), sidebar responsive mobile-drawer, header informatif, profil Super Admin, serta tombol logout aman.
+- Membangun dashboard analitik `resources/views/admin/dashboard.blade.php` yang menampilkan ringkasan jumlah artikel, kategori aktif, status sistem, quick actions, dan daftar artikel terbaru.
+- Membangun modul CMS Artikel lengkap:
+  1. Halaman daftar artikel `resources/views/admin/articles/index.blade.php` dengan pencarian teks, filter dropdown kategori, thumbnail preview, pagination, dan modal konfirmasi hapus interaktif via Alpine.js.
+  2. Formulir tambah artikel baru `resources/views/admin/articles/create.blade.php` dengan drag-and-drop image upload preview, auto-slug generator, dan helper tag pemformatan konten.
+  3. Formulir edit artikel `resources/views/admin/articles/edit.blade.php` dengan preview gambar saat ini dan opsi ganti gambar.
+- Membuat unit/feature test suite `tests/Feature/AdminPanelTest.php` mencakup 10 skenario pengujian: redirect tamu, rendering login, autentikasi super admin, proteksi rute, dashboard, serta operasi CRUD artikel dan logout (10/10 test lulus 100%).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000001_add_role_to_users_table.php`
+- `database/seeders/AdminSeeder.php`
+- `app/Models/User.php`
+- `app/Http/Middleware/SuperAdminMiddleware.php`
+- `bootstrap/app.php`
+- `app/Http/Controllers/Admin/AuthController.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `app/Http/Controllers/Admin/ArticleController.php`
+- `routes/web.php`
+- `resources/views/admin/login.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `resources/views/admin/dashboard.blade.php`
+- `resources/views/admin/articles/index.blade.php`
+- `resources/views/admin/articles/create.blade.php`
+- `resources/views/admin/articles/edit.blade.php`
+- `tests/Feature/AdminPanelTest.php`
 - `AI_Log.md`
 
 ### Status
@@ -2845,6 +2896,44 @@ DONE
 
 ### File
 - `resources/views/welcome.blade.php`
+- Panel administrasi hanya memiliki 1 role tunggal yaitu `Super Admin` dengan hak akses penuh ke seluruh sistem.
+- Tidak ada sedikitpun tombol atau tautan ke `/admin` di navbar, hero, maupun footer halaman publik, sehingga akses terjaga kerahasiaannya.
+- Semua pengujian Laravel (`php artisan test`) lulus 100% (12 passing tests, 37 assertions).
+- Kompilasi aset frontend Tailwind CSS v4 berhasil tanpa error.
+
+### Pekerjaan Selanjutnya
+- Melakukan verifikasi login langsung di browser melalui URL `http://127.0.0.1:8000/admin`.
+
+## 2026-09-25 - Implementasi CMS Career Center Dinamis pada Super Admin Panel
+
+### Sedang / Sudah Membuat
+- Membuat tabel `career_jobs` pada database melalui migration `database/migrations/2026_09_25_000002_create_career_jobs_table.php` lengkap dengan indexing jurusan, tipe kerja, sistem kerja, dan status aktif.
+- Membuat Eloquent Model `app/Models/CareerJob.php` dengan fillable, casting boolean, dan scope query `active()`.
+- Menyiapkan seeder `CareerJobSeeder.php` yang memigrasikan seluruh 21 lowongan mitra industri eksisting ke PostgreSQL, menjaga data asli 100% utuh.
+- Mengubah rute publik `/career-center` di `routes/web.php` dan tampilan `resources/views/career-center.blade.php` agar membaca data lowongan secara dinamis dari database via injection `@json($jobs)` ke Alpine.js `careerCenterData()`.
+- Menambahkan modul CRUD Career Center di panel Super Admin:
+  1. Controller `app/Http/Controllers/Admin/CareerJobController.php` dengan fitur filter pencarian, filter jurusan, filter status, tambah lowongan, edit, upload logo perusahaan, hapus, dan aksi cepat toggle aktif/tutup.
+  2. Halaman daftar lowongan `resources/views/admin/career/index.blade.php` dengan badge jurusan (RPL, TKJ, DKV), status aktif/tutup interaktif, pagination, dan modal hapus.
+  3. Formulir tambah lowongan `resources/views/admin/career/create.blade.php` dan edit `resources/views/admin/career/edit.blade.php`.
+- Menambahkan menu navigasi "Career Center" pada sidebar master layout `resources/views/admin/layouts/app.blade.php`.
+- Menghubungkan statistik lowongan karir aktif ke kartu ringkasan di dashboard `app/Http/Controllers/Admin/DashboardController.php` dan `resources/views/admin/dashboard.blade.php`.
+- Menambahkan 6 skenario feature test untuk Career Center pada `tests/Feature/AdminPanelTest.php` (total 18/18 test suite lulus 100%).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000002_create_career_jobs_table.php`
+- `app/Models/CareerJob.php`
+- `database/seeders/CareerJobSeeder.php`
+- `routes/web.php`
+- `resources/views/career-center.blade.php`
+- `app/Http/Controllers/Admin/CareerJobController.php`
+- `resources/views/admin/career/index.blade.php`
+- `resources/views/admin/career/create.blade.php`
+- `resources/views/admin/career/edit.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `resources/views/admin/dashboard.blade.php`
+- `tests/Feature/AdminPanelTest.php`
 - `AI_Log.md`
 
 ### Status
@@ -2852,6 +2941,88 @@ DONE
 
 ### Catatan
 - Efek bayangan (box shadow) kartu kini terlihat penuh dan lembut tanpa ada bagian yang terpotong di tepi atas, bawah, maupun samping.
+- Halaman publik `/career-center` kini 100% dinamis dan sinkron langsung dengan Super Admin Panel.
+- Fitur pencarian, filter jurusan (RPL/TKJ/DKV), filter sistem kerja (Onsite/Hybrid/Remote), dan filter tipe kerja di halaman publik tetap berjalan mulus dan reaktif via Alpine.js.
+- Super Admin dapat menutup atau mengaktifkan kembali lowongan hanya dengan 1 klik tombol status tanpa harus menghapus data.
+- Seluruh 18 automated tests lulus (100% Passing, 55 assertions).
+
+## 2026-09-25 - Pemulihan Presisi 21 Data Lowongan Bawaan Asli Career Center & Sinkronisasi Logo Partner
+
+### Sedang / Sudah Membuat
+- Mengoreksi data seeder pada `database/seeders/CareerJobSeeder.php` dengan mengembalikan ke-21 data perusahaan dan posisi asli default bawaan desain:
+  1. Digideep (`assets/partners/Digdeep.avif`)
+  2. Tenos Data Teknologi (`assets/partners/tenos-data-teknologi.avif`)
+  3. Indekstat (`assets/partners/indekstat.avif`)
+  4. Alfahuma Rekayasa Teknologi (`assets/partners/alfahuma-rekayasa.avif`)
+  5. Pertamina (`assets/partners/pertamina.avif`)
+  6. Vektora Studio (`assets/partners/vektora-studio.avif`)
+  7. PLN (`assets/partners/pln-1.avif`)
+  8. Telkom Indonesia (`assets/partners/telkom-id.avif`)
+  9. Toyota Astra Motor (`assets/partners/toyota-astra-motor.avif`)
+  10. Sisindokom Lintasbuana (`assets/partners/sisindokom-1.avif`)
+  11. Yaksa Ersada Solusindo (`assets/partners/yaksa-ersada.avif`)
+  12. Telkom Akses (`assets/partners/telkom-akses.avif`)
+  13. Sucofindo (`assets/partners/Sucofindo.avif`)
+  14. Pelabuhan Indonesia (`assets/partners/pelabuhanIndo.avif`)
+  15. Tokopedia (`assets/partners/tokped.avif`)
+  16. Shopee (`assets/partners/Shoppie.avif`)
+  17. Lazada (`assets/partners/lazada.avif`)
+  18. Gojek (`assets/partners/gojek.avif`)
+  19. Grab (`assets/partners/grab.avif`)
+  20. Maxim (`assets/partners/Maxim.avif`)
+  21. Blibli (`assets/partners/blibli.avif`)
+- Mendaftarkan `CareerJobSeeder` dan `AdminSeeder` ke dalam `DatabaseSeeder.php` agar pemanggilan `php artisan db:seed` secara otomatis menyegarkan seluruh tabel database.
+- Melakukan truncate dan re-seed tabel `career_jobs` dengan sukses (Exit code 0).
+- Memastikan seluruh 21 file logo mitra industri terverifikasi ada secara fisik pada `public/assets/partners/` dan ter-render dengan sempurna tanpa broken image.
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/seeders/CareerJobSeeder.php`
+- `database/seeders/DatabaseSeeder.php`
+- `AI_Log.md`
+
+## 2026-09-25 - Implementasi Fitur Formulir Kontak Publik & Kotak Masuk Pesan Super Admin
+
+### Sedang / Sudah Membuat
+- Membuat tabel database dan migration `2026_09_25_000003_create_contact_messages_table.php` dengan kolom: `name`, `phone`, `email`, `subject`, `message`, `is_read`, dan `admin_notes`.
+- Membuat Eloquent Model [ContactMessage.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Models/ContactMessage.php) dengan helper scope `unread()` dan accessor `whatsapp_url` untuk tautan instan balasan WhatsApp (`https://wa.me/...`).
+- Menambahkan formulir interaktif konsultasi dan pertanyaan online pada [kontak.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/kontak.blade.php) dengan styling presisi Tailwind CSS khas IDN (`#0c61cf`, font Funnel Display & Geist, responsif desktop & mobile, notifikasi flash success & validation).
+- Membuat controller publik [ContactController.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Http/Controllers/ContactController.php) untuk validasi input dan penyimpanan pesan baru dari pengunjung.
+- Membuat controller Super Admin [ContactMessageController.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/app/Http/Controllers/Admin/ContactMessageController.php) dengan kapabilitas:
+  1. Halaman daftar pesan `/admin/messages` lengkap dengan tab filter status (Semua / Belum Dibaca / Sudah Dibaca), filter dropdown topik, dan pencarian multi-kolom (nama, no WA, email, pesan).
+  2. Halaman detail pesan `/admin/messages/{id}` yang otomatis menandai pesan telah dibaca (`is_read = true`).
+  3. Tombol aksi cepat balas via WhatsApp (langsung membuka direct chat ke nomor pengirim dengan salam pembuka personal).
+  4. Tombol aksi balas via Email (`mailto:`).
+  5. Fitur pencatatan internal tindak lanjut (follow-up notes) staf admin.
+  6. Fitur toggle status dibaca / belum dibaca dan hapus pesan.
+- Mengintegrasikan menu "Pesan Masuk" pada sidebar Super Admin [app.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/admin/layouts/app.blade.php) lengkap dengan badge counter jumlah pesan belum dibaca secara dinamis.
+- Mengintegrasikan ringkasan statistik pesan dan tabel "Pesan Kontak & Konsultasi Terbaru" pada dashboard admin [dashboard.blade.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/resources/views/admin/dashboard.blade.php).
+- Menambahkan 7 unit feature test pada [AdminPanelTest.php](file:///c:/Users/novit/Documents/Lomba/JHIC/folder%20laravel/Website-IDN-JHIC/tests/Feature/AdminPanelTest.php) dan memverifikasi seluruh 25 automated tests lulus 100% (75 assertions).
+- Menjalankan `npm run build` sukses dengan Exit Code 0.
+
+### File
+- `database/migrations/2026_09_25_000003_create_contact_messages_table.php`
+- `app/Models/ContactMessage.php`
+- `app/Http/Controllers/ContactController.php`
+- `app/Http/Controllers/Admin/ContactMessageController.php`
+- `app/Http/Controllers/Admin/DashboardController.php`
+- `routes/web.php`
+- `resources/views/kontak.blade.php`
+- `resources/views/admin/messages/index.blade.php`
+- `resources/views/admin/messages/show.blade.php`
+- `resources/views/admin/layouts/app.blade.php`
+- `resources/views/admin/dashboard.blade.php`
+- `tests/Feature/AdminPanelTest.php`
+- `AI_Log.md`
+
+### Status
+DONE
+
+### Catatan
+- Form kontak publik pada `/kontak` terhubung langsung secara real-time ke Kotak Masuk Super Admin `/admin/messages`.
+- Super Admin dapat merespon pertanyaan calon wali santri dalam 1 klik langsung ke WhatsApp pengirim.
+- Seluruh 25 automated test pada `AdminPanelTest` lulus 100%.
+
 
 
 

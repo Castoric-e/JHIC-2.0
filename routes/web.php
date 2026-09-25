@@ -54,12 +54,33 @@ Route::get('/program/{slug?}', function ($slug = null) {
 });
 
 Route::get('/career-center', function () {
-    return view('career-center');
+    $jobs = \App\Models\CareerJob::active()
+        ->orderBy('id', 'asc')
+        ->get()
+        ->map(function ($j) {
+            return [
+                'id' => $j->id,
+                'title' => $j->title,
+                'major' => $j->major,
+                'salary' => $j->salary,
+                'workLocation' => $j->work_location,
+                'workType' => $j->work_type,
+                'companyName' => $j->company_name,
+                'companyLogo' => $j->company_logo_char,
+                'companyImg' => $j->company_img ? asset($j->company_img) : null,
+                'companyBg' => $j->company_bg,
+                'location' => $j->location,
+                'locationGroup' => $j->location_group,
+                'postedTime' => $j->posted_time,
+                'postTimeCategory' => $j->post_time_category,
+                'applyUrl' => $j->apply_url,
+            ];
+        });
+    return view('career-center', compact('jobs'));
 });
 
-Route::get('/kontak', function () {
-    return view('kontak');
-});
+Route::get('/kontak', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+Route::post('/kontak', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/artikel/{slug}', [ArticleController::class, 'show'])->name('articles.show');
@@ -73,3 +94,24 @@ Route::get('/clear-cache', function () {
 Route::post('/api/chatbot/conversations', [ChatbotController::class, 'createConversation']);
 Route::post('/api/chatbot/chat', [ChatbotController::class, 'sendMessage']);
 Route::post('/api/chatbot/chat/stream', [ChatbotController::class, 'streamMessage']);
+
+// Stealth Super Admin Panel Routes (Accessible strictly via direct URL /admin)
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login.post');
+    Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+
+    Route::middleware('super_admin')->group(function () {
+        Route::get('/', function () {
+            return redirect()->route('admin.dashboard');
+        });
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('articles', App\Http\Controllers\Admin\ArticleController::class)->except(['show']);
+        Route::resource('career', App\Http\Controllers\Admin\CareerJobController::class)->except(['show']);
+        Route::patch('career/{career}/toggle', [App\Http\Controllers\Admin\CareerJobController::class, 'toggle'])->name('career.toggle');
+        Route::resource('messages', App\Http\Controllers\Admin\ContactMessageController::class)->only(['index', 'show', 'destroy']);
+        Route::patch('messages/{message}/toggle', [App\Http\Controllers\Admin\ContactMessageController::class, 'toggle'])->name('messages.toggle');
+        Route::patch('messages/{message}/notes', [App\Http\Controllers\Admin\ContactMessageController::class, 'updateNotes'])->name('messages.notes');
+    });
+});
+

@@ -47,29 +47,40 @@
 
                 <!-- Search & Major Filter Bar -->
                 <div class="pt-6 max-w-[674px] mx-auto">
-                    <div class="bg-white p-3 sm:p-2.5 rounded-2xl sm:rounded-full border border-[#e9eaeb] shadow-lg flex flex-col sm:flex-row items-center gap-2.5 sm:gap-2 relative">
+                    <div class="bg-white p-2.5 sm:p-2 sm:pl-5 sm:pr-2.5 rounded-2xl sm:rounded-full border border-[#e9eaeb] shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:border-[#c2d8f5] hover:shadow-[0px_6px_28px_rgba(12,97,207,0.1)] transition-all duration-200 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 relative">
                         
                         <!-- Search Keyword Input -->
-                        <div class="flex-1 flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-0 bg-[#f8fafc] sm:bg-transparent rounded-xl sm:rounded-none border border-[#e2e8f0] sm:border-none w-full">
-                            <svg class="w-5 h-5 text-[#717680] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex-1 flex items-center gap-3 px-3.5 sm:px-0 py-2 sm:py-1 bg-[#f8fafc] sm:bg-transparent rounded-xl sm:rounded-none border border-[#e2e8f0] sm:border-none w-full">
+                            <svg class="w-5 h-5 text-[#0c61cf] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                             <input type="text" 
                                    x-model="searchQuery" 
-                                   placeholder="Pilih posisi/pekerjaan..." 
+                                   placeholder="Pilih posisi atau kata kunci pekerjaan..." 
                                    class="w-full bg-transparent text-sm md:text-base text-[#181d27] placeholder-[#717680] focus:outline-none">
+                            <button x-show="searchQuery && searchQuery.length > 0" 
+                                    @click="searchQuery = ''" 
+                                    type="button" 
+                                    x-cloak
+                                    class="text-[#717680] hover:text-[#181d27] p-1 shrink-0 transition-colors cursor-pointer"
+                                    title="Hapus pencarian">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
                         </div>
 
                         <!-- Divider -->
-                        <div class="hidden sm:block w-px h-8 bg-[#e9eaeb]"></div>
+                        <div class="hidden sm:block w-px h-8 bg-[#e9eaeb] shrink-0"></div>
 
                         <!-- Jurusan Selection Dropdown -->
-                        <div class="relative w-full sm:w-auto" @click.outside="majorDropdownOpen = false">
+                        <div class="relative w-full sm:w-auto shrink-0" @click.outside="majorDropdownOpen = false">
                             <button @click="majorDropdownOpen = !majorDropdownOpen" 
                                     type="button" 
-                                    class="w-full sm:w-auto px-4 py-2.5 rounded-xl sm:rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between gap-3 border border-[#e2e8f0] transition-colors">
+                                    class="w-full sm:w-auto px-4 py-2.5 rounded-xl sm:rounded-full text-sm font-medium text-[#414651] bg-[#f8fafc] hover:bg-[#f1f5f9] flex items-center justify-between sm:justify-start gap-2.5 border border-[#e2e8f0] transition-all duration-200 cursor-pointer">
+                                <span class="text-[#717680] text-xs font-normal hidden sm:inline">Jurusan:</span>
                                 <span x-text="selectedMajor === 'Semua' ? 'Pilih Jurusan' : selectedMajor" class="font-semibold text-[#0c61cf]"></span>
-                                <svg class="w-4 h-4 text-[#717680] transition-transform duration-200" :class="{'rotate-180': majorDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-[#717680] transition-transform duration-200 shrink-0" :class="{'rotate-180': majorDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                 </svg>
                             </button>
@@ -83,12 +94,12 @@
                                  x-transition:leave-start="opacity-100 scale-100 translate-y-0"
                                  x-transition:leave-end="opacity-0 scale-95 -translate-y-2"
                                  x-cloak
-                                 class="absolute left-0 sm:left-auto sm:right-0 mt-2 w-full sm:w-48 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
+                                 class="absolute left-0 sm:left-auto sm:right-0 mt-2 w-full sm:w-52 bg-white rounded-2xl shadow-xl border border-[#e9eaeb] py-2 z-50 text-left overflow-hidden">
                                 
                                 <!-- Dropdown Header / All -->
                                 <div @click="selectMajor('Semua')" 
                                      :class="selectedMajor === 'Semua' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>Semua Jurusan</span>
                                     <template x-if="selectedMajor === 'Semua'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -98,7 +109,7 @@
                                 <!-- TKJ -->
                                 <div @click="selectMajor('TKJ')" 
                                      :class="selectedMajor === 'TKJ' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>TKJ</span>
                                     <template x-if="selectedMajor === 'TKJ'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -108,7 +119,7 @@
                                 <!-- RPL -->
                                 <div @click="selectMajor('RPL')" 
                                      :class="selectedMajor === 'RPL' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>RPL</span>
                                     <template x-if="selectedMajor === 'RPL'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -118,7 +129,7 @@
                                 <!-- DKV -->
                                 <div @click="selectMajor('DKV')" 
                                      :class="selectedMajor === 'DKV' ? 'border-l-4 border-[#0c61cf] bg-[#f8fafc] font-semibold text-[#0c61cf]' : 'text-[#414651] hover:bg-[#f8fafc]'"
-                                     class="px-4 py-3 text-sm cursor-pointer transition-colors flex items-center justify-between">
+                                     class="px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between">
                                     <span>DKV</span>
                                     <template x-if="selectedMajor === 'DKV'">
                                         <svg class="w-4 h-4 text-[#0c61cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -126,13 +137,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Action Button -->
-                        <button type="button" 
-                                @click="applySearch()"
-                                class="w-full sm:w-auto bg-[#0c61cf] hover:bg-[#094fa5] hover:shadow-lg text-white px-6 py-2.5 sm:py-2.5 rounded-xl sm:rounded-full font-semibold text-sm md:text-base transition-all duration-200 shadow-md shrink-0">
-                            Cari Kerja
-                        </button>
 
                     </div>
                 </div>
@@ -470,366 +474,8 @@
                 workLocationOptions: ['Semua', 'Onsite', 'Hybrid', 'Remote/WFH'],
                 workTypeOptions: ['Semua', 'Full-time', 'Part-time', 'Contract', 'Internship', 'Freelance'],
                 postTimeOptions: ['Semua', 'Hari ini', 'Minggu ini', 'Bulan ini', 'Tahun ini'],
-                // Exactly 21 Jobs Matching Figma Node 19889-5661 (100% Exact Data)
-                jobs: [
-                    // Card 1
-                    {
-                        id: 1,
-                        title: 'Content Creator',
-                        major: 'DKV',
-                        salary: 'Rp 1.5 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Contract',
-                        companyName: 'Digideep',
-                        companyLogo: 'D',
-                        companyImg: "{{ asset('assets/partners/Digdeep.avif') }}",
-                        companyBg: 'bg-indigo-600',
-                        location: 'Greater Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '1 hari yang lalu',
-                        postTimeCategory: 'Hari ini'
-                    },
-                    // Card 2
-                    {
-                        id: 2,
-                        title: 'UI/UX Developer',
-                        major: 'DKV',
-                        salary: 'Rp 1.5 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Contract',
-                        companyName: 'Tenos Data Teknologi',
-                        companyLogo: 'T',
-                        companyImg: "{{ asset('assets/partners/tenos-data-teknologi.avif') }}",
-                        companyBg: 'bg-amber-500',
-                        location: 'Greater Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '2 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 3
-                    {
-                        id: 3,
-                        title: 'Digital Marketing',
-                        major: 'DKV',
-                        salary: 'Rp 1.5 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Contract',
-                        companyName: 'Indekstat',
-                        companyLogo: 'I',
-                        companyImg: "{{ asset('assets/partners/indekstat.avif') }}",
-                        companyBg: 'bg-orange-500',
-                        location: 'Greater Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '3 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 4
-                    {
-                        id: 4,
-                        title: 'Frontend Developer',
-                        major: 'RPL',
-                        salary: 'Rp 2 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Full-time',
-                        companyName: 'Alfahuma Rekayasa Teknologi',
-                        companyLogo: 'A',
-                        companyImg: "{{ asset('assets/partners/alfahuma-rekayasa.avif') }}",
-                        companyBg: 'bg-blue-600',
-                        location: 'Bekasi, West Java',
-                        locationGroup: 'Jawa',
-                        postedTime: '4 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 5
-                    {
-                        id: 5,
-                        title: 'IT Support',
-                        major: 'TKJ',
-                        salary: 'Rp 3 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Part-time',
-                        companyName: 'Pertamina',
-                        companyLogo: 'P',
-                        companyImg: "{{ asset('assets/partners/pertamina.avif') }}",
-                        companyBg: 'bg-red-600',
-                        location: 'Central Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '5 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 6
-                    {
-                        id: 6,
-                        title: 'Network Administrator',
-                        major: 'TKJ',
-                        salary: 'Rp 2.5 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Freelance',
-                        companyName: 'Vektora Studio',
-                        companyLogo: 'V',
-                        companyImg: "{{ asset('assets/partners/vektora-studio.avif') }}",
-                        companyBg: 'bg-emerald-600',
-                        location: 'Surakarta, Central Java',
-                        locationGroup: 'Jawa',
-                        postedTime: '6 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 7
-                    {
-                        id: 7,
-                        title: 'Cloud Engineer',
-                        major: 'TKJ',
-                        salary: 'Rp 1 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Internship',
-                        companyName: 'PLN',
-                        companyLogo: 'P',
-                        companyImg: "{{ asset('assets/partners/pln-1.avif') }}",
-                        companyBg: 'bg-cyan-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '7 hari yang lalu',
-                        postTimeCategory: 'Minggu ini'
-                    },
-                    // Card 8
-                    {
-                        id: 8,
-                        title: 'Video Editor',
-                        major: 'DKV',
-                        salary: 'Rp 2 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Part-time',
-                        companyName: 'Telkom Indonesia',
-                        companyLogo: 'T',
-                        companyImg: "{{ asset('assets/partners/telkom-id.avif') }}",
-                        companyBg: 'bg-red-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '8 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 9
-                    {
-                        id: 9,
-                        title: 'Web Developer',
-                        major: 'RPL',
-                        salary: 'Rp 1.5 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Contract',
-                        companyName: 'Toyota Astra Motor',
-                        companyLogo: 'T',
-                        companyImg: "{{ asset('assets/partners/toyota-astra-motor.avif') }}",
-                        companyBg: 'bg-rose-700',
-                        location: 'Central Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '9 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 10
-                    {
-                        id: 10,
-                        title: 'Graphic Designer',
-                        major: 'DKV',
-                        salary: 'Rp 5 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Full-time',
-                        companyName: 'Sisindokom Lintasbuana',
-                        companyLogo: 'S',
-                        companyImg: "{{ asset('assets/partners/sisindokom-1.avif') }}",
-                        companyBg: 'bg-purple-600',
-                        location: 'Central Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '10 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 11
-                    {
-                        id: 11,
-                        title: 'Backend Developer',
-                        major: 'RPL',
-                        salary: 'Rp 2 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Freelance',
-                        companyName: 'Yaksa Ersada Solusindo',
-                        companyLogo: 'Y',
-                        companyImg: "{{ asset('assets/partners/yaksa-ersada.avif') }}",
-                        companyBg: 'bg-red-500',
-                        location: 'Bekasi, West Java',
-                        locationGroup: 'Jawa',
-                        postedTime: '11 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 12
-                    {
-                        id: 12,
-                        title: 'Security Engineer',
-                        major: 'TKJ',
-                        salary: 'Rp 4 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Part-time',
-                        companyName: 'Telkom Akses',
-                        companyLogo: 'T',
-                        companyImg: "{{ asset('assets/partners/telkom-akses.avif') }}",
-                        companyBg: 'bg-red-600',
-                        location: 'Tangerang, Banten',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '12 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 13
-                    {
-                        id: 13,
-                        title: 'IT Support',
-                        major: 'TKJ',
-                        salary: 'Rp 4 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Contract',
-                        companyName: 'Sucofindo',
-                        companyLogo: 'S',
-                        companyImg: "{{ asset('assets/partners/Sucofindo.avif') }}",
-                        companyBg: 'bg-blue-700',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '13 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 14
-                    {
-                        id: 14,
-                        title: '3D Designer',
-                        major: 'DKV',
-                        salary: 'Rp 3 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Part-time',
-                        companyName: 'Pelabuhan Indonesia',
-                        companyLogo: 'P',
-                        companyImg: "{{ asset('assets/partners/pelabuhanIndo.avif') }}",
-                        companyBg: 'bg-sky-600',
-                        location: 'North Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '14 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 15
-                    {
-                        id: 15,
-                        title: 'Fullstack Developer',
-                        major: 'RPL',
-                        salary: 'Rp 1 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Freelance',
-                        companyName: 'Tokopedia',
-                        companyLogo: 'T',
-                        companyImg: "{{ asset('assets/partners/tokped.avif') }}",
-                        companyBg: 'bg-emerald-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '15 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 16
-                    {
-                        id: 16,
-                        title: 'QA Tester',
-                        major: 'RPL',
-                        salary: 'Rp 1.5 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Full-time',
-                        companyName: 'Shopee',
-                        companyLogo: 'S',
-                        companyImg: "{{ asset('assets/partners/Shoppie.avif') }}",
-                        companyBg: 'bg-orange-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '16 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 17
-                    {
-                        id: 17,
-                        title: 'Animator',
-                        major: 'DKV',
-                        salary: 'Rp 2.5 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Internship',
-                        companyName: 'Lazada',
-                        companyLogo: 'L',
-                        companyImg: "{{ asset('assets/partners/lazada.avif') }}",
-                        companyBg: 'bg-purple-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '17 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 18
-                    {
-                        id: 18,
-                        title: 'Network Administrator',
-                        major: 'TKJ',
-                        salary: 'Rp 3.5 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Part-time',
-                        companyName: 'Gojek',
-                        companyLogo: 'G',
-                        companyImg: "{{ asset('assets/partners/gojek.avif') }}",
-                        companyBg: 'bg-emerald-600',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '18 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 19
-                    {
-                        id: 19,
-                        title: 'Backend Developer',
-                        major: 'RPL',
-                        salary: 'Rp 6 Juta',
-                        workLocation: 'Hybrid',
-                        workType: 'Contract',
-                        companyName: 'Grab',
-                        companyLogo: 'G',
-                        companyImg: "{{ asset('assets/partners/grab.avif') }}",
-                        companyBg: 'bg-emerald-700',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '19 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 20
-                    {
-                        id: 20,
-                        title: 'UI/UX Designer',
-                        major: 'DKV',
-                        salary: 'Rp 1 Juta',
-                        workLocation: 'Onsite',
-                        workType: 'Freelance',
-                        companyName: 'Maxim',
-                        companyLogo: 'M',
-                        companyImg: "{{ asset('assets/partners/Maxim.avif') }}",
-                        companyBg: 'bg-amber-400 text-black',
-                        location: 'South Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '20 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    },
-                    // Card 21
-                    {
-                        id: 21,
-                        title: 'Cloud Engineer',
-                        major: 'TKJ',
-                        salary: 'Rp 3 Juta',
-                        workLocation: 'Remote/WFH',
-                        workType: 'Full-time',
-                        companyName: 'Blibli',
-                        companyLogo: 'B',
-                        companyImg: "{{ asset('assets/partners/blibli.avif') }}",
-                        companyBg: 'bg-blue-500',
-                        location: 'Central Jakarta, DKI Jakarta',
-                        locationGroup: 'Jabodetabek',
-                        postedTime: '21 hari yang lalu',
-                        postTimeCategory: 'Bulan ini'
-                    }
-                ],
+                // Dynamic Jobs injected from Database (managed via Super Admin Panel)
+                jobs: @json($jobs ?? []),
 
                 selectMajor(major) {
                     this.selectedMajor = major;
