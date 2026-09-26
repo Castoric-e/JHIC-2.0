@@ -74,6 +74,13 @@
                     <p class="text-[#717680] text-[15px] md:text-[16px] leading-[24px] font-normal text-center lg:text-left">
                         Selamat datang di website resmi SMK IDN Boarding School. Sebagai sekolah berbasis IT dan boarding school yang berlandaskan nilai-nilai Islam, kami berkomitmen mencetak generasi yang profesional, berkarakter, dan siap memberikan manfaat bagi masyarakat. Semoga website ini menjadi media informasi dan komunikasi yang bermanfaat bagi semua pihak.
                     </p>
+                    <!-- USER BADGE (Centered on Mobile/Tablet) -->
+                <div class="flex items-center justify-center lg:justify-start gap-2 pt-1">
+                    <svg class="w-6 h-6 text-[#181d27] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                    <span class="font-bold text-[16px] leading-[24px] text-black">Beny Fitriyanto, S.S., M.Pd., Gr.</span>
+                </div>
                 </div>
             </div>
 
@@ -83,13 +90,7 @@
                     <img src="{{ asset('assets/pages/tentang-kami/mr-beny.avif') }}" alt="Mr Beny Fitriyanto" class="w-full h-full object-cover">
                 </div>
 
-                <!-- USER BADGE (Centered on Mobile/Tablet) -->
-                <div class="flex items-center justify-center lg:justify-start gap-2 pt-1">
-                    <svg class="w-6 h-6 text-[#181d27] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                    </svg>
-                    <span class="font-semibold text-[16px] leading-[24px] text-black">Beny Fitriyanto, S.S., M.Pd., Gr.</span>
-                </div>
+                
             </div>
 
         </div>
